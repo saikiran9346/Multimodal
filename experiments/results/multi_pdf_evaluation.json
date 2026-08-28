@@ -1,0 +1,3842 @@
+{
+  "baseline_dense": {
+    "arm": "1. Baseline Dense (BGE)",
+    "summary": {
+      "recall@5": 0.62,
+      "precision@5": 0.16,
+      "mrr": 0.5667,
+      "ndcg@5": 0.5518
+    },
+    "per_question": [
+      {
+        "id": "q1",
+        "category": "TABLE",
+        "question": "What is shaft seal type AQQx rated for?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ],
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q2",
+        "category": "TABLE",
+        "question": "What is the maximum system pressure for a cast iron pump with shaft seal type AVBx?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.5,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "id": "q3",
+        "category": "TABLE",
+        "question": "What does item 1 on the pump nameplate represent?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q4",
+        "category": "TABLE",
+        "question": "What is the remedy if the pump runs but delivers no water, according to the fault-finding table?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q5",
+        "category": "TABLE",
+        "question": "What are the sound pressure levels and electrical data listed in the technical data section?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            13
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            31
+          ],
+          [
+            "1_TP.pdf",
+            30
+          ],
+          [
+            "1_TP.pdf",
+            31
+          ],
+          [
+            "1_TP.pdf",
+            30
+          ],
+          [
+            "1_TP.pdf",
+            31
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q6",
+        "category": "TABLE",
+        "question": "What does the fault-finding table recommend if the pump is classified as contaminated?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q7",
+        "category": "IMAGE",
+        "question": "How should TP and TPD pumps be lifted according to Fig. 1 and Fig. 2?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            3
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.5,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "id": "q8",
+        "category": "IMAGE",
+        "question": "What does Fig. 5 illustrate regarding the use of washers for oval bolt holes during pump installation?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            6
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q9",
+        "category": "IMAGE",
+        "question": "What does Fig. 3 show for the suction and discharge ports?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q10",
+        "category": "IMAGE",
+        "question": "What does Fig. 5 show about alternative connection positions?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q11",
+        "category": "IMAGE",
+        "question": "What does Fig. 6 show about terminal box positions?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q12",
+        "category": "IMAGE",
+        "question": "How is the pump connected in the terminal box, and what does the wiring diagram show?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            9
+          ],
+          [
+            "1_TP.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            12
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q13",
+        "category": "EXACT_FACT",
+        "question": "What should I check before installing the pump, according to section 6?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q14",
+        "category": "EXACT_FACT",
+        "question": "What is the maximum liquid temperature allowed for self-priming pumps?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q15",
+        "category": "EXACT_FACT",
+        "question": "What should I check regarding the direction of rotation before starting the pump?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q16",
+        "category": "EXACT_FACT",
+        "question": "What is the recommended concrete foundation weight for TP Series 300 pumps with weights of 150 kg or more?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            7
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q17",
+        "category": "EXACT_FACT",
+        "question": "What should be injected between the motor stool and shaft if the pump is drained for a long period of inactivity?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q18",
+        "category": "EXACT_FACT",
+        "question": "How should the pump be disposed of at the end of its life?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@5": 0.5
+      },
+      {
+        "id": "q19",
+        "category": "MULTI_PAGE",
+        "question": "What nameplate information is provided for both the pump and the motor?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ]
+        ],
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 0.6131471927654584
+      },
+      {
+        "id": "q20",
+        "category": "MULTI_PAGE",
+        "question": "What are the pump's temperature and pressure operating limits?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "mrr": 0.3333333333333333,
+        "ndcg@5": 0.5437713091520254
+      },
+      {
+        "id": "q21",
+        "category": "MULTI_PAGE",
+        "question": "What are the handling and delivery guidelines for TP and TPD pumps?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            3
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q22",
+        "category": "MULTI_PAGE",
+        "question": "What steps are required for startup, flushing, and priming the pipe system?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ]
+        ],
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 0.6131471927654584
+      },
+      {
+        "id": "q23",
+        "category": "SECTION_STRUCTURE",
+        "question": "What does section 6 of this manual cover, and what are its subsections?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q24",
+        "category": "SECTION_STRUCTURE",
+        "question": "What does section 5 (Installation) cover in the TP manual, and what are its subsections?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ]
+        ],
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 0.6131471927654584
+      },
+      {
+        "id": "q25",
+        "category": "SECTION_STRUCTURE",
+        "question": "What does section 8 (Maintenance and service) cover in the TP manual?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "mrr": 0.5,
+        "ndcg@5": 0.6509209298071326
+      }
+    ]
+  },
+  "hybrid_rrf": {
+    "arm": "2. Hybrid Search (Dense + BM25 RRF)",
+    "summary": {
+      "recall@5": 0.8,
+      "precision@5": 0.2,
+      "mrr": 0.6467,
+      "ndcg@5": 0.6652
+    },
+    "per_question": [
+      {
+        "id": "q1",
+        "category": "TABLE",
+        "question": "What is shaft seal type AQQx rated for?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ],
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.5,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "id": "q2",
+        "category": "TABLE",
+        "question": "What is the maximum system pressure for a cast iron pump with shaft seal type AVBx?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q3",
+        "category": "TABLE",
+        "question": "What does item 1 on the pump nameplate represent?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q4",
+        "category": "TABLE",
+        "question": "What is the remedy if the pump runs but delivers no water, according to the fault-finding table?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            12
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q5",
+        "category": "TABLE",
+        "question": "What are the sound pressure levels and electrical data listed in the technical data section?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            13
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            31
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            30
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            31
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q6",
+        "category": "TABLE",
+        "question": "What does the fault-finding table recommend if the pump is classified as contaminated?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "mrr": 1.0,
+        "ndcg@5": 0.8503449055347546
+      },
+      {
+        "id": "q7",
+        "category": "IMAGE",
+        "question": "How should TP and TPD pumps be lifted according to Fig. 1 and Fig. 2?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            3
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q8",
+        "category": "IMAGE",
+        "question": "What does Fig. 5 illustrate regarding the use of washers for oval bolt holes during pump installation?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            6
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q9",
+        "category": "IMAGE",
+        "question": "What does Fig. 3 show for the suction and discharge ports?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q10",
+        "category": "IMAGE",
+        "question": "What does Fig. 5 show about alternative connection positions?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q11",
+        "category": "IMAGE",
+        "question": "What does Fig. 6 show about terminal box positions?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q12",
+        "category": "IMAGE",
+        "question": "How is the pump connected in the terminal box, and what does the wiring diagram show?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@5": 0.5
+      },
+      {
+        "id": "q13",
+        "category": "EXACT_FACT",
+        "question": "What should I check before installing the pump, according to section 6?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q14",
+        "category": "EXACT_FACT",
+        "question": "What is the maximum liquid temperature allowed for self-priming pumps?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.5,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "id": "q15",
+        "category": "EXACT_FACT",
+        "question": "What should I check regarding the direction of rotation before starting the pump?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@5": 0.5
+      },
+      {
+        "id": "q16",
+        "category": "EXACT_FACT",
+        "question": "What is the recommended concrete foundation weight for TP Series 300 pumps with weights of 150 kg or more?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            7
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q17",
+        "category": "EXACT_FACT",
+        "question": "What should be injected between the motor stool and shaft if the pump is drained for a long period of inactivity?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q18",
+        "category": "EXACT_FACT",
+        "question": "How should the pump be disposed of at the end of its life?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@5": 0.5
+      },
+      {
+        "id": "q19",
+        "category": "MULTI_PAGE",
+        "question": "What nameplate information is provided for both the pump and the motor?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ]
+        ],
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 0.6131471927654584
+      },
+      {
+        "id": "q20",
+        "category": "MULTI_PAGE",
+        "question": "What are the pump's temperature and pressure operating limits?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "mrr": 0.3333333333333333,
+        "ndcg@5": 0.5706417189553201
+      },
+      {
+        "id": "q21",
+        "category": "MULTI_PAGE",
+        "question": "What are the handling and delivery guidelines for TP and TPD pumps?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            3
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q22",
+        "category": "MULTI_PAGE",
+        "question": "What steps are required for startup, flushing, and priming the pipe system?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ]
+        ],
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 0.5,
+        "ndcg@5": 0.38685280723454163
+      },
+      {
+        "id": "q23",
+        "category": "SECTION_STRUCTURE",
+        "question": "What does section 6 of this manual cover, and what are its subsections?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q24",
+        "category": "SECTION_STRUCTURE",
+        "question": "What does section 5 (Installation) cover in the TP manual, and what are its subsections?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "mrr": 1.0,
+        "ndcg@5": 0.8772153153380493
+      },
+      {
+        "id": "q25",
+        "category": "SECTION_STRUCTURE",
+        "question": "What does section 8 (Maintenance and service) cover in the TP manual?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "mrr": 0.3333333333333333,
+        "ndcg@5": 0.5706417189553201
+      }
+    ]
+  },
+  "hybrid_reranked": {
+    "arm": "3. Hybrid + Cross-Encoder Reranker",
+    "summary": {
+      "recall@5": 0.76,
+      "precision@5": 0.184,
+      "mrr": 0.72,
+      "ndcg@5": 0.6939
+    },
+    "per_question": [
+      {
+        "id": "q1",
+        "category": "TABLE",
+        "question": "What is shaft seal type AQQx rated for?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q2",
+        "category": "TABLE",
+        "question": "What is the maximum system pressure for a cast iron pump with shaft seal type AVBx?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q3",
+        "category": "TABLE",
+        "question": "What does item 1 on the pump nameplate represent?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q4",
+        "category": "TABLE",
+        "question": "What is the remedy if the pump runs but delivers no water, according to the fault-finding table?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q5",
+        "category": "TABLE",
+        "question": "What are the sound pressure levels and electrical data listed in the technical data section?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            13
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            31
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            30
+          ],
+          [
+            "1_TP.pdf",
+            29
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q6",
+        "category": "TABLE",
+        "question": "What does the fault-finding table recommend if the pump is classified as contaminated?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ]
+        ],
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 0.6131471927654584
+      },
+      {
+        "id": "q7",
+        "category": "IMAGE",
+        "question": "How should TP and TPD pumps be lifted according to Fig. 1 and Fig. 2?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            3
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q8",
+        "category": "IMAGE",
+        "question": "What does Fig. 5 illustrate regarding the use of washers for oval bolt holes during pump installation?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q9",
+        "category": "IMAGE",
+        "question": "What does Fig. 3 show for the suction and discharge ports?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q10",
+        "category": "IMAGE",
+        "question": "What does Fig. 5 show about alternative connection positions?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q11",
+        "category": "IMAGE",
+        "question": "What does Fig. 6 show about terminal box positions?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q12",
+        "category": "IMAGE",
+        "question": "How is the pump connected in the terminal box, and what does the wiring diagram show?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            9
+          ],
+          [
+            "1_TP.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@5": 0.5
+      },
+      {
+        "id": "q13",
+        "category": "EXACT_FACT",
+        "question": "What should I check before installing the pump, according to section 6?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q14",
+        "category": "EXACT_FACT",
+        "question": "What is the maximum liquid temperature allowed for self-priming pumps?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q15",
+        "category": "EXACT_FACT",
+        "question": "What should I check regarding the direction of rotation before starting the pump?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@5": 0.5
+      },
+      {
+        "id": "q16",
+        "category": "EXACT_FACT",
+        "question": "What is the recommended concrete foundation weight for TP Series 300 pumps with weights of 150 kg or more?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            7
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q17",
+        "category": "EXACT_FACT",
+        "question": "What should be injected between the motor stool and shaft if the pump is drained for a long period of inactivity?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q18",
+        "category": "EXACT_FACT",
+        "question": "How should the pump be disposed of at the end of its life?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            15
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ],
+          [
+            "1_TP.pdf",
+            15
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.5,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "id": "q19",
+        "category": "MULTI_PAGE",
+        "question": "What nameplate information is provided for both the pump and the motor?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ]
+        ],
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 0.6131471927654584
+      },
+      {
+        "id": "q20",
+        "category": "MULTI_PAGE",
+        "question": "What are the pump's temperature and pressure operating limits?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "mrr": 0.5,
+        "ndcg@5": 0.6509209298071326
+      },
+      {
+        "id": "q21",
+        "category": "MULTI_PAGE",
+        "question": "What are the handling and delivery guidelines for TP and TPD pumps?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            3
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q22",
+        "category": "MULTI_PAGE",
+        "question": "What steps are required for startup, flushing, and priming the pipe system?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ]
+        ],
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 0.6131471927654584
+      },
+      {
+        "id": "q23",
+        "category": "SECTION_STRUCTURE",
+        "question": "What does section 6 of this manual cover, and what are its subsections?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q24",
+        "category": "SECTION_STRUCTURE",
+        "question": "What does section 5 (Installation) cover in the TP manual, and what are its subsections?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "mrr": 1.0,
+        "ndcg@5": 0.9197207891481876
+      },
+      {
+        "id": "q25",
+        "category": "SECTION_STRUCTURE",
+        "question": "What does section 8 (Maintenance and service) cover in the TP manual?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ]
+        ],
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@5": 0.3065735963827292
+      }
+    ]
+  },
+  "multimodal_final": {
+    "arm": "4. Multimodal (Text + Tables + Vision Chunks)",
+    "summary": {
+      "recall@5": 0.76,
+      "precision@5": 0.184,
+      "mrr": 0.7467,
+      "ndcg@5": 0.7131
+    },
+    "per_question": [
+      {
+        "id": "q1",
+        "category": "TABLE",
+        "question": "What is shaft seal type AQQx rated for?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q2",
+        "category": "TABLE",
+        "question": "What is the maximum system pressure for a cast iron pump with shaft seal type AVBx?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q3",
+        "category": "TABLE",
+        "question": "What does item 1 on the pump nameplate represent?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            14
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            14
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.5,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "id": "q4",
+        "category": "TABLE",
+        "question": "What is the remedy if the pump runs but delivers no water, according to the fault-finding table?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q5",
+        "category": "TABLE",
+        "question": "What are the sound pressure levels and electrical data listed in the technical data section?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            13
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            31
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            30
+          ],
+          [
+            "1_TP.pdf",
+            29
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q6",
+        "category": "TABLE",
+        "question": "What does the fault-finding table recommend if the pump is classified as contaminated?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ]
+        ],
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 0.6131471927654584
+      },
+      {
+        "id": "q7",
+        "category": "IMAGE",
+        "question": "How should TP and TPD pumps be lifted according to Fig. 1 and Fig. 2?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            3
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            3
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q8",
+        "category": "IMAGE",
+        "question": "What does Fig. 5 illustrate regarding the use of washers for oval bolt holes during pump installation?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q9",
+        "category": "IMAGE",
+        "question": "What does Fig. 3 show for the suction and discharge ports?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            5
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q10",
+        "category": "IMAGE",
+        "question": "What does Fig. 5 show about alternative connection positions?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q11",
+        "category": "IMAGE",
+        "question": "What does Fig. 6 show about terminal box positions?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q12",
+        "category": "IMAGE",
+        "question": "How is the pump connected in the terminal box, and what does the wiring diagram show?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            9
+          ],
+          [
+            "1_TP.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q13",
+        "category": "EXACT_FACT",
+        "question": "What should I check before installing the pump, according to section 6?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q14",
+        "category": "EXACT_FACT",
+        "question": "What is the maximum liquid temperature allowed for self-priming pumps?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "1_TP.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q15",
+        "category": "EXACT_FACT",
+        "question": "What should I check regarding the direction of rotation before starting the pump?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@5": 0.5
+      },
+      {
+        "id": "q16",
+        "category": "EXACT_FACT",
+        "question": "What is the recommended concrete foundation weight for TP Series 300 pumps with weights of 150 kg or more?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            7
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            7
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q17",
+        "category": "EXACT_FACT",
+        "question": "What should be injected between the motor stool and shaft if the pump is drained for a long period of inactivity?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q18",
+        "category": "EXACT_FACT",
+        "question": "How should the pump be disposed of at the end of its life?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            15
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            13
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ],
+          [
+            "1_TP.pdf",
+            15
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            9
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 0.5,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "id": "q19",
+        "category": "MULTI_PAGE",
+        "question": "What nameplate information is provided for both the pump and the motor?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            3
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            14
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ]
+        ],
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 0.6131471927654584
+      },
+      {
+        "id": "q20",
+        "category": "MULTI_PAGE",
+        "question": "What are the pump's temperature and pressure operating limits?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            11
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q21",
+        "category": "MULTI_PAGE",
+        "question": "What are the handling and delivery guidelines for TP and TPD pumps?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            3
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            3
+          ],
+          [
+            "1_TP.pdf",
+            3
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q22",
+        "category": "MULTI_PAGE",
+        "question": "What steps are required for startup, flushing, and priming the pipe system?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            11
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            8
+          ]
+        ],
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 0.6131471927654584
+      },
+      {
+        "id": "q23",
+        "category": "SECTION_STRUCTURE",
+        "question": "What does section 6 of this manual cover, and what are its subsections?",
+        "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            7
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ]
+        ],
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "mrr": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "id": "q24",
+        "category": "SECTION_STRUCTURE",
+        "question": "What does section 5 (Installation) cover in the TP manual, and what are its subsections?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            8
+          ],
+          [
+            "1_TP.pdf",
+            4
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "mrr": 1.0,
+        "ndcg@5": 0.9197207891481876
+      },
+      {
+        "id": "q25",
+        "category": "SECTION_STRUCTURE",
+        "question": "What does section 8 (Maintenance and service) cover in the TP manual?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            11
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ],
+          [
+            "1_TP.pdf",
+            2
+          ]
+        ],
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@5": 0.3065735963827292
+      }
+    ]
+  }
+}

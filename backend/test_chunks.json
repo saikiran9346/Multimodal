@@ -1,0 +1,1501 @@
+[
+  {
+    "text": "CM\nInstallation and operating instructions\nInstallation and operating instructions\nhttp://net.grundfos.com/qr/i/95121197\nOriginal installation and operating instructions",
+    "raw_text": "Installation and operating instructions\nInstallation and operating instructions\nhttp://net.grundfos.com/qr/i/95121197\nOriginal installation and operating instructions",
+    "page_no": 1,
+    "headings": [
+      "CM"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "CONTENTS\n1. Symbols used in this document, Page = 2. 2. Introduction, Page = 3. 3. Delivery and handling, Page = 3. 4. Applications, Page = 3. 5. Identification, Page = 3. 5.1 Nameplates for pump, Page = 3. 5.2 Nameplate for motor, Page = 4. 6. Mechanical installation, Page = 4. 6.1 Installation of pump, Page = 4. 6.2 Pipework, Page = 5. 6.3 Alternative connection positions, Page = 6. 6.4 Terminal box positions, Page = 6. 6.5 Avoiding condensation in the motor, Page = 6. 7. Electrical installation, Page = 7. 7.1 Power supply cable, Page = 7. 7.2 Motor protection, Page = 7. 7.3 Electrical connection, Page = 7. 7.4 Frequency converter operation, Page = 7. 8. Startup, Page = 8. 8.1 Non-self-priming pumps, Page = 8. 8.2 Self-priming pumps, Page = 8. 8.3 Checking the direction of rotation, Page = 9. 9. Maintenance, Page = 9. 10. Service, Page = 9. 9.2 Cleaning, Page = . , Page = 10. 11. Technical data, Page = 10. 11.1 Enclosure class 11.2, Page = 10. Sound pressure level, Page = 10. 11.3 Maximum system pressure, Page = 10. Ambient temperature 11.4 and permissible liquid temperature, Page = 11. pressure, Page = 11. 11.5 Minimum inlet, Page = . 11.6 Maximum inlet pressure, Page = 11. 13. Further product information, Page = 13. 13.1 Service documentation, Page = 13. 14. Disposal, Page = 13",
+    "raw_text": "1. Symbols used in this document, Page = 2. 2. Introduction, Page = 3. 3. Delivery and handling, Page = 3. 4. Applications, Page = 3. 5. Identification, Page = 3. 5.1 Nameplates for pump, Page = 3. 5.2 Nameplate for motor, Page = 4. 6. Mechanical installation, Page = 4. 6.1 Installation of pump, Page = 4. 6.2 Pipework, Page = 5. 6.3 Alternative connection positions, Page = 6. 6.4 Terminal box positions, Page = 6. 6.5 Avoiding condensation in the motor, Page = 6. 7. Electrical installation, Page = 7. 7.1 Power supply cable, Page = 7. 7.2 Motor protection, Page = 7. 7.3 Electrical connection, Page = 7. 7.4 Frequency converter operation, Page = 7. 8. Startup, Page = 8. 8.1 Non-self-priming pumps, Page = 8. 8.2 Self-priming pumps, Page = 8. 8.3 Checking the direction of rotation, Page = 9. 9. Maintenance, Page = 9. 10. Service, Page = 9. 9.2 Cleaning, Page = . , Page = 10. 11. Technical data, Page = 10. 11.1 Enclosure class 11.2, Page = 10. Sound pressure level, Page = 10. 11.3 Maximum system pressure, Page = 10. Ambient temperature 11.4 and permissible liquid temperature, Page = 11. pressure, Page = 11. 11.5 Minimum inlet, Page = . 11.6 Maximum inlet pressure, Page = 11. 13. Further product information, Page = 13. 13.1 Service documentation, Page = 13. 14. Disposal, Page = 13",
+    "page_no": 2,
+    "headings": [
+      "CONTENTS"
+    ],
+    "captions": [],
+    "content_types": [
+      "document_index"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Warning\nPrior to installation, read these installation and operating instructions. Installation and operation must comply with local regulations and accepted codes of good practice.\nThe use of this product requires experience with and knowledge of the product.\nPersons with reduced physical, sensory or mental capabilities must not use this product, unless they are under supervision or have been instructed in the use of the product by a person responsible for their safety.\nChildren must not use or play with this product.\nIf these safety instructions are not observed, it may result in personal injury.\nIf these instructions are not observed, it may lead to electric shock with consequent risk of serious personal injury or death.\nThe surface of the product may be so hot that it may cause burns or personal injury.\nIf these safety instructions are not observed, it may result in malfunction or damage to the equipment.\nNotes or instructions that make the job easier and ensure safe operation.",
+    "raw_text": "Prior to installation, read these installation and operating instructions. Installation and operation must comply with local regulations and accepted codes of good practice.\nThe use of this product requires experience with and knowledge of the product.\nPersons with reduced physical, sensory or mental capabilities must not use this product, unless they are under supervision or have been instructed in the use of the product by a person responsible for their safety.\nChildren must not use or play with this product.\nIf these safety instructions are not observed, it may result in personal injury.\nIf these instructions are not observed, it may lead to electric shock with consequent risk of serious personal injury or death.\nThe surface of the product may be so hot that it may cause burns or personal injury.\nIf these safety instructions are not observed, it may result in malfunction or damage to the equipment.\nNotes or instructions that make the job easier and ensure safe operation.",
+    "page_no": 2,
+    "headings": [
+      "Warning"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "2. Introduction\nThis manual describes the installation and operation of Grundfos CM pumps.",
+    "raw_text": "This manual describes the installation and operation of Grundfos CM pumps.",
+    "page_no": 3,
+    "headings": [
+      "2. Introduction"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "3. Delivery and handling\nThe pumps are delivered from factory in a packaging specially designed for manual transport or transport by forklift truck or a similar vehicle.\nIn order to ensure safe transport, we recommend that you transport the pumps with suitable lifting tools.",
+    "raw_text": "The pumps are delivered from factory in a packaging specially designed for manual transport or transport by forklift truck or a similar vehicle.\nIn order to ensure safe transport, we recommend that you transport the pumps with suitable lifting tools.",
+    "page_no": 3,
+    "headings": [
+      "3. Delivery and handling"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "4. Applications\nThe pumps are horizontal, multistage centrifugal pumps designed for pumping of clean, thin and non-flammable liquids, not containing solid particles or fibres that may attack the pump mechanically or chemically.",
+    "raw_text": "The pumps are horizontal, multistage centrifugal pumps designed for pumping of clean, thin and non-flammable liquids, not containing solid particles or fibres that may attack the pump mechanically or chemically.",
+    "page_no": 3,
+    "headings": [
+      "4. Applications"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Warning\nThe pump must not be used for the transfer of flammable or toxic liquids.",
+    "raw_text": "The pump must not be used for the transfer of flammable or toxic liquids.",
+    "page_no": 3,
+    "headings": [
+      "Warning"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "5.1 Nameplates for pump\nThe pump name plates are positioned on the motor fan cover or terminal box.",
+    "raw_text": "The pump name plates are positioned on the motor fan cover or terminal box.",
+    "page_no": 3,
+    "headings": [
+      "5.1 Nameplates for pump"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "5.1.1 Nameplate with pump data\nThe data and information on the pump nameplate are described in the table below. See the nameplate in fig. 1 on page 14.\n1, Description = Pump type. 2, Description = Pump model. 3, Description = Maximum ambient temperature. 4, Description = Temperature class. 5, Description = Minimum efficiency index. 6, Description = Maximum system pressure. 7, Description = Maximum liquid temperature. 8, Description = Hydraulic efficiency at best efficiency point. 9, Description = Insulation class. 10, Description = Motor protection. 11, Description = Rated flow. 12, Description = Head at rated flow. 13, Description = Maximum head",
+    "raw_text": "The data and information on the pump nameplate are described in the table below. See the nameplate in fig. 1 on page 14.\n1, Description = Pump type. 2, Description = Pump model. 3, Description = Maximum ambient temperature. 4, Description = Temperature class. 5, Description = Minimum efficiency index. 6, Description = Maximum system pressure. 7, Description = Maximum liquid temperature. 8, Description = Hydraulic efficiency at best efficiency point. 9, Description = Insulation class. 10, Description = Motor protection. 11, Description = Rated flow. 12, Description = Head at rated flow. 13, Description = Maximum head",
+    "page_no": 3,
+    "headings": [
+      "5.1.1 Nameplate with pump data"
+    ],
+    "captions": [],
+    "content_types": [
+      "table",
+      "text"
+    ],
+    "contains_table": true
+  },
+  {
+    "text": "5.1.2 Nameplate with approval marks\nThe data and information on the pump nameplate are described in the table below. See the nameplate in fig. 2 on page 14.\n1, Description = CE mark. 2, Description = EAC mark. 3, Description = PSE mark. 4, Description = cULus mark. 5, Description = UL mark. 6, Description = cURus mark. 7, Description = Company name and address. 8, Description = Country of manufacture",
+    "raw_text": "The data and information on the pump nameplate are described in the table below. See the nameplate in fig. 2 on page 14.\n1, Description = CE mark. 2, Description = EAC mark. 3, Description = PSE mark. 4, Description = cULus mark. 5, Description = UL mark. 6, Description = cURus mark. 7, Description = Company name and address. 8, Description = Country of manufacture",
+    "page_no": 3,
+    "headings": [
+      "5.1.2 Nameplate with approval marks"
+    ],
+    "captions": [],
+    "content_types": [
+      "table",
+      "text"
+    ],
+    "contains_table": true
+  },
+  {
+    "text": "5.2 Nameplate for motor\nThe motor name plate is positioned on the motor cooling fins.\nThe data and information on the motor nameplate are described in the table below. See the nameplate in fig. 3 on page 14.\n1, Description = Capacitor size and voltage. 2, Description = 50 Hz motor efficiency at rated work point. 3, Description = 50 Hz power factor. 4, Description = 50 Hz output power in kW. 5, Description = Frequency. 6, Description = Number of phases. 7, Description = 50 Hz output power in hp. 8, Description = 50 Hz maximum current. 9, Description = 50 Hz full-load current. 10, Description = 50 Hz rated voltage. 11, Description = Motor type. 12, Description = 50 Hz rated speed. 13, Description = Frequency. 14, Description = 60 Hz output power in kW. 15, Description = NEMA enclosure class. 16, Description = 60 Hz output power in hp. 17, Description = 60 Hz power factor. 18, Description = 60 Hz motor efficiency at rated work point. 19, Description = Part number. 20, Description = Factory code. 21, Description = Production date (year and week). 22, Description = Country of origin. 23, Description = 60 Hz rated voltage. 24, Description = 60 Hz full-load current. 25, Description = 60 Hz maximum current. 26, Description = 60 Hz rated speed. 27, Description = IEC duty cycle. 28, Description = Number of poles. 29, Description = IEC enclosure class. 30, Description = Insulation class. 31, Description = NEMA enclosure type. 32, Description = Motor duty class. 33, Description = Maximum ambient temperature. 34, Description = NEMA locked-rotor code. 35, Description = NEMA design class. 37, Description = CC122B mark. 38, Description = CE mark. 39, Description = cURus mark",
+    "raw_text": "The motor name plate is positioned on the motor cooling fins.\nThe data and information on the motor nameplate are described in the table below. See the nameplate in fig. 3 on page 14.\n1, Description = Capacitor size and voltage. 2, Description = 50 Hz motor efficiency at rated work point. 3, Description = 50 Hz power factor. 4, Description = 50 Hz output power in kW. 5, Description = Frequency. 6, Description = Number of phases. 7, Description = 50 Hz output power in hp. 8, Description = 50 Hz maximum current. 9, Description = 50 Hz full-load current. 10, Description = 50 Hz rated voltage. 11, Description = Motor type. 12, Description = 50 Hz rated speed. 13, Description = Frequency. 14, Description = 60 Hz output power in kW. 15, Description = NEMA enclosure class. 16, Description = 60 Hz output power in hp. 17, Description = 60 Hz power factor. 18, Description = 60 Hz motor efficiency at rated work point. 19, Description = Part number. 20, Description = Factory code. 21, Description = Production date (year and week). 22, Description = Country of origin. 23, Description = 60 Hz rated voltage. 24, Description = 60 Hz full-load current. 25, Description = 60 Hz maximum current. 26, Description = 60 Hz rated speed. 27, Description = IEC duty cycle. 28, Description = Number of poles. 29, Description = IEC enclosure class. 30, Description = Insulation class. 31, Description = NEMA enclosure type. 32, Description = Motor duty class. 33, Description = Maximum ambient temperature. 34, Description = NEMA locked-rotor code. 35, Description = NEMA design class. 37, Description = CC122B mark. 38, Description = CE mark. 39, Description = cURus mark",
+    "page_no": 4,
+    "headings": [
+      "5.2 Nameplate for motor"
+    ],
+    "captions": [],
+    "content_types": [
+      "table",
+      "text"
+    ],
+    "contains_table": true
+  },
+  {
+    "text": "6. Mechanical installation\nBefore installing the pump, check that the pump type and parts are as ordered.",
+    "raw_text": "Before installing the pump, check that the pump type and parts are as ordered.",
+    "page_no": 4,
+    "headings": [
+      "6. Mechanical installation"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Warning\nWhen pumping hot or cold liquids, make sure that persons cannot accidentally come into contact with hot or cold surfaces.",
+    "raw_text": "When pumping hot or cold liquids, make sure that persons cannot accidentally come into contact with hot or cold surfaces.",
+    "page_no": 4,
+    "headings": [
+      "Warning"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "6.1 Installation of pump\nInstall the pump on a plane surface using the mounting holes in the motor base plate and a minimum of four bolts. Tighten each of the four bolts to a torque of 10 Nm.\nInstall the pump so that air locks are avoided in the pump housing and pipework.\nFigure 1 and the table below show the permissible pump positions.\nFig. 1 Pump positions\n1, Non-self-priming pumps = -. 1, Self-priming pumps = -. 2, Non-self-priming pumps = ●. 2, Self-priming pumps = -. 3, Non-self-priming pumps = ●. 3, Self-priming pumps = -. 4, Non-self-priming pumps = ●. 4, Self-priming pumps = ●. 5, Non-self-priming pumps = -. 5, Self-priming pumps = -. 6, Non-self-priming pumps = ●. 6, Self-priming pumps = ●\n- Mounting in this position is allowed.\nInstall the pump so that inspection, maintenance and service can easily be performed.\nInstall the pump in a well-ventilated location.",
+    "raw_text": "Install the pump on a plane surface using the mounting holes in the motor base plate and a minimum of four bolts. Tighten each of the four bolts to a torque of 10 Nm.\nInstall the pump so that air locks are avoided in the pump housing and pipework.\nFigure 1 and the table below show the permissible pump positions.\nFig. 1 Pump positions\n1, Non-self-priming pumps = -. 1, Self-priming pumps = -. 2, Non-self-priming pumps = ●. 2, Self-priming pumps = -. 3, Non-self-priming pumps = ●. 3, Self-priming pumps = -. 4, Non-self-priming pumps = ●. 4, Self-priming pumps = ●. 5, Non-self-priming pumps = -. 5, Self-priming pumps = -. 6, Non-self-priming pumps = ●. 6, Self-priming pumps = ●\n- Mounting in this position is allowed.\nInstall the pump so that inspection, maintenance and service can easily be performed.\nInstall the pump in a well-ventilated location.",
+    "page_no": 4,
+    "headings": [
+      "6.1 Installation of pump"
+    ],
+    "captions": [],
+    "content_types": [
+      "caption",
+      "list_item",
+      "table",
+      "text"
+    ],
+    "contains_table": true
+  },
+  {
+    "text": "6.2 Pipework\nWe recommend that you fit isolating valves on either side of the pump. It is thus not necessary to drain the system if the pump needs service.\nIf the pump is installed above the liquid level, a non-return valve must be fitted in the suction pipe below the liquid level. See fig. 4.",
+    "raw_text": "We recommend that you fit isolating valves on either side of the pump. It is thus not necessary to drain the system if the pump needs service.\nIf the pump is installed above the liquid level, a non-return valve must be fitted in the suction pipe below the liquid level. See fig. 4.",
+    "page_no": 5,
+    "headings": [
+      "6.2 Pipework"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Self-priming pumps:\nWe recommend an opening pressure of the non-return valve which is lower than 0.05 bar. Otherwise the additional resistance will reduce the suction capability of the pump.\nIf the pump is to be used for pumping rainwater or well water, we recommend that you fit a filter to the inlet of the suction pipe.\nThe pump must not be stressed by the pipework.\nInstall the pipes according to the design requirements given in EN ISO 13480-3:2012. Tolerances must comply with EN ISO 13920:1996, class C.\nThe pipework must be correctly sized taking due account of the pump inlet pressure.\nInstall the pipes so that air locks are avoided, especially on the suction side of the pump. See fig. 2.\nFig. 2 Pipework\nTM04 0338 0608",
+    "raw_text": "We recommend an opening pressure of the non-return valve which is lower than 0.05 bar. Otherwise the additional resistance will reduce the suction capability of the pump.\nIf the pump is to be used for pumping rainwater or well water, we recommend that you fit a filter to the inlet of the suction pipe.\nThe pump must not be stressed by the pipework.\nInstall the pipes according to the design requirements given in EN ISO 13480-3:2012. Tolerances must comply with EN ISO 13920:1996, class C.\nThe pipework must be correctly sized taking due account of the pump inlet pressure.\nInstall the pipes so that air locks are avoided, especially on the suction side of the pump. See fig. 2.\nFig. 2 Pipework\nTM04 0338 0608",
+    "page_no": 5,
+    "headings": [
+      "Self-priming pumps:"
+    ],
+    "captions": [],
+    "content_types": [
+      "caption",
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "6.2.1 Pipe connection (non-self-priming pumps)\nTake care not to damage the pump when connecting the suction and discharge pipes.\nTorque: 50-60 Nm. The stated torque must not be exceeded.\nFig. 3 Suction and discharge ports",
+    "raw_text": "Take care not to damage the pump when connecting the suction and discharge pipes.\nTorque: 50-60 Nm. The stated torque must not be exceeded.\nFig. 3 Suction and discharge ports",
+    "page_no": 5,
+    "headings": [
+      "6.2.1 Pipe connection (non-self-priming pumps)"
+    ],
+    "captions": [],
+    "content_types": [
+      "caption",
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "6.2.2 Pipe connection (self-priming pumps)\nThe pump must be installed correctly to ensure that it can self-prime.\nTake the following precautions:",
+    "raw_text": "The pump must be installed correctly to ensure that it can self-prime.\nTake the following precautions:",
+    "page_no": 5,
+    "headings": [
+      "6.2.2 Pipe connection (self-priming pumps)"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "See fig. 4.\n- The minimum height from the centre of the suction port to the first tapping point (H 1 ) must be observed.\nIf a pressure manager is installed in the system, H1  is the height from the centre of the pump suction port to the pressure manager. Minimum heights appear from the table below.\n- The suction pipe must be at least 0.5 metres below the liquid level (H 3 ).\nFor optimum suction capability, the pump must be located near the well or tank to ensure that the suction pipe is as short as possible. This will reduce the self-priming time, especially in the case of a high suction lift.\nWe recommend that you install a filling plug in the discharge pipe. This facilitates liquid filling before startup. See fig. 4, pos. A.\nTM05 8415 2313\nFig. 4 Recommended pipework for a self-priming pump\n\n4, Minimum height (H 1 ) [m] = 0.2. 5, Minimum height (H 1 ) [m] = 0.35. 6, Minimum height (H 1 ) [m] = 0.5. 7, Minimum height (H 1 ) [m] = 0.6. 8, Minimum height (H 1 ) [m] = 0.7",
+    "raw_text": "- The minimum height from the centre of the suction port to the first tapping point (H 1 ) must be observed.\nIf a pressure manager is installed in the system, H1  is the height from the centre of the pump suction port to the pressure manager. Minimum heights appear from the table below.\n- The suction pipe must be at least 0.5 metres below the liquid level (H 3 ).\nFor optimum suction capability, the pump must be located near the well or tank to ensure that the suction pipe is as short as possible. This will reduce the self-priming time, especially in the case of a high suction lift.\nWe recommend that you install a filling plug in the discharge pipe. This facilitates liquid filling before startup. See fig. 4, pos. A.\nTM05 8415 2313\nFig. 4 Recommended pipework for a self-priming pump\n\n4, Minimum height (H 1 ) [m] = 0.2. 5, Minimum height (H 1 ) [m] = 0.35. 6, Minimum height (H 1 ) [m] = 0.5. 7, Minimum height (H 1 ) [m] = 0.6. 8, Minimum height (H 1 ) [m] = 0.7",
+    "page_no": 5,
+    "headings": [
+      "See fig. 4."
+    ],
+    "captions": [],
+    "content_types": [
+      "caption",
+      "list_item",
+      "table",
+      "text"
+    ],
+    "contains_table": true
+  },
+  {
+    "text": "6.3 Alternative connection positions\nThe pump is available with various connection positions on special request. See fig. 5.\nFig. 5 Alternative connection positions\nSelf-priming pumps:\nThese pumps are only available with the discharge port pointing upwards, i.e. in the same direction as the filling hole.\nTM03 8709 1008",
+    "raw_text": "The pump is available with various connection positions on special request. See fig. 5.\nFig. 5 Alternative connection positions\nSelf-priming pumps:\nThese pumps are only available with the discharge port pointing upwards, i.e. in the same direction as the filling hole.\nTM03 8709 1008",
+    "page_no": 6,
+    "headings": [
+      "6.3 Alternative connection positions"
+    ],
+    "captions": [],
+    "content_types": [
+      "caption",
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "6.4 Terminal box positions\nThe pump is available with various terminal box positions on special request. See fig. 6.\nFig. 6 Terminal box positions",
+    "raw_text": "The pump is available with various terminal box positions on special request. See fig. 6.\nFig. 6 Terminal box positions",
+    "page_no": 6,
+    "headings": [
+      "6.4 Terminal box positions"
+    ],
+    "captions": [],
+    "content_types": [
+      "caption",
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "6.5 Avoiding condensation in the motor\nIf the liquid temperature falls below the ambient temperature, condensation may form in the motor during standstill. Condensation can occur in moist surroundings or areas with high humidity.\nIn such cases, use a motor suitable for condensing environments such as an IPX5 motor available from Grundfos.\nAlternatively, open the bottom drain hole in the motor flange by removing the plug. See fig. 7. This reduces the motor enclosure class to IPX5.\nFig. 7 Motor drain plug",
+    "raw_text": "If the liquid temperature falls below the ambient temperature, condensation may form in the motor during standstill. Condensation can occur in moist surroundings or areas with high humidity.\nIn such cases, use a motor suitable for condensing environments such as an IPX5 motor available from Grundfos.\nAlternatively, open the bottom drain hole in the motor flange by removing the plug. See fig. 7. This reduces the motor enclosure class to IPX5.\nFig. 7 Motor drain plug",
+    "page_no": 6,
+    "headings": [
+      "6.5 Avoiding condensation in the motor"
+    ],
+    "captions": [],
+    "content_types": [
+      "caption",
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "1 Motor drain plug\nThe open drain hole helps prevent condensation in the motor as it makes the motor self-venting and allows water and humid air to escape.\nWhen you install the pump outdoors, provide the motor with a cover to avoid condensation. See fig. 8.\nFig. 8 Examples of covers (not supplied by Grundfos)",
+    "raw_text": "The open drain hole helps prevent condensation in the motor as it makes the motor self-venting and allows water and humid air to escape.\nWhen you install the pump outdoors, provide the motor with a cover to avoid condensation. See fig. 8.\nFig. 8 Examples of covers (not supplied by Grundfos)",
+    "page_no": 6,
+    "headings": [
+      "1 Motor drain plug"
+    ],
+    "captions": [],
+    "content_types": [
+      "caption",
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "7. Electrical installation\nCarry out the electrical connection according to local regulations.\nCheck that the supply voltage and frequency correspond to the values stated on the nameplate.",
+    "raw_text": "Carry out the electrical connection according to local regulations.\nCheck that the supply voltage and frequency correspond to the values stated on the nameplate.",
+    "page_no": 7,
+    "headings": [
+      "7. Electrical installation"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Warning\nThe electrical connection must be carried out in accordance with local regulations.\nBefore starting work on the pump, switch off the power supply. Make sure that the power supply cannot be accidentally switched on.\nThe pump must be connected to an external all-pole mains switch according to local regulations.\nThe product must be earthed and protected against indirect contact in accordance with local regulations.\nWires connected to supply terminals, must be separated from each other and from the supply by reinforced insulation.",
+    "raw_text": "The electrical connection must be carried out in accordance with local regulations.\nBefore starting work on the pump, switch off the power supply. Make sure that the power supply cannot be accidentally switched on.\nThe pump must be connected to an external all-pole mains switch according to local regulations.\nThe product must be earthed and protected against indirect contact in accordance with local regulations.\nWires connected to supply terminals, must be separated from each other and from the supply by reinforced insulation.",
+    "page_no": 7,
+    "headings": [
+      "Warning"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "7.1 Power supply cable\nIn order to comply with the EN 60335-1 standard, the power supply cable must as minimum be rated for an operating temperature of 105 °C (221 °F).",
+    "raw_text": "In order to comply with the EN 60335-1 standard, the power supply cable must as minimum be rated for an operating temperature of 105 °C (221 °F).",
+    "page_no": 7,
+    "headings": [
+      "7.1 Power supply cable"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Single-phase motors, 1 x 115 / 230 V, 60 Hz\nThese motors do not incorporate motor protection and must be connected to a motor-protective circuit breaker which can be manually reset.\nSet the motor-protective circuit breaker to maximum 1.15 x I 1/1 .",
+    "raw_text": "These motors do not incorporate motor protection and must be connected to a motor-protective circuit breaker which can be manually reset.\nSet the motor-protective circuit breaker to maximum 1.15 x I 1/1 .",
+    "page_no": 7,
+    "headings": [
+      "Single-phase motors, 1 x 115 / 230 V, 60 Hz"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Other single-phase motors\nThese motors have built-in current- and temperature-dependent motor protection in accordance with IEC 60034-11 and require no further motor protection. The motor protection is of the TP 211 type which reacts to both slow- and quick-rising temperatures. The motor protection is automatically reset.",
+    "raw_text": "These motors have built-in current- and temperature-dependent motor protection in accordance with IEC 60034-11 and require no further motor protection. The motor protection is of the TP 211 type which reacts to both slow- and quick-rising temperatures. The motor protection is automatically reset.",
+    "page_no": 7,
+    "headings": [
+      "Other single-phase motors"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Three-phase motors up to 3 kW\nThese motors must be connected to a motor-protective circuit breaker which can be manually reset.\nSet the motor-protective circuit breaker to maximum 1.15 times full-load current.",
+    "raw_text": "These motors must be connected to a motor-protective circuit breaker which can be manually reset.\nSet the motor-protective circuit breaker to maximum 1.15 times full-load current.",
+    "page_no": 7,
+    "headings": [
+      "Three-phase motors up to 3 kW"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Three-phase motors of 3 kW and up\nThese motors have built-in thermistors (PTC)*. The thermistors are designed according to DIN 44082. The motor protection is of the TP 211 type which reacts to both slow- and quick-rising temperatures.\n* Applies only to motors for the following supply voltages:\n- 3 x 200 V / 346 V, 50 Hz\n- 3 x 200-220 V / 346-380 V, 60 Hz\n- 3 x 220-240 V / 380-415 V, 50 Hz.\nMotors for other supply voltages must be connected to a motor-protective circuit breaker as described for three-phase motors up to 3 kW.",
+    "raw_text": "These motors have built-in thermistors (PTC)*. The thermistors are designed according to DIN 44082. The motor protection is of the TP 211 type which reacts to both slow- and quick-rising temperatures.\n* Applies only to motors for the following supply voltages:\n- 3 x 200 V / 346 V, 50 Hz\n- 3 x 200-220 V / 346-380 V, 60 Hz\n- 3 x 220-240 V / 380-415 V, 50 Hz.\nMotors for other supply voltages must be connected to a motor-protective circuit breaker as described for three-phase motors up to 3 kW.",
+    "page_no": 7,
+    "headings": [
+      "Three-phase motors of 3 kW and up"
+    ],
+    "captions": [],
+    "content_types": [
+      "list_item",
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "7.3 Electrical connection\nCarry out the electrical connection as shown in the diagram inside the terminal box cover.\nFig. 9 Wiring diagram",
+    "raw_text": "Carry out the electrical connection as shown in the diagram inside the terminal box cover.\nFig. 9 Wiring diagram",
+    "page_no": 7,
+    "headings": [
+      "7.3 Electrical connection"
+    ],
+    "captions": [],
+    "content_types": [
+      "caption",
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "7.4 Frequency converter operation\nYou can connect three-phase motors to a frequency converter.\nDepending on the frequency converter type, this may cause increased acoustic noise from the motor. Furthermore, it may cause the motor to be exposed to detrimental voltage peaks.\nMG 71- and MG 80-based motors have no phase insulation* and must therefore be protected against voltage peaks higher than 650 V (peak value) between the supply terminals.\n* MG 71- and MG 80-based motors with phase insulation are available on request.\nThe above disturbances, i.e. both increased acoustic noise and detrimental voltage peaks, can be eliminated by fitting an LC filter between the frequency converter and the motor.\nFor further information, please contact the frequency converter supplier or Grundfos.",
+    "raw_text": "You can connect three-phase motors to a frequency converter.\nDepending on the frequency converter type, this may cause increased acoustic noise from the motor. Furthermore, it may cause the motor to be exposed to detrimental voltage peaks.\nMG 71- and MG 80-based motors have no phase insulation* and must therefore be protected against voltage peaks higher than 650 V (peak value) between the supply terminals.\n* MG 71- and MG 80-based motors with phase insulation are available on request.\nThe above disturbances, i.e. both increased acoustic noise and detrimental voltage peaks, can be eliminated by fitting an LC filter between the frequency converter and the motor.\nFor further information, please contact the frequency converter supplier or Grundfos.",
+    "page_no": 7,
+    "headings": [
+      "7.4 Frequency converter operation"
+    ],
+    "captions": [],
+    "content_types": [
+      "list_item",
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Self-priming pumps only:\nIf the pump is connected to a frequency converter, operation at low speed may cause the internal recirculation valve to open. This will result in a drop in pressure and flow.",
+    "raw_text": "If the pump is connected to a frequency converter, operation at low speed may cause the internal recirculation valve to open. This will result in a drop in pressure and flow.",
+    "page_no": 7,
+    "headings": [
+      "Self-priming pumps only:"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "8. Startup\nIf there is a risk of condensation in the motor, remove the motor drain plug before startup and keep the drain hole open during operation. See fig. 7.",
+    "raw_text": "If there is a risk of condensation in the motor, remove the motor drain plug before startup and keep the drain hole open during operation. See fig. 7.",
+    "page_no": 8,
+    "headings": [
+      "8. Startup"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "8.1 Non-self-priming pumps\nDo not start the pump until it has been filled with liquid.",
+    "raw_text": "Do not start the pump until it has been filled with liquid.",
+    "page_no": 8,
+    "headings": [
+      "8.1 Non-self-priming pumps"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Warning\nPay attention to the direction of the vent hole, and make sure that the escaping hot or cold liquid does not cause injury to persons or damage to the equipment.\n1. Close the isolating valve on the discharge side of the pump.\n2. Open the isolating valve in the suction pipe completely before starting the pump.\n3. Remove the filling plug. See fig. 10.\n4. Fill the pump housing and the suction pipe completely with liquid until a steady stream of liquid runs out of the filling hole.\n5. Fit and tighten the filling plug.\n6. Start the pump and slowly open the discharge isolating valve while the pump is running. This ensures venting and pressure build-up during startup.\nThe discharge isolating valve must be opened immediately after startup of the pump. Otherwise the temperature of the pumped liquid may become too high and cause damage to the equipment.\nFig. 10 Position of filling hole and drain hole\nIf it is difficult for the pump to build up pressure, it may be necessary to repeat steps 1 to 6.\nTM03 8774 1008",
+    "raw_text": "Pay attention to the direction of the vent hole, and make sure that the escaping hot or cold liquid does not cause injury to persons or damage to the equipment.\n1. Close the isolating valve on the discharge side of the pump.\n2. Open the isolating valve in the suction pipe completely before starting the pump.\n3. Remove the filling plug. See fig. 10.\n4. Fill the pump housing and the suction pipe completely with liquid until a steady stream of liquid runs out of the filling hole.\n5. Fit and tighten the filling plug.\n6. Start the pump and slowly open the discharge isolating valve while the pump is running. This ensures venting and pressure build-up during startup.\nThe discharge isolating valve must be opened immediately after startup of the pump. Otherwise the temperature of the pumped liquid may become too high and cause damage to the equipment.\nFig. 10 Position of filling hole and drain hole\nIf it is difficult for the pump to build up pressure, it may be necessary to repeat steps 1 to 6.\nTM03 8774 1008",
+    "page_no": 8,
+    "headings": [
+      "Warning"
+    ],
+    "captions": [],
+    "content_types": [
+      "caption",
+      "list_item",
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "8.2 Self-priming pumps\nDo not start the pump until it has been filled with liquid.",
+    "raw_text": "Do not start the pump until it has been filled with liquid.",
+    "page_no": 8,
+    "headings": [
+      "8.2 Self-priming pumps"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Warning\nPay attention to the direction of the vent hole, and make sure that the escaping hot or cold liquid does not cause injury to persons or damage to the equipment.\n1. Make sure that the discharge pipe is empty and that the height from the centre of the suction port to the first tapping point (H 1 ) meets the requirements. See section 6.2.2 Pipe connection (self-priming pumps) .\n2. Open the isolating valves in the suction and discharge pipes.\n3. Open a tap close to the pump so that air can escape.\n4. Remove the filling plug in the pump. See fig. 11.\n5. If a filling plug has been installed in the discharge pipe, remove this plug and use this hole for filling. Otherwise use the filling hole in the pump.\n6. Fill the pump housing and the suction pipe completely with liquid until a steady stream of liquid runs out of the filling hole.\n7. Fit and tighten the filling plug(s).\n8. Start the pump and wait until liquid is pumped. If you have used the filling hole in the pump, it may be necessary to repeat steps 1 to 8 to ensure that the pump is completely filled with liquid.\nIf connected to a frequency converter, the pump must run at maximum speed (3450 min -1 ) during startup.\n9. If the pump does not operate properly after several start attempts, see section 12. Fault finding .\nTM05 8169 2013\nFig. 11 Position of filling holes and drain hole\nThe pump is allowed to run for 5 minutes to attempt to suck liquid. If the pump does not build up pressure and flow, repeat steps 1 to 8.",
+    "raw_text": "Pay attention to the direction of the vent hole, and make sure that the escaping hot or cold liquid does not cause injury to persons or damage to the equipment.\n1. Make sure that the discharge pipe is empty and that the height from the centre of the suction port to the first tapping point (H 1 ) meets the requirements. See section 6.2.2 Pipe connection (self-priming pumps) .\n2. Open the isolating valves in the suction and discharge pipes.\n3. Open a tap close to the pump so that air can escape.\n4. Remove the filling plug in the pump. See fig. 11.\n5. If a filling plug has been installed in the discharge pipe, remove this plug and use this hole for filling. Otherwise use the filling hole in the pump.\n6. Fill the pump housing and the suction pipe completely with liquid until a steady stream of liquid runs out of the filling hole.\n7. Fit and tighten the filling plug(s).\n8. Start the pump and wait until liquid is pumped. If you have used the filling hole in the pump, it may be necessary to repeat steps 1 to 8 to ensure that the pump is completely filled with liquid.\nIf connected to a frequency converter, the pump must run at maximum speed (3450 min -1 ) during startup.\n9. If the pump does not operate properly after several start attempts, see section 12. Fault finding .\nTM05 8169 2013\nFig. 11 Position of filling holes and drain hole\nThe pump is allowed to run for 5 minutes to attempt to suck liquid. If the pump does not build up pressure and flow, repeat steps 1 to 8.",
+    "page_no": 8,
+    "headings": [
+      "Warning"
+    ],
+    "captions": [],
+    "content_types": [
+      "caption",
+      "list_item",
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "8.3 Checking the direction of rotation\nThe description below applies to three-phase motors only.\nThe motor fan cover has an installation indicator. See fig. 12. Based on the motor cooling air, it indicates the direction of rotation of the motor.\nBefore the motor is started for the first time or if the position of the indicator has been changed, the indicator function should be checked, for instance by moving the indicator field with a finger.\nTo determine whether the direction of rotation is correct or wrong, compare the indication with the table below.\nBlack, Direction of rotation = Correct. White/reflecting, Direction of rotation = Wrong*\n* To reverse the direction of rotation, switch off the power supply and interchange any two of the incoming supply wires.\nTM04 0360 1008\nFig. 12 Installation indicator\nYou can place the indicator in various positions on the motor, but do not place it between the cooling fins close to the screws that hold the fan cover.\nThe correct direction of rotation is also shown by arrows on the motor fan cover.",
+    "raw_text": "The description below applies to three-phase motors only.\nThe motor fan cover has an installation indicator. See fig. 12. Based on the motor cooling air, it indicates the direction of rotation of the motor.\nBefore the motor is started for the first time or if the position of the indicator has been changed, the indicator function should be checked, for instance by moving the indicator field with a finger.\nTo determine whether the direction of rotation is correct or wrong, compare the indication with the table below.\nBlack, Direction of rotation = Correct. White/reflecting, Direction of rotation = Wrong*\n* To reverse the direction of rotation, switch off the power supply and interchange any two of the incoming supply wires.\nTM04 0360 1008\nFig. 12 Installation indicator\nYou can place the indicator in various positions on the motor, but do not place it between the cooling fins close to the screws that hold the fan cover.\nThe correct direction of rotation is also shown by arrows on the motor fan cover.",
+    "page_no": 9,
+    "headings": [
+      "8.3 Checking the direction of rotation"
+    ],
+    "captions": [],
+    "content_types": [
+      "caption",
+      "table",
+      "text"
+    ],
+    "contains_table": true
+  },
+  {
+    "text": "Warning\nBefore starting work on the pump, switch off the power supply. Make sure that the power supply cannot be accidentally switched on.\nMake sure that the escaping water does not cause injury to persons or damage to the equipment.\nThe internal pump parts are maintenance-free. You must keep the motor clean in order to ensure adequate cooling of the motor. If the pump is installed in dusty environments, clean and check the pump regularly. Take the enclosure class of the motor into account when cleaning.\nThe motor has maintenance-free, greased-for-life bearings.",
+    "raw_text": "Before starting work on the pump, switch off the power supply. Make sure that the power supply cannot be accidentally switched on.\nMake sure that the escaping water does not cause injury to persons or damage to the equipment.\nThe internal pump parts are maintenance-free. You must keep the motor clean in order to ensure adequate cooling of the motor. If the pump is installed in dusty environments, clean and check the pump regularly. Take the enclosure class of the motor into account when cleaning.\nThe motor has maintenance-free, greased-for-life bearings.",
+    "page_no": 9,
+    "headings": [
+      "Warning"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "9.1 Frost protection\nPumps which are not being used during periods of frost must be drained to avoid damage.\nRemove the filling and drain plugs from the pump. See fig. 10.\nDo not refit the plugs until the pump is taken into operation again.\nBefore startup after a period of inactivity, the pump and the suction pipe must be completely filled with liquid. See section 8. Startup .",
+    "raw_text": "Pumps which are not being used during periods of frost must be drained to avoid damage.\nRemove the filling and drain plugs from the pump. See fig. 10.\nDo not refit the plugs until the pump is taken into operation again.\nBefore startup after a period of inactivity, the pump and the suction pipe must be completely filled with liquid. See section 8. Startup .",
+    "page_no": 9,
+    "headings": [
+      "9.1 Frost protection"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "9.2 Cleaning\nPrior to a long period of inactivity, flush the pump with clean water to prevent corrosion and deposits in the pump.\nUse acetic acid to remove possible lime deposits from the pump.",
+    "raw_text": "Prior to a long period of inactivity, flush the pump with clean water to prevent corrosion and deposits in the pump.\nUse acetic acid to remove possible lime deposits from the pump.",
+    "page_no": 9,
+    "headings": [
+      "9.2 Cleaning"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "10. Service\nIf used for a liquid which is injurious to health or toxic, the pump will be classified as contaminated.\nBefore the pump is returned to Grundfos for service, the safety declaration at the end of these instructions must be filled in by authorised personnel and attached to the pump in a visible position.\nIf Grundfos is requested to service the pump, it must be cleaned before it is returned.\nIf proper cleaning is not possible, all relevant information about the pumped liquid must be provided.\nIf the above is not fulfilled, Grundfos can refuse to accept the pump for service.\nPossible costs of returning the pump are to be paid by the customer.\nThe safety declaration can be found at the end of these instructions (only in English).",
+    "raw_text": "If used for a liquid which is injurious to health or toxic, the pump will be classified as contaminated.\nBefore the pump is returned to Grundfos for service, the safety declaration at the end of these instructions must be filled in by authorised personnel and attached to the pump in a visible position.\nIf Grundfos is requested to service the pump, it must be cleaned before it is returned.\nIf proper cleaning is not possible, all relevant information about the pumped liquid must be provided.\nIf the above is not fulfilled, Grundfos can refuse to accept the pump for service.\nPossible costs of returning the pump are to be paid by the customer.\nThe safety declaration can be found at the end of these instructions (only in English).",
+    "page_no": 10,
+    "headings": [
+      "10. Service"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "11.1 Enclosure class\n- IP55 (standard)\n- IPx5 (with motor drain plug removed)",
+    "raw_text": "- IP55 (standard)\n- IPx5 (with motor drain plug removed)",
+    "page_no": 10,
+    "headings": [
+      "11.1 Enclosure class"
+    ],
+    "captions": [],
+    "content_types": [
+      "list_item"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "11.2 Sound pressure level\nThe sound pressure level of the pumps is lower than 70 dB(A).",
+    "raw_text": "The sound pressure level of the pumps is lower than 70 dB(A).",
+    "page_no": 10,
+    "headings": [
+      "11.2 Sound pressure level"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "11.3 Ambient temperature\nSelf-priming pumps:\nThe liquid temperature must not exceed 60 °C (140 °F).\n55 °C (131 °F) 2), Liquid temperature = 90 °C (194 °F) 1) + 2). 50 °C (122 °F) 2), Liquid temperature = 100 °C (212 °F) 1) + 2). 45 °C (113 °F), Liquid temperature = 110 °C (230 °F) 1). 40 °C (104 °F), Liquid temperature = 120 °C (248 °F) 1)\n- 1) Only the stainless-steel variant (EN 1.4301 / AISI 304) is suitable for pumping liquids with temperatures above 90 °C (194 °F).\n- 2) Does not apply for pumps with PSE approval (pumps approved for use in Japan).\nIf the ambient temperature exceeds 55 °C (45 °C for pumps with PSE approval), do not fully load the motor due to the risk of overheating. In such cases, you may need to derate the motor output or use an oversize motor with a higher rated output. You can derate the CM pumps in relation to the ambient temperature without any consequence. Contact Grundfos for further information. See fig. 13.\nFig. 13 Derating in relation to the ambient temperature",
+    "raw_text": "Self-priming pumps:\nThe liquid temperature must not exceed 60 °C (140 °F).\n55 °C (131 °F) 2), Liquid temperature = 90 °C (194 °F) 1) + 2). 50 °C (122 °F) 2), Liquid temperature = 100 °C (212 °F) 1) + 2). 45 °C (113 °F), Liquid temperature = 110 °C (230 °F) 1). 40 °C (104 °F), Liquid temperature = 120 °C (248 °F) 1)\n- 1) Only the stainless-steel variant (EN 1.4301 / AISI 304) is suitable for pumping liquids with temperatures above 90 °C (194 °F).\n- 2) Does not apply for pumps with PSE approval (pumps approved for use in Japan).\nIf the ambient temperature exceeds 55 °C (45 °C for pumps with PSE approval), do not fully load the motor due to the risk of overheating. In such cases, you may need to derate the motor output or use an oversize motor with a higher rated output. You can derate the CM pumps in relation to the ambient temperature without any consequence. Contact Grundfos for further information. See fig. 13.\nFig. 13 Derating in relation to the ambient temperature",
+    "page_no": 10,
+    "headings": [
+      "11.3 Ambient temperature"
+    ],
+    "captions": [],
+    "content_types": [
+      "caption",
+      "list_item",
+      "table",
+      "text"
+    ],
+    "contains_table": true
+  },
+  {
+    "text": "11.4 Maximum system pressure and permissible liquid temperature\n\nCast iron (EN-GJL-200), Shaft seal = AVBx. Cast iron (EN-GJL-200), Permissible liquid temperature* = -20 to 40 °C 41 to 90 °C. Cast iron (EN-GJL-200), Permissible liquid temperature* = (-4 to 104 °F) (105.8 to 194 °F). Cast iron (EN-GJL-200), Maximum system pressure = 10 bar 6 bar. Cast iron (EN-GJL-200), Maximum system pressure = (145 psi) (87 psi). Cast iron (EN-GJL-200), Shaft seal = AQQx. Cast iron (EN-GJL-200), Permissible liquid temperature* = -20 to 90 °C. Cast iron (EN-GJL-200), Permissible liquid temperature* = (-4 to 194 °F). Cast iron (EN-GJL-200), Maximum system pressure = 10 bar. Cast iron (EN-GJL-200), Maximum system pressure = (145 psi). Stainless steel (EN 1.4301 / AISI 304), Shaft seal = AVBx. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = -20 to 40 °C 41 to 90 °C. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = (-4 to 104 °F) (105.8 to 194 °F). Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = 10 bar 6 bar. Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = (145 psi) (87 psi). Stainless steel (EN 1.4301 / AISI 304), Shaft seal = AQQx. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = -20*** to 90 °C 91 to 120 °C**. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = (-4 to 194 °F) (195.8 to 248 °F). Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = 16 bar 10 bar. Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = (232 psi)",
+    "raw_text": "\nCast iron (EN-GJL-200), Shaft seal = AVBx. Cast iron (EN-GJL-200), Permissible liquid temperature* = -20 to 40 °C 41 to 90 °C. Cast iron (EN-GJL-200), Permissible liquid temperature* = (-4 to 104 °F) (105.8 to 194 °F). Cast iron (EN-GJL-200), Maximum system pressure = 10 bar 6 bar. Cast iron (EN-GJL-200), Maximum system pressure = (145 psi) (87 psi). Cast iron (EN-GJL-200), Shaft seal = AQQx. Cast iron (EN-GJL-200), Permissible liquid temperature* = -20 to 90 °C. Cast iron (EN-GJL-200), Permissible liquid temperature* = (-4 to 194 °F). Cast iron (EN-GJL-200), Maximum system pressure = 10 bar. Cast iron (EN-GJL-200), Maximum system pressure = (145 psi). Stainless steel (EN 1.4301 / AISI 304), Shaft seal = AVBx. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = -20 to 40 °C 41 to 90 °C. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = (-4 to 104 °F) (105.8 to 194 °F). Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = 10 bar 6 bar. Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = (145 psi) (87 psi). Stainless steel (EN 1.4301 / AISI 304), Shaft seal = AQQx. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = -20*** to 90 °C 91 to 120 °C**. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = (-4 to 194 °F) (195.8 to 248 °F). Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = 16 bar 10 bar. Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = (232 psi)",
+    "page_no": 11,
+    "headings": [
+      "11.4 Maximum system pressure and permissible liquid temperature"
+    ],
+    "captions": [],
+    "content_types": [
+      "table"
+    ],
+    "contains_table": true
+  },
+  {
+    "text": "11.4 Maximum system pressure and permissible liquid temperature\n (145 psi). Stainless steel (EN 1.4401 / AISI 316), Shaft seal = AVBx. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = -20 to 40 °C 41 to 90 °C. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = (-4 to 104 °F) (105.8 to 194 °F). Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = 10 bar 6 bar. Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = (145 psi) (87 psi). Stainless steel (EN 1.4401 / AISI 316), Shaft seal = AQQx. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = -20*** to 90 °C 91 to 120 °C**. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = (-4 to 194 °F) (195.8 to 248 °F). Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = 16 bar 10 bar. Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = (232 psi) (145 psi)",
+    "raw_text": " (145 psi). Stainless steel (EN 1.4401 / AISI 316), Shaft seal = AVBx. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = -20 to 40 °C 41 to 90 °C. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = (-4 to 104 °F) (105.8 to 194 °F). Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = 10 bar 6 bar. Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = (145 psi) (87 psi). Stainless steel (EN 1.4401 / AISI 316), Shaft seal = AQQx. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = -20*** to 90 °C 91 to 120 °C**. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = (-4 to 194 °F) (195.8 to 248 °F). Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = 16 bar 10 bar. Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = (232 psi) (145 psi)",
+    "page_no": 11,
+    "headings": [
+      "11.4 Maximum system pressure and permissible liquid temperature"
+    ],
+    "captions": [],
+    "content_types": [
+      "table"
+    ],
+    "contains_table": true
+  },
+  {
+    "text": "11.5 Minimum inlet pressure\nYou can calculate the minimum inlet pressure \"H\" in metres head required during operation to avoid cavitation in the pump from the following formula:\nH = p b x 10.2 - NPSH - H f  - H v - H s\np b =\nBarometric pressure in bar.\nThe barometric pressure can be set to 1 bar.\nIn closed systems, p b  indicates the system pressure in bar.\n- NPSH = Net Positive Suction Head in metres head. To be read from the NPSH curves on pages 15 to 17 at the highest flow the pump will be delivering.\n- Hf = Friction loss in suction pipe in metres head.\n- Hv = Vapour pressure in metres head. See fig. 9, page 18. t m = liquid temperature.\nHs = Safety margin = min. 0.5 metres head.\nIf the calculated value of \"H\" is positive, the pump can operate with a maximum suction lift of \"H\" metres.\nIf the calculated value of \"H\" is negative, a minimum suction head of \"H\" metres is required during operation to avoid cavitation.",
+    "raw_text": "You can calculate the minimum inlet pressure \"H\" in metres head required during operation to avoid cavitation in the pump from the following formula:\nH = p b x 10.2 - NPSH - H f  - H v - H s\np b =\nBarometric pressure in bar.\nThe barometric pressure can be set to 1 bar.\nIn closed systems, p b  indicates the system pressure in bar.\n- NPSH = Net Positive Suction Head in metres head. To be read from the NPSH curves on pages 15 to 17 at the highest flow the pump will be delivering.\n- Hf = Friction loss in suction pipe in metres head.\n- Hv = Vapour pressure in metres head. See fig. 9, page 18. t m = liquid temperature.\nHs = Safety margin = min. 0.5 metres head.\nIf the calculated value of \"H\" is positive, the pump can operate with a maximum suction lift of \"H\" metres.\nIf the calculated value of \"H\" is negative, a minimum suction head of \"H\" metres is required during operation to avoid cavitation.",
+    "page_no": 11,
+    "headings": [
+      "11.5 Minimum inlet pressure"
+    ],
+    "captions": [],
+    "content_types": [
+      "list_item",
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Example\np b  = 1 bar.\nPump type: CM 3, 50 Hz.\nFlow rate: 4 m 3 /h.\nNPSH (from fig. 5, page 15): 3.3 metres head.\nHf  = 3.0 metres head.\nLiquid temperature: 90 °C.\nHv  (from fig. 9, page 18): 7.2 metres head.\nH = p b x 10.2 - NPSH - H f  - H v - H s  [metres head].\nH = 1 x 10.2 - 3.0 - 3.3 - 7.2 - 0.5 = -3.8 metres head.\nThis means that a suction head of 3.8 metres is required during operation.\nPressure calculated in bar: 3.8 x 0.0981 = 0.37 bar. Pressure calculated in kPa: 3.8 x 9.81 = 37.3 kPa.",
+    "raw_text": "p b  = 1 bar.\nPump type: CM 3, 50 Hz.\nFlow rate: 4 m 3 /h.\nNPSH (from fig. 5, page 15): 3.3 metres head.\nHf  = 3.0 metres head.\nLiquid temperature: 90 °C.\nHv  (from fig. 9, page 18): 7.2 metres head.\nH = p b x 10.2 - NPSH - H f  - H v - H s  [metres head].\nH = 1 x 10.2 - 3.0 - 3.3 - 7.2 - 0.5 = -3.8 metres head.\nThis means that a suction head of 3.8 metres is required during operation.\nPressure calculated in bar: 3.8 x 0.0981 = 0.37 bar. Pressure calculated in kPa: 3.8 x 9.81 = 37.3 kPa.",
+    "page_no": 11,
+    "headings": [
+      "Example"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "11.6 Maximum inlet pressure\nThe actual inlet pressure plus the pressure when the pump is operating against a closed valve must always be lower than the maximum system pressure.",
+    "raw_text": "The actual inlet pressure plus the pressure when the pump is operating against a closed valve must always be lower than the maximum system pressure.",
+    "page_no": 11,
+    "headings": [
+      "11.6 Maximum inlet pressure"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Warning\nBefore removing the terminal box cover, switch off the power supply. Make sure that the power supply cannot be accidentally switched on.\nThe pumped liquid may be scalding hot and under high pressure. Before any removal or dismantling of the pump, the system must therefore be drained, or the isolating valves on either side of the pump must be closed.",
+    "raw_text": "Before removing the terminal box cover, switch off the power supply. Make sure that the power supply cannot be accidentally switched on.\nThe pumped liquid may be scalding hot and under high pressure. Before any removal or dismantling of the pump, the system must therefore be drained, or the isolating valves on either side of the pump must be closed.",
+    "page_no": 12,
+    "headings": [
+      "Warning"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Warning\n\n1.,  = The pump does not run.. 1., Cause = a). 1., Cause = Supply failure.. 1., Remedy = Switch on the switch. Check cables and cable connections for defects and loose connections.. 1.,  = The pump does not run.. 1., Cause = b). 1., Cause = Motor protection tripped.. 1., Remedy = See 2. a), b), c), d), e).. 1.,  = The pump does not run.. 1., Cause = c). 1., Cause = Control-current circuit defective.. 1., Remedy = Repair or replace the control-current circuit.. 2.,  = Motor-protective circuit breaker has tripped (trips immediately when power supply is switched on).. 2., Cause = a). 2., Cause = Contacts of the motor-protective circuit breaker or magnet coil defective.. 2., Remedy = Replace the contacts of the motor-protective circuit breaker, the magnet coil or the entire motor-protective circuit breaker.. 2.,  = Motor-protective circuit breaker has tripped (trips immediately when power supply is switched on).. 2., Cause = b). 2., Cause = Cable connection is loose or faulty.. 2., Remedy = Check cables and cable connections for defects, and replace the fuses.. 2.,  = Motor-protective circuit breaker has tripped (trips immediately when power supply is switched on).. 2., Cause = c). 2., Cause = Motor winding is defective.. 2., Remedy = Repair or replace the motor.. 2.,  = Motor-protective circuit breaker has tripped (trips immediately when power supply is switched on).. 2., Cause = d). 2., Cause = The pump is mechanically blocked.. 2., Remedy = Switch off the power supply, and clean or repair the pump.. 2.,  = Motor-protective circuit breaker has tripped (trips immediately when power supply is switched on).. 2., Cause = e). 2., Cause = The setting of the motor-protective circuit breaker is too low.. 2., Remedy = Set the motor-protective circuit breaker according to the rated current of the motor (I 1/1 ). See nameplate.. 3.,  = The motor-protective circuit breaker trips occasionally.. 3., Cause = a).",
+    "raw_text": "\n1.,  = The pump does not run.. 1., Cause = a). 1., Cause = Supply failure.. 1., Remedy = Switch on the switch. Check cables and cable connections for defects and loose connections.. 1.,  = The pump does not run.. 1., Cause = b). 1., Cause = Motor protection tripped.. 1., Remedy = See 2. a), b), c), d), e).. 1.,  = The pump does not run.. 1., Cause = c). 1., Cause = Control-current circuit defective.. 1., Remedy = Repair or replace the control-current circuit.. 2.,  = Motor-protective circuit breaker has tripped (trips immediately when power supply is switched on).. 2., Cause = a). 2., Cause = Contacts of the motor-protective circuit breaker or magnet coil defective.. 2., Remedy = Replace the contacts of the motor-protective circuit breaker, the magnet coil or the entire motor-protective circuit breaker.. 2.,  = Motor-protective circuit breaker has tripped (trips immediately when power supply is switched on).. 2., Cause = b). 2., Cause = Cable connection is loose or faulty.. 2., Remedy = Check cables and cable connections for defects, and replace the fuses.. 2.,  = Motor-protective circuit breaker has tripped (trips immediately when power supply is switched on).. 2., Cause = c). 2., Cause = Motor winding is defective.. 2., Remedy = Repair or replace the motor.. 2.,  = Motor-protective circuit breaker has tripped (trips immediately when power supply is switched on).. 2., Cause = d). 2., Cause = The pump is mechanically blocked.. 2., Remedy = Switch off the power supply, and clean or repair the pump.. 2.,  = Motor-protective circuit breaker has tripped (trips immediately when power supply is switched on).. 2., Cause = e). 2., Cause = The setting of the motor-protective circuit breaker is too low.. 2., Remedy = Set the motor-protective circuit breaker according to the rated current of the motor (I 1/1 ). See nameplate.. 3.,  = The motor-protective circuit breaker trips occasionally.. 3., Cause = a).",
+    "page_no": 12,
+    "headings": [
+      "Warning"
+    ],
+    "captions": [],
+    "content_types": [
+      "table"
+    ],
+    "contains_table": true
+  },
+  {
+    "text": "Warning\n 3., Cause = The setting of the motor-protective circuit breaker is too low.. 3., Remedy = See 2. e).. 3.,  = The motor-protective circuit breaker trips occasionally.. 3., Cause = b). 3., Cause = Periodic supply fault.. 3., Remedy = See 2. b).. 3.,  = The motor-protective circuit breaker trips occasionally.. 3., Cause = c). 3., Cause = Periodically low voltage.. 3., Remedy = Check cables and cable connections for defects and loose connections. Check that the power supply cable of the pump is correctly sized.. 4.,  = The motor-protective circuit breaker has not tripped, but the pump is inadvertently out of operation.. 4., Cause = a). 4., Cause = See 1. a), b), c) and 2. d).. 4., Remedy = . 5.,  = The pump performance is unstable.. 5., Cause = a). 5., Cause = Pump inlet pressure too low.. 5., Remedy = Check the inlet conditions of the pump.. 5.,  = The pump performance is unstable.. 5., Cause = b). 5., Cause = Suction pipe is partly blocked by impurities.. 5., Remedy = Remove and clean the suction pipe.. 5.,  = The pump performance is unstable.. 5., Cause = c). 5., Cause = Leakage in suction pipe.. 5., Remedy = Remove and repair the suction pipe.. 5.,  = The pump performance is unstable.. 5., Cause = d). 5., Cause = Air in suction pipe or pump.. 5., Remedy = Vent the suction pipe or pump. Check the inlet conditions of the pump.. 6.,  = The pump performance is unstable, and the pump is noisy.. 6., Cause = Self-priming pumps only:. 6., Cause = Self-priming pumps only:. 6., Remedy = . 6.,  = The pump performance is unstable, and the pump is noisy.. 6., Cause = a). 6., Cause = The differential pressure across the pump is too low.. 6., Remedy = Close the tap gradually until the discharge pressure is stable and the noise has ceased.",
+    "raw_text": " 3., Cause = The setting of the motor-protective circuit breaker is too low.. 3., Remedy = See 2. e).. 3.,  = The motor-protective circuit breaker trips occasionally.. 3., Cause = b). 3., Cause = Periodic supply fault.. 3., Remedy = See 2. b).. 3.,  = The motor-protective circuit breaker trips occasionally.. 3., Cause = c). 3., Cause = Periodically low voltage.. 3., Remedy = Check cables and cable connections for defects and loose connections. Check that the power supply cable of the pump is correctly sized.. 4.,  = The motor-protective circuit breaker has not tripped, but the pump is inadvertently out of operation.. 4., Cause = a). 4., Cause = See 1. a), b), c) and 2. d).. 4., Remedy = . 5.,  = The pump performance is unstable.. 5., Cause = a). 5., Cause = Pump inlet pressure too low.. 5., Remedy = Check the inlet conditions of the pump.. 5.,  = The pump performance is unstable.. 5., Cause = b). 5., Cause = Suction pipe is partly blocked by impurities.. 5., Remedy = Remove and clean the suction pipe.. 5.,  = The pump performance is unstable.. 5., Cause = c). 5., Cause = Leakage in suction pipe.. 5., Remedy = Remove and repair the suction pipe.. 5.,  = The pump performance is unstable.. 5., Cause = d). 5., Cause = Air in suction pipe or pump.. 5., Remedy = Vent the suction pipe or pump. Check the inlet conditions of the pump.. 6.,  = The pump performance is unstable, and the pump is noisy.. 6., Cause = Self-priming pumps only:. 6., Cause = Self-priming pumps only:. 6., Remedy = . 6.,  = The pump performance is unstable, and the pump is noisy.. 6., Cause = a). 6., Cause = The differential pressure across the pump is too low.. 6., Remedy = Close the tap gradually until the discharge pressure is stable and the noise has ceased.",
+    "page_no": 12,
+    "headings": [
+      "Warning"
+    ],
+    "captions": [],
+    "content_types": [
+      "table"
+    ],
+    "contains_table": true
+  },
+  {
+    "text": "Warning\n\n7.,  = The pump runs, but gives no water.. 7., Cause = a). 7., Cause = Pump inlet pressure too low.. 7., Remedy = See 5. a).. 7.,  = The pump runs, but gives no water.. 7., Cause = b). 7., Cause = The suction pipe is partly clogged by impurities.. 7., Remedy = See 5. b).. 7.,  = The pump runs, but gives no water.. 7., Cause = c). 7., Cause = The foot or non-return valve is stuck in its closed position.. 7., Remedy = Remove and clean, repair or replace the valve.. 7.,  = The pump runs, but gives no water.. 7., Cause = d). 7., Cause = Leakage in suction pipe.. 7., Remedy = See 5. c).. 7.,  = The pump runs, but gives no water.. 7., Cause = e). 7., Cause = Air in suction pipe or pump.. 7., Remedy = See 5. d).. 8.,  = When startup is attempted, the pump will start, but delivers no pressure or flow.. 8., Cause = Self-priming pumps only:. 8., Cause = Self-priming pumps only:. 8., Remedy = . 8.,  = When startup is attempted, the pump will start, but delivers no pressure or flow.. 8., Cause = a). 8., Cause = Liquid column above non-return valve in discharge pipe prevents the pump from self-priming.. 8., Remedy = Empty the discharge pipe. Make sure that the non-return valve does not hold back liquid in the discharge pipe. Repeat the startup procedure in section 6.2.2 Pipe connection (self-priming pumps) .. 8.,  = When startup is attempted, the pump will start, but delivers no pressure or flow.. 8., Cause = b). 8., Cause = Suction pipe draws in air.. 8., Remedy = Make sure that the suction pipe is airtight from pump to liquid level. Repeat the startup procedure in section 6.2.2 Pipe connection (self-priming pumps) .. 9.,  = The pump runs, but does not deliver the rated",
+    "raw_text": "\n7.,  = The pump runs, but gives no water.. 7., Cause = a). 7., Cause = Pump inlet pressure too low.. 7., Remedy = See 5. a).. 7.,  = The pump runs, but gives no water.. 7., Cause = b). 7., Cause = The suction pipe is partly clogged by impurities.. 7., Remedy = See 5. b).. 7.,  = The pump runs, but gives no water.. 7., Cause = c). 7., Cause = The foot or non-return valve is stuck in its closed position.. 7., Remedy = Remove and clean, repair or replace the valve.. 7.,  = The pump runs, but gives no water.. 7., Cause = d). 7., Cause = Leakage in suction pipe.. 7., Remedy = See 5. c).. 7.,  = The pump runs, but gives no water.. 7., Cause = e). 7., Cause = Air in suction pipe or pump.. 7., Remedy = See 5. d).. 8.,  = When startup is attempted, the pump will start, but delivers no pressure or flow.. 8., Cause = Self-priming pumps only:. 8., Cause = Self-priming pumps only:. 8., Remedy = . 8.,  = When startup is attempted, the pump will start, but delivers no pressure or flow.. 8., Cause = a). 8., Cause = Liquid column above non-return valve in discharge pipe prevents the pump from self-priming.. 8., Remedy = Empty the discharge pipe. Make sure that the non-return valve does not hold back liquid in the discharge pipe. Repeat the startup procedure in section 6.2.2 Pipe connection (self-priming pumps) .. 8.,  = When startup is attempted, the pump will start, but delivers no pressure or flow.. 8., Cause = b). 8., Cause = Suction pipe draws in air.. 8., Remedy = Make sure that the suction pipe is airtight from pump to liquid level. Repeat the startup procedure in section 6.2.2 Pipe connection (self-priming pumps) .. 9.,  = The pump runs, but does not deliver the rated",
+    "page_no": 13,
+    "headings": [
+      "Warning"
+    ],
+    "captions": [],
+    "content_types": [
+      "table"
+    ],
+    "contains_table": true
+  },
+  {
+    "text": "Warning\n flow.. 9., Cause = Self-priming pumps only:. 9., Cause = Self-priming pumps only:. 9., Remedy = . 9.,  = The pump runs, but does not deliver the rated flow.. 9., Cause = a). 9., Cause = The internal valve did not close.. 9., Remedy = Close the tap gradually until a sudden rise in pressure or flow can be seen. Then open the tap gradually until the required flow is reached.. 10.,  = The pump runs backwards when switched off.. 10., Cause = a). 10., Cause = Leakage in suction pipe.. 10., Remedy = See 5. c).. 10.,  = The pump runs backwards when switched off.. 10., Cause = b). 10., Cause = Foot or non-return valve defective.. 10., Remedy = See 7. c).. 10.,  = The pump runs backwards when switched off.. 10., Cause = c). 10., Cause = The foot valve is stuck in completely or partly open position.. 10., Remedy = See 7. c).. 11.,  = The pump runs with reduced performance.. 11., Cause = a). 11., Cause = Wrong direction of rotation.. 11., Remedy = Three-phase pumps only: Switch off the power supply with the external circuit breaker, and interchange two phases in the pump terminal box. See also section 8.3 Checking the direction of rotation .",
+    "raw_text": " flow.. 9., Cause = Self-priming pumps only:. 9., Cause = Self-priming pumps only:. 9., Remedy = . 9.,  = The pump runs, but does not deliver the rated flow.. 9., Cause = a). 9., Cause = The internal valve did not close.. 9., Remedy = Close the tap gradually until a sudden rise in pressure or flow can be seen. Then open the tap gradually until the required flow is reached.. 10.,  = The pump runs backwards when switched off.. 10., Cause = a). 10., Cause = Leakage in suction pipe.. 10., Remedy = See 5. c).. 10.,  = The pump runs backwards when switched off.. 10., Cause = b). 10., Cause = Foot or non-return valve defective.. 10., Remedy = See 7. c).. 10.,  = The pump runs backwards when switched off.. 10., Cause = c). 10., Cause = The foot valve is stuck in completely or partly open position.. 10., Remedy = See 7. c).. 11.,  = The pump runs with reduced performance.. 11., Cause = a). 11., Cause = Wrong direction of rotation.. 11., Remedy = Three-phase pumps only: Switch off the power supply with the external circuit breaker, and interchange two phases in the pump terminal box. See also section 8.3 Checking the direction of rotation .",
+    "page_no": 13,
+    "headings": [
+      "Warning"
+    ],
+    "captions": [],
+    "content_types": [
+      "table"
+    ],
+    "contains_table": true
+  },
+  {
+    "text": "13.1 Service documentation\nService documentation is available in Grundfos Product Center\n(http://product-selection.grundfos.com/).\nIf you have any questions, please contact the nearest Grundfos company or service workshop.",
+    "raw_text": "Service documentation is available in Grundfos Product Center\n(http://product-selection.grundfos.com/).\nIf you have any questions, please contact the nearest Grundfos company or service workshop.",
+    "page_no": 13,
+    "headings": [
+      "13.1 Service documentation"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "14. Disposal\nThis product or parts of it must be disposed of in an environmentally sound way:\n1. Use the public or private waste collection service.\n2. If this is not possible, contact the nearest Grundfos company or service workshop.\nSubject to alterations.\n1\nFig. 3 Nameplate for motor\nFig. 4 NPSH curve for CM 1\nFig. 7 NPSH curves for CM 15\nFig. 9 Vapour pressure\n1",
+    "raw_text": "This product or parts of it must be disposed of in an environmentally sound way:\n1. Use the public or private waste collection service.\n2. If this is not possible, contact the nearest Grundfos company or service workshop.\nSubject to alterations.\n1\nFig. 3 Nameplate for motor\nFig. 4 NPSH curve for CM 1\nFig. 7 NPSH curves for CM 15\nFig. 9 Vapour pressure\n1",
+    "page_no": 13,
+    "headings": [
+      "14. Disposal"
+    ],
+    "captions": [],
+    "content_types": [
+      "caption",
+      "list_item",
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Safety declaration\nPlease copy, fill in and sign this sheet and attach it to the pump returned for service.",
+    "raw_text": "Please copy, fill in and sign this sheet and attach it to the pump returned for service.",
+    "page_no": 19,
+    "headings": [
+      "Safety declaration"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Media and application\nWhich media has the pump been used for: ______________________\nIn which application has the pump been used: ____________________",
+    "raw_text": "Which media has the pump been used for: ______________________\nIn which application has the pump been used: ____________________",
+    "page_no": 19,
+    "headings": [
+      "Media and application"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Fault description\nIf possible please make a circle around the faulty part. (In case of an electrical fault, please mark the terminal box.)\nPlease give a short description of the fault:\nWe hereby declare that this product is free from hazardous chemicals, biological and radioactive substances.\n_________________________\n_________________________\nDate and signature\nCompany stamp\nO",
+    "raw_text": "If possible please make a circle around the faulty part. (In case of an electrical fault, please mark the terminal box.)\nPlease give a short description of the fault:\nWe hereby declare that this product is free from hazardous chemicals, biological and radioactive substances.\n_________________________\n_________________________\nDate and signature\nCompany stamp\nO",
+    "page_no": 19,
+    "headings": [
+      "Fault description"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Argentina\nBombas GRUNDFOS de Argentina S.A. Ruta Panamericana km. 37.500 Centro Industrial Garin 1619 Garín Pcia. de B.A. Phone: +54-3327 414 444 Telefax: +54-3327 45 3190",
+    "raw_text": "Bombas GRUNDFOS de Argentina S.A. Ruta Panamericana km. 37.500 Centro Industrial Garin 1619 Garín Pcia. de B.A. Phone: +54-3327 414 444 Telefax: +54-3327 45 3190",
+    "page_no": 20,
+    "headings": [
+      "Argentina"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Australia\nGRUNDFOS Pumps Pty. Ltd. P.O. Box 2040 Regency Park South Australia 5942 Phone: +61-8-8461-4611 Telefax: +61-8-8340 0155",
+    "raw_text": "GRUNDFOS Pumps Pty. Ltd. P.O. Box 2040 Regency Park South Australia 5942 Phone: +61-8-8461-4611 Telefax: +61-8-8340 0155",
+    "page_no": 20,
+    "headings": [
+      "Australia"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Austria\nGRUNDFOS Pumpen Vertrieb Ges.m.b.H. Grundfosstraße 2 A-5082 Grödig/Salzburg Tel.: +43-6246-883-0 Telefax: +43-6246-883-30",
+    "raw_text": "GRUNDFOS Pumpen Vertrieb Ges.m.b.H. Grundfosstraße 2 A-5082 Grödig/Salzburg Tel.: +43-6246-883-0 Telefax: +43-6246-883-30",
+    "page_no": 20,
+    "headings": [
+      "Austria"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Belgium\nN.V. GRUNDFOS Bellux S.A. Boomsesteenweg 81-83 B-2630 Aartselaar Tél.: +32-3-870 7300 Télécopie: +32-3-870 7301",
+    "raw_text": "N.V. GRUNDFOS Bellux S.A. Boomsesteenweg 81-83 B-2630 Aartselaar Tél.: +32-3-870 7300 Télécopie: +32-3-870 7301",
+    "page_no": 20,
+    "headings": [
+      "Belgium"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Belarus\nПредставительство ГРУНДФОС в Минске 220125, Минск ул . Шафарнянская , 11, оф . 56, БЦ\n« Порт »\nТел\n.: +7 (375 17) 286 39 72/73\nФакс\n: +7 (375 17) 286 39 71\nE-mail: minsk@grundfos.com",
+    "raw_text": "Представительство ГРУНДФОС в Минске 220125, Минск ул . Шафарнянская , 11, оф . 56, БЦ\n« Порт »\nТел\n.: +7 (375 17) 286 39 72/73\nФакс\n: +7 (375 17) 286 39 71\nE-mail: minsk@grundfos.com",
+    "page_no": 20,
+    "headings": [
+      "Belarus"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Bosna and Herzegovina\nGRUNDFOS Sarajevo Zmaja od Bosne 7-7A, BH-71000 Sarajevo Phone: +387 33 592 480 Telefax: +387 33 590 465 www.ba.grundfos.com e-mail: grundfos@bih.net.ba",
+    "raw_text": "GRUNDFOS Sarajevo Zmaja od Bosne 7-7A, BH-71000 Sarajevo Phone: +387 33 592 480 Telefax: +387 33 590 465 www.ba.grundfos.com e-mail: grundfos@bih.net.ba",
+    "page_no": 20,
+    "headings": [
+      "Bosna and Herzegovina"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Brazil\nBOMBAS GRUNDFOS DO BRASIL Av. Humberto de Alencar Castelo Branco, 630 CEP 09850 - 300 São Bernardo do Campo - SP Phone: +55-11 4393 5533 Telefax: +55-11 4343 5015",
+    "raw_text": "BOMBAS GRUNDFOS DO BRASIL Av. Humberto de Alencar Castelo Branco, 630 CEP 09850 - 300 São Bernardo do Campo - SP Phone: +55-11 4393 5533 Telefax: +55-11 4343 5015",
+    "page_no": 20,
+    "headings": [
+      "Brazil"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Bulgaria\nGrundfos Bulgaria EOOD Slatina District Iztochna Tangenta street no. 100 BG - 1592 Sofia Tel. +359 2 49 22 200 Fax. +359 2 49 22 201 email: bulgaria@grundfos.bg",
+    "raw_text": "Grundfos Bulgaria EOOD Slatina District Iztochna Tangenta street no. 100 BG - 1592 Sofia Tel. +359 2 49 22 200 Fax. +359 2 49 22 201 email: bulgaria@grundfos.bg",
+    "page_no": 20,
+    "headings": [
+      "Bulgaria"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Canada\nGRUNDFOS Canada Inc. 2941 Brighton Road Oakville, Ontario L6H 6C9 Phone: +1-905 829 9533 Telefax: +1-905 829 9512",
+    "raw_text": "GRUNDFOS Canada Inc. 2941 Brighton Road Oakville, Ontario L6H 6C9 Phone: +1-905 829 9533 Telefax: +1-905 829 9512",
+    "page_no": 20,
+    "headings": [
+      "Canada"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "China\nGRUNDFOS Pumps (Shanghai) Co. Ltd. 10F The Hub, No. 33 Suhong Road Minhang District Shanghai 201106 PRC Phone: +86 21 612 252 22 Telefax: +86 21 612 253 33",
+    "raw_text": "GRUNDFOS Pumps (Shanghai) Co. Ltd. 10F The Hub, No. 33 Suhong Road Minhang District Shanghai 201106 PRC Phone: +86 21 612 252 22 Telefax: +86 21 612 253 33",
+    "page_no": 20,
+    "headings": [
+      "China"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Croatia\nGRUNDFOS CROATIA d.o.o. Buzinski prilaz 38, Buzin HR-10010 Zagreb Phone: +385 1 6595 400 Telefax: +385 1 6595 499\nwww.hr.grundfos.com",
+    "raw_text": "GRUNDFOS CROATIA d.o.o. Buzinski prilaz 38, Buzin HR-10010 Zagreb Phone: +385 1 6595 400 Telefax: +385 1 6595 499\nwww.hr.grundfos.com",
+    "page_no": 20,
+    "headings": [
+      "Croatia"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Czech Republic\nGRUNDFOS s.r.o.\nČ ajkovského 21 779 00 Olomouc Phone: +420-585-716 111 Telefax: +420-585-716 299",
+    "raw_text": "GRUNDFOS s.r.o.\nČ ajkovského 21 779 00 Olomouc Phone: +420-585-716 111 Telefax: +420-585-716 299",
+    "page_no": 20,
+    "headings": [
+      "Czech Republic"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Denmark\nGRUNDFOS DK A/S Martin Bachs Vej 3 DK-8850 Bjerringbro Tlf.: +45-87 50 50 50 Telefax: +45-87 50 51 51 E-mail: info_GDK@grundfos.com www.grundfos.com/DK",
+    "raw_text": "GRUNDFOS DK A/S Martin Bachs Vej 3 DK-8850 Bjerringbro Tlf.: +45-87 50 50 50 Telefax: +45-87 50 51 51 E-mail: info_GDK@grundfos.com www.grundfos.com/DK",
+    "page_no": 20,
+    "headings": [
+      "Denmark"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Estonia\nGRUNDFOS Pumps Eesti OÜ Peterburi tee 92G 11415 Tallinn Tel: + 372 606 1690 Fax: + 372 606 1691",
+    "raw_text": "GRUNDFOS Pumps Eesti OÜ Peterburi tee 92G 11415 Tallinn Tel: + 372 606 1690 Fax: + 372 606 1691",
+    "page_no": 20,
+    "headings": [
+      "Estonia"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Finland\nOY GRUNDFOS Pumput AB Trukkikuja 1 FI-01360 Vantaa Phone:  +358-(0) 207 889 500\nTelefax: +358-(0) 207 889 550",
+    "raw_text": "OY GRUNDFOS Pumput AB Trukkikuja 1 FI-01360 Vantaa Phone:  +358-(0) 207 889 500\nTelefax: +358-(0) 207 889 550",
+    "page_no": 20,
+    "headings": [
+      "Finland"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "France\nPompes GRUNDFOS Distribution S.A. Parc d'Activités de Chesnes 57, rue de Malacombe F-38290 St. Quentin Fallavier (Lyon) Tél.: +33-4 74 82 15 15 Télécopie: +33-4 74 94 10 51",
+    "raw_text": "Pompes GRUNDFOS Distribution S.A. Parc d'Activités de Chesnes 57, rue de Malacombe F-38290 St. Quentin Fallavier (Lyon) Tél.: +33-4 74 82 15 15 Télécopie: +33-4 74 94 10 51",
+    "page_no": 20,
+    "headings": [
+      "France"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Germany\nGRUNDFOS GMBH Schlüterstr. 33 40699 Erkrath Tel.: +49-(0) 211 929 69-0 Telefax: +49-(0) 211 929 69-3799 e-mail: infoservice@grundfos.de Service in Deutschland: e-mail: kundendienst@grundfos.de",
+    "raw_text": "GRUNDFOS GMBH Schlüterstr. 33 40699 Erkrath Tel.: +49-(0) 211 929 69-0 Telefax: +49-(0) 211 929 69-3799 e-mail: infoservice@grundfos.de Service in Deutschland: e-mail: kundendienst@grundfos.de",
+    "page_no": 20,
+    "headings": [
+      "Germany"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Greece\nGRUNDFOS Hellas A.E.B.E. 20th km. Athinon-Markopoulou Av. P.O. Box 71 GR-19002 Peania Phone: +0030-210-66 83 400 Telefax: +0030-210-66 46 273",
+    "raw_text": "GRUNDFOS Hellas A.E.B.E. 20th km. Athinon-Markopoulou Av. P.O. Box 71 GR-19002 Peania Phone: +0030-210-66 83 400 Telefax: +0030-210-66 46 273",
+    "page_no": 20,
+    "headings": [
+      "Greece"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Hong Kong\nGRUNDFOS Pumps (Hong Kong) Ltd. Unit 1, Ground floor Siu Wai Industrial Centre 29-33 Wing Hong Street & 68 King Lam Street, Cheung Sha Wan Kowloon Phone: +852-27861706 / 27861741 Telefax: +852-27858664",
+    "raw_text": "GRUNDFOS Pumps (Hong Kong) Ltd. Unit 1, Ground floor Siu Wai Industrial Centre 29-33 Wing Hong Street & 68 King Lam Street, Cheung Sha Wan Kowloon Phone: +852-27861706 / 27861741 Telefax: +852-27858664",
+    "page_no": 20,
+    "headings": [
+      "Hong Kong"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Hungary\nGRUNDFOS Hungária Kft. Park u. 8 H-2045 Törökbálint, Phone: +36-23 511 110 Telefax: +36-23 511 111",
+    "raw_text": "GRUNDFOS Hungária Kft. Park u. 8 H-2045 Törökbálint, Phone: +36-23 511 110 Telefax: +36-23 511 111",
+    "page_no": 20,
+    "headings": [
+      "Hungary"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "India\nGRUNDFOS Pumps India Private Limited 118 Old Mahabalipuram Road Thoraipakkam Chennai 600 096 Phone: +91-44 2496 6800",
+    "raw_text": "GRUNDFOS Pumps India Private Limited 118 Old Mahabalipuram Road Thoraipakkam Chennai 600 096 Phone: +91-44 2496 6800",
+    "page_no": 20,
+    "headings": [
+      "India"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Indonesia\nPT. GRUNDFOS POMPA Graha Intirub Lt. 2 & 3 Jln. Cililitan Besar No.454. Makasar, Jakarta Timur ID-Jakarta 13650 Phone: +62 21-469-51900 Telefax: +62 21-460 6910 / 460 6901",
+    "raw_text": "PT. GRUNDFOS POMPA Graha Intirub Lt. 2 & 3 Jln. Cililitan Besar No.454. Makasar, Jakarta Timur ID-Jakarta 13650 Phone: +62 21-469-51900 Telefax: +62 21-460 6910 / 460 6901",
+    "page_no": 20,
+    "headings": [
+      "Indonesia"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Ireland\nGRUNDFOS (Ireland) Ltd. Unit A, Merrywell Business Park Ballymount Road Lower Dublin 12 Phone: +353-1-4089 800 Telefax: +353-1-4089 830",
+    "raw_text": "GRUNDFOS (Ireland) Ltd. Unit A, Merrywell Business Park Ballymount Road Lower Dublin 12 Phone: +353-1-4089 800 Telefax: +353-1-4089 830",
+    "page_no": 20,
+    "headings": [
+      "Ireland"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Italy\nGRUNDFOS Pompe Italia S.r.l.\nVia Gran Sasso 4 I-20060 Truccazzano (Milano) Tel.: +39-02-95838112 Telefax: +39-02-95309290 / 95838461",
+    "raw_text": "GRUNDFOS Pompe Italia S.r.l.\nVia Gran Sasso 4 I-20060 Truccazzano (Milano) Tel.: +39-02-95838112 Telefax: +39-02-95309290 / 95838461",
+    "page_no": 20,
+    "headings": [
+      "Italy"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Japan\nGRUNDFOS Pumps K.K. Gotanda Metalion Bldg., 5F, 5-21-15, Higashi-gotanda Shiagawa-ku, Tokyo 141-0022 Japan Phone: +81 35 448 1391 Telefax: +81 35 448 9619",
+    "raw_text": "GRUNDFOS Pumps K.K. Gotanda Metalion Bldg., 5F, 5-21-15, Higashi-gotanda Shiagawa-ku, Tokyo 141-0022 Japan Phone: +81 35 448 1391 Telefax: +81 35 448 9619",
+    "page_no": 20,
+    "headings": [
+      "Japan"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Korea\nGRUNDFOS Pumps Korea Ltd. 6th Floor, Aju Building 679-5 Yeoksam-dong, Kangnam-ku, 135-916 Seoul, Korea Phone: +82-2-5317 600 Telefax: +82-2-5633 725",
+    "raw_text": "GRUNDFOS Pumps Korea Ltd. 6th Floor, Aju Building 679-5 Yeoksam-dong, Kangnam-ku, 135-916 Seoul, Korea Phone: +82-2-5317 600 Telefax: +82-2-5633 725",
+    "page_no": 20,
+    "headings": [
+      "Korea"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Latvia\nSIA GRUNDFOS Pumps Latvia Deglava biznesa centrs Augusta Deglava iel ā 60, LV-1035, R ī ga, T ā lr.: + 371 714 9640, 7 149 641 Fakss: + 371 914 9646",
+    "raw_text": "SIA GRUNDFOS Pumps Latvia Deglava biznesa centrs Augusta Deglava iel ā 60, LV-1035, R ī ga, T ā lr.: + 371 714 9640, 7 149 641 Fakss: + 371 914 9646",
+    "page_no": 20,
+    "headings": [
+      "Latvia"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Lithuania\nGRUNDFOS Pumps UAB Smolensko g. 6\nLT-03201 Vilnius Tel: + 370 52 395 430 Fax: + 370 52 395 431",
+    "raw_text": "GRUNDFOS Pumps UAB Smolensko g. 6\nLT-03201 Vilnius Tel: + 370 52 395 430 Fax: + 370 52 395 431",
+    "page_no": 20,
+    "headings": [
+      "Lithuania"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Malaysia\nGRUNDFOS Pumps Sdn. Bhd. 7 Jalan Peguam U1/25 Glenmarie Industrial Park 40150 Shah Alam Selangor Phone: +60-3-5569 2922 Telefax: +60-3-5569 2866",
+    "raw_text": "GRUNDFOS Pumps Sdn. Bhd. 7 Jalan Peguam U1/25 Glenmarie Industrial Park 40150 Shah Alam Selangor Phone: +60-3-5569 2922 Telefax: +60-3-5569 2866",
+    "page_no": 21,
+    "headings": [
+      "Malaysia"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Mexico\nBombas GRUNDFOS de México S.A. de\nC.V. Boulevard TLC No. 15 Parque Industrial Stiva Aeropuerto Apodaca, N.L. 66600 Phone: +52-81-8144 4000 Telefax: +52-81-8144 4010",
+    "raw_text": "Bombas GRUNDFOS de México S.A. de\nC.V. Boulevard TLC No. 15 Parque Industrial Stiva Aeropuerto Apodaca, N.L. 66600 Phone: +52-81-8144 4000 Telefax: +52-81-8144 4010",
+    "page_no": 21,
+    "headings": [
+      "Mexico"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Netherlands\nGRUNDFOS Netherlands Veluwezoom 35 1326 AE Almere Postbus 22015 1302 CA ALMERE Tel.: +31-88-478 6336 Telefax: +31-88-478 6332 E-mail: info_gnl@grundfos.com",
+    "raw_text": "GRUNDFOS Netherlands Veluwezoom 35 1326 AE Almere Postbus 22015 1302 CA ALMERE Tel.: +31-88-478 6336 Telefax: +31-88-478 6332 E-mail: info_gnl@grundfos.com",
+    "page_no": 21,
+    "headings": [
+      "Netherlands"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "New Zealand\nGRUNDFOS Pumps NZ Ltd. 17 Beatrice Tinsley Crescent North Harbour Industrial Estate Albany, Auckland Phone: +64-9-415 3240 Telefax: +64-9-415 3250",
+    "raw_text": "GRUNDFOS Pumps NZ Ltd. 17 Beatrice Tinsley Crescent North Harbour Industrial Estate Albany, Auckland Phone: +64-9-415 3240 Telefax: +64-9-415 3250",
+    "page_no": 21,
+    "headings": [
+      "New Zealand"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Norway\nGRUNDFOS Pumper A/S Strømsveien 344 Postboks 235, Leirdal N-1011 Oslo Tlf.: +47-22 90 47 00 Telefax: +47-22 32 21 50",
+    "raw_text": "GRUNDFOS Pumper A/S Strømsveien 344 Postboks 235, Leirdal N-1011 Oslo Tlf.: +47-22 90 47 00 Telefax: +47-22 32 21 50",
+    "page_no": 21,
+    "headings": [
+      "Norway"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Poland\nGRUNDFOS Pompy Sp. z o.o. ul. Klonowa 23 Baranowo k. Poznania PL-62-081 Prze ź mierowo Tel: (+48-61) 650 13 00 Fax: (+48-61) 650 13 50",
+    "raw_text": "GRUNDFOS Pompy Sp. z o.o. ul. Klonowa 23 Baranowo k. Poznania PL-62-081 Prze ź mierowo Tel: (+48-61) 650 13 00 Fax: (+48-61) 650 13 50",
+    "page_no": 21,
+    "headings": [
+      "Poland"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Portugal\nBombas GRUNDFOS Portugal, S.A. Rua Calvet de Magalhães, 241 Apartado 1079 P-2770-153 Paço de Arcos Tel.: +351-21-440 76 00 Telefax: +351-21-440 76 90",
+    "raw_text": "Bombas GRUNDFOS Portugal, S.A. Rua Calvet de Magalhães, 241 Apartado 1079 P-2770-153 Paço de Arcos Tel.: +351-21-440 76 00 Telefax: +351-21-440 76 90",
+    "page_no": 21,
+    "headings": [
+      "Portugal"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Romania\nGRUNDFOS Pompe România SRL Bd. Biruintei, nr 103 Pantelimon county Ilfov Phone: +40 21 200 4100 Telefax: +40 21 200 4101 E-mail: romania@grundfos.ro",
+    "raw_text": "GRUNDFOS Pompe România SRL Bd. Biruintei, nr 103 Pantelimon county Ilfov Phone: +40 21 200 4100 Telefax: +40 21 200 4101 E-mail: romania@grundfos.ro",
+    "page_no": 21,
+    "headings": [
+      "Romania"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Russia\nООО Грундфос Россия 109544, г . Москва , ул . Школьная , 39-41, стр . 1 Тел . (+7) 495 564-88-00 (495) 737-30-00 Факс (+7) 495 564 88 11\nE-mail grundfos.moscow@grundfos.com",
+    "raw_text": "ООО Грундфос Россия 109544, г . Москва , ул . Школьная , 39-41, стр . 1 Тел . (+7) 495 564-88-00 (495) 737-30-00 Факс (+7) 495 564 88 11\nE-mail grundfos.moscow@grundfos.com",
+    "page_no": 21,
+    "headings": [
+      "Russia"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Serbia\nGrundfos Srbija d.o.o. Omladinskih brigada 90b 11070 Novi Beograd Phone: +381 11 2258 740 Telefax: +381 11 2281 769 www.rs.grundfos.com",
+    "raw_text": "Grundfos Srbija d.o.o. Omladinskih brigada 90b 11070 Novi Beograd Phone: +381 11 2258 740 Telefax: +381 11 2281 769 www.rs.grundfos.com",
+    "page_no": 21,
+    "headings": [
+      "Serbia"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Singapore\nGRUNDFOS (Singapore) Pte. Ltd. 25 Jalan Tukang Singapore 619264 Phone: +65-6681 9688 Telefax: +65-6681 9689",
+    "raw_text": "GRUNDFOS (Singapore) Pte. Ltd. 25 Jalan Tukang Singapore 619264 Phone: +65-6681 9688 Telefax: +65-6681 9689",
+    "page_no": 21,
+    "headings": [
+      "Singapore"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Slovakia\nGRUNDFOS s.r.o. Prievozská 4D 821 09 BRATISLAVA Phona: +421 2 5020 1426 sk.grundfos.com",
+    "raw_text": "GRUNDFOS s.r.o. Prievozská 4D 821 09 BRATISLAVA Phona: +421 2 5020 1426 sk.grundfos.com",
+    "page_no": 21,
+    "headings": [
+      "Slovakia"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Slovenia\nGRUNDFOS LJUBLJANA, d.o.o. Leskoškova 9e, 1122 Ljubljana Phone: +386 (0) 1 568 06 10 Telefax: +386 (0)1 568 06 19 E-mail: tehnika-si@grundfos.com",
+    "raw_text": "GRUNDFOS LJUBLJANA, d.o.o. Leskoškova 9e, 1122 Ljubljana Phone: +386 (0) 1 568 06 10 Telefax: +386 (0)1 568 06 19 E-mail: tehnika-si@grundfos.com",
+    "page_no": 21,
+    "headings": [
+      "Slovenia"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "South Africa\nGRUNDFOS (PTY) LTD\nCorner Mountjoy and George Allen Roads Wilbart Ext. 2 Bedfordview 2008 Phone: (+27) 11 579 4800 Fax: (+27) 11 455 6066 E-mail: lsmart@grundfos.com",
+    "raw_text": "GRUNDFOS (PTY) LTD\nCorner Mountjoy and George Allen Roads Wilbart Ext. 2 Bedfordview 2008 Phone: (+27) 11 579 4800 Fax: (+27) 11 455 6066 E-mail: lsmart@grundfos.com",
+    "page_no": 21,
+    "headings": [
+      "South Africa"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Spain\nBombas GRUNDFOS España S.A. Camino de la Fuentecilla, s/n E-28110 Algete (Madrid) Tel.: +34-91-848 8800 Telefax: +34-91-628 0465",
+    "raw_text": "Bombas GRUNDFOS España S.A. Camino de la Fuentecilla, s/n E-28110 Algete (Madrid) Tel.: +34-91-848 8800 Telefax: +34-91-628 0465",
+    "page_no": 21,
+    "headings": [
+      "Spain"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Sweden\nGRUNDFOS AB Box 333 (Lunnagårdsgatan 6) 431 24 Mölndal Tel.: +46 31 332 23 000 Telefax: +46 31 331 94 60",
+    "raw_text": "GRUNDFOS AB Box 333 (Lunnagårdsgatan 6) 431 24 Mölndal Tel.: +46 31 332 23 000 Telefax: +46 31 331 94 60",
+    "page_no": 21,
+    "headings": [
+      "Sweden"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Switzerland\nGRUNDFOS Pumpen AG Bruggacherstrasse 10 CH-8117 Fällanden/ZH Tel.: +41-44-806 8111 Telefax: +41-44-806 8115",
+    "raw_text": "GRUNDFOS Pumpen AG Bruggacherstrasse 10 CH-8117 Fällanden/ZH Tel.: +41-44-806 8111 Telefax: +41-44-806 8115",
+    "page_no": 21,
+    "headings": [
+      "Switzerland"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Taiwan\nGRUNDFOS Pumps (Taiwan) Ltd. 7 Floor, 219 Min-Chuan Road Taichung, Taiwan, R.O.C. Phone: +886-4-2305 0868 Telefax: +886-4-2305 0878",
+    "raw_text": "GRUNDFOS Pumps (Taiwan) Ltd. 7 Floor, 219 Min-Chuan Road Taichung, Taiwan, R.O.C. Phone: +886-4-2305 0868 Telefax: +886-4-2305 0878",
+    "page_no": 21,
+    "headings": [
+      "Taiwan"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Thailand\nGRUNDFOS (Thailand) Ltd. 92 Chaloem Phrakiat Rama 9 Road, Dokmai, Pravej, Bangkok 10250 Phone: +66-2-725 8999 Telefax: +66-2-725 8998",
+    "raw_text": "GRUNDFOS (Thailand) Ltd. 92 Chaloem Phrakiat Rama 9 Road, Dokmai, Pravej, Bangkok 10250 Phone: +66-2-725 8999 Telefax: +66-2-725 8998",
+    "page_no": 21,
+    "headings": [
+      "Thailand"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Turkey\nGRUNDFOS POMPA San. ve Tic. Ltd. Sti. Gebze Organize Sanayi Bölgesi Ihsan dede Caddesi, 2. yol 200. Sokak No. 204 41490 Gebze/ Kocaeli Phone: +90 - 262-679 7979 Telefax: +90 - 262-679 7905 E-mail: satis@grundfos.com\nUkraine\nБізнес Центр Європа Столичне шосе , 103 м . Київ , 03131, Україна Телефон : (+38 044) 237 04 00 Факс .: (+38 044) 237 04 01 E-mail: ukraine@grundfos.com",
+    "raw_text": "GRUNDFOS POMPA San. ve Tic. Ltd. Sti. Gebze Organize Sanayi Bölgesi Ihsan dede Caddesi, 2. yol 200. Sokak No. 204 41490 Gebze/ Kocaeli Phone: +90 - 262-679 7979 Telefax: +90 - 262-679 7905 E-mail: satis@grundfos.com\nUkraine\nБізнес Центр Європа Столичне шосе , 103 м . Київ , 03131, Україна Телефон : (+38 044) 237 04 00 Факс .: (+38 044) 237 04 01 E-mail: ukraine@grundfos.com",
+    "page_no": 21,
+    "headings": [
+      "Turkey"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "United Arab Emirates\nGRUNDFOS Gulf Distribution P.O. Box 16768 Jebel Ali Free Zone Dubai Phone: +971 4  8815 166 Telefax: +971 4 8815 136",
+    "raw_text": "GRUNDFOS Gulf Distribution P.O. Box 16768 Jebel Ali Free Zone Dubai Phone: +971 4  8815 166 Telefax: +971 4 8815 136",
+    "page_no": 21,
+    "headings": [
+      "United Arab Emirates"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "United Kingdom\nGRUNDFOS Pumps Ltd. Grovebury Road Leighton Buzzard/Beds. LU7 4TL Phone: +44-1525-850000 Telefax: +44-1525-850011",
+    "raw_text": "GRUNDFOS Pumps Ltd. Grovebury Road Leighton Buzzard/Beds. LU7 4TL Phone: +44-1525-850000 Telefax: +44-1525-850011",
+    "page_no": 21,
+    "headings": [
+      "United Kingdom"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "U.S.A.\nGRUNDFOS Pumps Corporation 17100 West 118th Terrace Olathe, Kansas 66061 Phone: +1-913-227-3400 Telefax: +1-913-227-3500",
+    "raw_text": "GRUNDFOS Pumps Corporation 17100 West 118th Terrace Olathe, Kansas 66061 Phone: +1-913-227-3400 Telefax: +1-913-227-3500",
+    "page_no": 21,
+    "headings": [
+      "U.S.A."
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  },
+  {
+    "text": "Uzbekistan\nGrundfos Tashkent, Uzbekistan The Representative Office of Grundfos Kazakhstan in Uzbekistan 38a, Oybek street, Tashkent Телефон : (+998) 71 150 3290 / 71 150 3291 Факс : (+998) 71 150 3292\nAddresses Revised 25.01.2016\n95121197 0616\nECM: 1181574\nGRUNDFOS\n© Copyright Grundfos Holding A/S\nThe name Grundfos, the Grundfos logo, and be think innovate are registered trademarks owned by Grundfos Holding A/S or Grundfos A/S, Denmark. All rights reserved worldwide.",
+    "raw_text": "Grundfos Tashkent, Uzbekistan The Representative Office of Grundfos Kazakhstan in Uzbekistan 38a, Oybek street, Tashkent Телефон : (+998) 71 150 3290 / 71 150 3291 Факс : (+998) 71 150 3292\nAddresses Revised 25.01.2016\n95121197 0616\nECM: 1181574\nGRUNDFOS\n© Copyright Grundfos Holding A/S\nThe name Grundfos, the Grundfos logo, and be think innovate are registered trademarks owned by Grundfos Holding A/S or Grundfos A/S, Denmark. All rights reserved worldwide.",
+    "page_no": 21,
+    "headings": [
+      "Uzbekistan"
+    ],
+    "captions": [],
+    "content_types": [
+      "text"
+    ],
+    "contains_table": false
+  }
+]

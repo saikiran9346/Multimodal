@@ -1,0 +1,152 @@
+[
+  {
+    "id": "q1",
+    "question": "What should I check before installing the pump, according to section 6?",
+    "relevant_pages": [4],
+    "notes": "Verified in Phase 2 -- matches the real page-4 text directly, not just the ToC entry."
+  },
+  {
+    "id": "q2",
+    "question": "What is shaft seal type AQQx rated for?",
+    "relevant_pages": [11],
+    "notes": "Verified in Phase 5/6 -- the exact-code case that showed dense-only retrieval failing while hybrid succeeded."
+  },
+  {
+    "id": "q3",
+    "question": "What does this manual describe and what pumps does it cover?",
+    "relevant_pages": [3],
+    "notes": "Verified in Phase 3 embedding test -- matched the '2. Introduction' chunk directly."
+  },
+  {
+    "id": "q4",
+    "question": "How is the pump connected in the terminal box, and what does the wiring diagram show?",
+    "relevant_pages": [6, 7],
+    "notes": "Verified in Phase 8/9 -- the multimodal case where a picture chunk correctly outranked a text chunk that only referenced it."
+  },
+  {
+    "id": "q5",
+    "question": "What should I check regarding the direction of rotation before starting the pump?",
+    "relevant_pages": [9],
+    "notes": "Verified via explore_candidates.py -- top result was a direct hit on '8.3 Checking the direction of rotation'."
+  },
+  {
+    "id": "q6",
+    "question": "How should I clean the pump according to the maintenance section?",
+    "relevant_pages": [9],
+    "notes": "Verified via explore_candidates.py -- matched '9.2 Cleaning' text directly."
+  },
+  {
+    "id": "q7",
+    "question": "What is the pump's enclosure class and sound pressure level?",
+    "relevant_pages": [10],
+    "notes": "Sound pressure level directly confirmed via explore_candidates.py ('11.2', 70 dB(A)); enclosure class (11.1) not directly re-shown in this probe but the manual's own ToC lists both under page 10."
+  },
+  {
+    "id": "q8",
+    "question": "What are the pump's standard mounting positions?",
+    "relevant_pages": [4],
+    "notes": "Verified via explore_candidates.py -- the specific count ('six standard mounting positions') only exists in the image description, not the accompanying text chunk. Multimodal test case."
+  },
+  {
+    "id": "q9",
+    "question": "How should the pump be disposed of at the end of its life?",
+    "relevant_pages": [13],
+    "notes": "Verified via explore_candidates.py -- direct match on '14. Disposal'."
+  },
+  {
+    "id": "q10",
+    "question": "What does section 6 of this manual cover, and what are its subsections?",
+    "relevant_pages": [2, 4],
+    "notes": "Deliberately hard case. Real ground truth spans two pages: the ToC (page 2) lists the subsections; page 4 is where the body content starts. Documented failure case -- image-description chunks out-competed short text chunks in BM25 scoring for this question, and this held true across all 4 retrieval arms (recall was identical 0.95 for every arm)."
+  },
+  {
+    "id": "q11",
+    "question": "What does item 19 represent on the motor nameplate?",
+    "relevant_pages": [4],
+    "notes": "TABLE. Page 4 confirmed as relevant via explore_candidates_v2.py, but item 19's specific value ('Part number') was seen verbatim earlier in Phase 3's raw chunk inspection, not re-confirmed in this exact run since the preview truncated before reaching it."
+  },
+  {
+    "id": "q12",
+    "question": "What is the remedy if the pump runs but delivers no water, according to the fault-finding table?",
+    "relevant_pages": [13],
+    "notes": "TABLE. Verified via explore_candidates_v2.py -- 'Cause = Pump inlet pressure too low' directly visible on page 13."
+  },
+  {
+    "id": "q13",
+    "question": "What is the cause if the pump does not run, according to the fault-finding table?",
+    "relevant_pages": [12],
+    "notes": "TABLE. Verified via explore_candidates_v2.py -- 'Cause = Supply failure' directly visible on page 12."
+  },
+  {
+    "id": "q14",
+    "question": "What is the maximum system pressure for a cast iron pump with shaft seal type AVBx?",
+    "relevant_pages": [11],
+    "notes": "TABLE. Verified via explore_candidates_v2.py -- same pressure/temperature table as q2, different shaft seal code."
+  },
+  {
+    "id": "q15",
+    "question": "What does Fig. 3 show for the suction and discharge ports?",
+    "relevant_pages": [5],
+    "notes": "IMAGE. Verified via explore_candidates_v2.py -- direct match on the 'Fig. 3 Suction and discharge ports' picture chunk."
+  },
+  {
+    "id": "q16",
+    "question": "What does Fig. 5 show about alternative connection positions?",
+    "relevant_pages": [6],
+    "notes": "IMAGE. Verified via explore_candidates_v2.py -- direct match on the 'Fig. 5 Alternative connection positions' picture chunk."
+  },
+  {
+    "id": "q17",
+    "question": "What does Fig. 6 show about terminal box positions?",
+    "relevant_pages": [6],
+    "notes": "IMAGE. Verified via explore_candidates_v2.py -- direct match on the 'Fig. 6 Terminal box positions' picture chunk."
+  },
+  {
+    "id": "q18",
+    "question": "What does the Fig. 3 motor nameplate diagram illustrate?",
+    "relevant_pages": [14],
+    "notes": "IMAGE. Verified via explore_candidates_v2.py -- reworded from an earlier version that gave away the page number in the question text itself."
+  },
+  {
+    "id": "q19",
+    "question": "What nameplate information is provided for both the pump and the motor?",
+    "relevant_pages": [3, 4],
+    "notes": "MULTI_PAGE. Verified via explore_candidates_v2.py -- pump nameplate sections (5.1.1, 5.1.2) on page 3, motor nameplate (5.2) on page 4."
+  },
+  {
+    "id": "q20",
+    "question": "What are the pump's temperature and pressure operating limits?",
+    "relevant_pages": [10, 11],
+    "notes": "MULTI_PAGE. Verified via explore_candidates_v2.py -- ambient temperature (11.3) on page 10, inlet pressure limits (11.5, 11.6) on page 11."
+  },
+  {
+    "id": "q21",
+    "question": "What mounting and connection position options does the pump have?",
+    "relevant_pages": [4, 6],
+    "notes": "MULTI_PAGE. Verified via explore_candidates_v2.py -- standard mounting positions on page 4, alternative connection positions (6.3) on page 6."
+  },
+  {
+    "id": "q22",
+    "question": "What does section 9 (Maintenance) cover, and what are its subsections?",
+    "relevant_pages": [2, 9],
+    "notes": "SECTION_STRUCTURE. '9.1 Frost protection' confirmed directly via explore_candidates_v2.py; '9.2 Cleaning' confirmed earlier via q6's exploration, both on page 9. ToC entry on page 2."
+  },
+  {
+    "id": "q23",
+    "question": "What does section 11 (Technical data) cover, and what are its subsections?",
+    "relevant_pages": [2, 10],
+    "notes": "SECTION_STRUCTURE. Page 10 grounded in the manual's own ToC ('11. Technical data, Page = 10', seen in Phase 2). No direct section-11 content chunk surfaced in explore_candidates_v2.py's top 5 -- likely a second instance of the same structural-question failure mode as q10."
+  },
+  {
+    "id": "q24",
+    "question": "What is the maximum liquid temperature allowed for self-priming pumps?",
+    "relevant_pages": [10],
+    "notes": "EXACT_FACT. Verified via explore_candidates_v2.py -- '60 degrees C (140 degrees F)' directly visible on page 10."
+  },
+  {
+    "id": "q25",
+    "question": "What non-return valve opening pressure is recommended for self-priming pumps?",
+    "relevant_pages": [5],
+    "notes": "EXACT_FACT. Verified via explore_candidates_v2.py -- 'lower than 0.05 bar' directly visible on page 5."
+  }
+]

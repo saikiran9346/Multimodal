@@ -1,0 +1,386 @@
+{
+  "experiment": "hybrid_reranked",
+  "per_question": [
+    {
+      "id": "q1",
+      "question": "What should I check before installing the pump, according to section 6?",
+      "retrieved_pages": [
+        4,
+        9,
+        7,
+        7,
+        2
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.2,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q2",
+      "question": "What is shaft seal type AQQx rated for?",
+      "retrieved_pages": [
+        11,
+        11,
+        11,
+        2,
+        10
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.6,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q3",
+      "question": "What does this manual describe and what pumps does it cover?",
+      "retrieved_pages": [
+        3,
+        6,
+        12,
+        2,
+        3
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.4,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q4",
+      "question": "How is the pump connected in the terminal box, and what does the wiring diagram show?",
+      "retrieved_pages": [
+        7,
+        7,
+        13,
+        3,
+        6
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.6,
+      "mrr": 1.0,
+      "ndcg_at_k": 0.8503449055347546
+    },
+    {
+      "id": "q5",
+      "question": "What should I check regarding the direction of rotation before starting the pump?",
+      "retrieved_pages": [
+        9,
+        13,
+        2,
+        4,
+        9
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.4,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q6",
+      "question": "How should I clean the pump according to the maintenance section?",
+      "retrieved_pages": [
+        9,
+        12,
+        9,
+        13,
+        10
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.4,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q7",
+      "question": "What is the pump's enclosure class and sound pressure level?",
+      "retrieved_pages": [
+        10,
+        2,
+        9,
+        4,
+        3
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.2,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q8",
+      "question": "What are the pump's standard mounting positions?",
+      "retrieved_pages": [
+        4,
+        6,
+        6,
+        3,
+        10
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.2,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q9",
+      "question": "How should the pump be disposed of at the end of its life?",
+      "retrieved_pages": [
+        13,
+        9,
+        10,
+        12,
+        9
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.2,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q10",
+      "question": "What does section 6 of this manual cover, and what are its subsections?",
+      "retrieved_pages": [
+        13,
+        2,
+        3,
+        19,
+        6
+      ],
+      "recall_at_k": 0.5,
+      "precision_at_k": 0.2,
+      "mrr": 0.5,
+      "ndcg_at_k": 0.38685280723454163
+    },
+    {
+      "id": "q11",
+      "question": "What does item 19 represent on the motor nameplate?",
+      "retrieved_pages": [
+        4,
+        3,
+        2,
+        13,
+        12
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.2,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q12",
+      "question": "What is the remedy if the pump runs but delivers no water, according to the fault-finding table?",
+      "retrieved_pages": [
+        13,
+        13,
+        12,
+        12,
+        9
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.4,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q13",
+      "question": "What is the cause if the pump does not run, according to the fault-finding table?",
+      "retrieved_pages": [
+        12,
+        13,
+        12,
+        13,
+        8
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.4,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q14",
+      "question": "What is the maximum system pressure for a cast iron pump with shaft seal type AVBx?",
+      "retrieved_pages": [
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q15",
+      "question": "What does Fig. 3 show for the suction and discharge ports?",
+      "retrieved_pages": [
+        5,
+        5,
+        8,
+        8,
+        13
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.4,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q16",
+      "question": "What does Fig. 5 show about alternative connection positions?",
+      "retrieved_pages": [
+        6,
+        2,
+        4,
+        4,
+        3
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.2,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q17",
+      "question": "What does Fig. 6 show about terminal box positions?",
+      "retrieved_pages": [
+        6,
+        2,
+        13,
+        3,
+        19
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.2,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q18",
+      "question": "What does the Fig. 3 motor nameplate diagram illustrate?",
+      "retrieved_pages": [
+        4,
+        13,
+        2,
+        3,
+        12
+      ],
+      "recall_at_k": 0.0,
+      "precision_at_k": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_k": 0.0
+    },
+    {
+      "id": "q19",
+      "question": "What nameplate information is provided for both the pump and the motor?",
+      "retrieved_pages": [
+        3,
+        2,
+        3,
+        4,
+        3
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.8,
+      "mrr": 1.0,
+      "ndcg_at_k": 0.8772153153380493
+    },
+    {
+      "id": "q20",
+      "question": "What are the pump's temperature and pressure operating limits?",
+      "retrieved_pages": [
+        11,
+        11,
+        11,
+        10,
+        11
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 0.8772153153380493
+    },
+    {
+      "id": "q21",
+      "question": "What mounting and connection position options does the pump have?",
+      "retrieved_pages": [
+        6,
+        4,
+        13,
+        8,
+        6
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.6,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q22",
+      "question": "What does section 9 (Maintenance) cover, and what are its subsections?",
+      "retrieved_pages": [
+        2,
+        13,
+        9,
+        13,
+        3
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.4,
+      "mrr": 1.0,
+      "ndcg_at_k": 0.9197207891481876
+    },
+    {
+      "id": "q23",
+      "question": "What does section 11 (Technical data) cover, and what are its subsections?",
+      "retrieved_pages": [
+        2,
+        13,
+        4,
+        10,
+        3
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.4,
+      "mrr": 1.0,
+      "ndcg_at_k": 0.8772153153380493
+    },
+    {
+      "id": "q24",
+      "question": "What is the maximum liquid temperature allowed for self-priming pumps?",
+      "retrieved_pages": [
+        10,
+        2,
+        11,
+        11,
+        8
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.2,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "q25",
+      "question": "What non-return valve opening pressure is recommended for self-priming pumps?",
+      "retrieved_pages": [
+        5,
+        13,
+        7,
+        13,
+        5
+      ],
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.4,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0
+    }
+  ],
+  "averages": {
+    "recall_at_k": 0.94,
+    "precision_at_k": 0.4,
+    "mrr": 0.94,
+    "ndcg_at_k": 0.9115425779172652
+  }
+}
