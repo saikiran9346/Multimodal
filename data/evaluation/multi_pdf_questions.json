@@ -1,177 +1,27 @@
 [
-  {
-    "id": "q1",
-    "category": "TABLE",
-    "question": "What is shaft seal type AQQx rated for?",
-    "doc_name": "grundfos_cm_pump_manual.pdf",
-    "relevant_pages": [11]
-  },
-  {
-    "id": "q2",
-    "category": "TABLE",
-    "question": "What is the maximum system pressure for a cast iron pump with shaft seal type AVBx?",
-    "doc_name": "grundfos_cm_pump_manual.pdf",
-    "relevant_pages": [11]
-  },
-  {
-    "id": "q3",
-    "category": "TABLE",
-    "question": "What does item 1 on the pump nameplate represent?",
-    "doc_name": "grundfos_cm_pump_manual.pdf",
-    "relevant_pages": [3]
-  },
-  {
-    "id": "q4",
-    "category": "TABLE",
-    "question": "What is the remedy if the pump runs but delivers no water, according to the fault-finding table?",
-    "doc_name": "grundfos_cm_pump_manual.pdf",
-    "relevant_pages": [10]
-  },
-  {
-    "id": "q5",
-    "category": "TABLE",
-    "question": "What are the sound pressure levels and electrical data listed in the technical data section?",
-    "doc_name": "1_TP.pdf",
-    "relevant_pages": [13]
-  },
-  {
-    "id": "q6",
-    "category": "TABLE",
-    "question": "What does the fault-finding table recommend if the pump is classified as contaminated?",
-    "doc_name": "1_TP.pdf",
-    "relevant_pages": [12, 14]
-  },
-  {
-    "id": "q7",
-    "category": "IMAGE",
-    "question": "How should TP and TPD pumps be lifted according to Fig. 1 and Fig. 2?",
-    "doc_name": "1_TP.pdf",
-    "relevant_pages": [3]
-  },
-  {
-    "id": "q8",
-    "category": "IMAGE",
-    "question": "What does Fig. 5 illustrate regarding the use of washers for oval bolt holes during pump installation?",
-    "doc_name": "1_TP.pdf",
-    "relevant_pages": [4]
-  },
-  {
-    "id": "q9",
-    "category": "IMAGE",
-    "question": "What does Fig. 3 show for the suction and discharge ports?",
-    "doc_name": "grundfos_cm_pump_manual.pdf",
-    "relevant_pages": [5]
-  },
-  {
-    "id": "q10",
-    "category": "IMAGE",
-    "question": "What does Fig. 5 show about alternative connection positions?",
-    "doc_name": "grundfos_cm_pump_manual.pdf",
-    "relevant_pages": [6]
-  },
-  {
-    "id": "q11",
-    "category": "IMAGE",
-    "question": "What does Fig. 6 show about terminal box positions?",
-    "doc_name": "grundfos_cm_pump_manual.pdf",
-    "relevant_pages": [6]
-  },
-  {
-    "id": "q12",
-    "category": "IMAGE",
-    "question": "How is the pump connected in the terminal box, and what does the wiring diagram show?",
-    "doc_name": "grundfos_cm_pump_manual.pdf",
-    "relevant_pages": [7]
-  },
-  {
-    "id": "q13",
-    "category": "EXACT_FACT",
-    "question": "What should I check before installing the pump, according to section 6?",
-    "doc_name": "grundfos_cm_pump_manual.pdf",
-    "relevant_pages": [4]
-  },
-  {
-    "id": "q14",
-    "category": "EXACT_FACT",
-    "question": "What is the maximum liquid temperature allowed for self-priming pumps?",
-    "doc_name": "grundfos_cm_pump_manual.pdf",
-    "relevant_pages": [8]
-  },
-  {
-    "id": "q15",
-    "category": "EXACT_FACT",
-    "question": "What should I check regarding the direction of rotation before starting the pump?",
-    "doc_name": "grundfos_cm_pump_manual.pdf",
-    "relevant_pages": [9]
-  },
-  {
-    "id": "q16",
-    "category": "EXACT_FACT",
-    "question": "What is the recommended concrete foundation weight for TP Series 300 pumps with weights of 150 kg or more?",
-    "doc_name": "1_TP.pdf",
-    "relevant_pages": [7]
-  },
-  {
-    "id": "q17",
-    "category": "EXACT_FACT",
-    "question": "What should be injected between the motor stool and shaft if the pump is drained for a long period of inactivity?",
-    "doc_name": "1_TP.pdf",
-    "relevant_pages": [11]
-  },
-  {
-    "id": "q18",
-    "category": "EXACT_FACT",
-    "question": "How should the pump be disposed of at the end of its life?",
-    "doc_name": "grundfos_cm_pump_manual.pdf",
-    "relevant_pages": [13]
-  },
-  {
-    "id": "q19",
-    "category": "MULTI_PAGE",
-    "question": "What nameplate information is provided for both the pump and the motor?",
-    "doc_name": "grundfos_cm_pump_manual.pdf",
-    "relevant_pages": [3, 4]
-  },
-  {
-    "id": "q20",
-    "category": "MULTI_PAGE",
-    "question": "What are the pump's temperature and pressure operating limits?",
-    "doc_name": "grundfos_cm_pump_manual.pdf",
-    "relevant_pages": [10, 11]
-  },
-  {
-    "id": "q21",
-    "category": "MULTI_PAGE",
-    "question": "What are the handling and delivery guidelines for TP and TPD pumps?",
-    "doc_name": "1_TP.pdf",
-    "relevant_pages": [3]
-  },
-  {
-    "id": "q22",
-    "category": "MULTI_PAGE",
-    "question": "What steps are required for startup, flushing, and priming the pipe system?",
-    "doc_name": "1_TP.pdf",
-    "relevant_pages": [10, 11]
-  },
-  {
-    "id": "q23",
-    "category": "SECTION_STRUCTURE",
-    "question": "What does section 6 of this manual cover, and what are its subsections?",
-    "doc_name": "grundfos_cm_pump_manual.pdf",
-    "relevant_pages": [4]
-  },
-  {
-    "id": "q24",
-    "category": "SECTION_STRUCTURE",
-    "question": "What does section 5 (Installation) cover in the TP manual, and what are its subsections?",
-    "doc_name": "1_TP.pdf",
-    "relevant_pages": [2, 4]
-  },
-  {
-    "id": "q25",
-    "category": "SECTION_STRUCTURE",
-    "question": "What does section 8 (Maintenance and service) cover in the TP manual?",
-    "doc_name": "1_TP.pdf",
-    "relevant_pages": [11, 12]
-  }
+  {"id": "q1", "category": "TABLE", "question": "What is shaft seal type AQQx rated for?", "doc_name": "grundfos_cm_pump_manual.pdf", "relevant_pages": [11]},
+  {"id": "q2", "category": "TABLE", "question": "What is the maximum system pressure for a cast iron pump with shaft seal type AVBx?", "doc_name": "grundfos_cm_pump_manual.pdf", "relevant_pages": [11]},
+  {"id": "q3", "category": "TABLE", "question": "What is the cause if the pump does not run, according to the fault-finding table?", "doc_name": "grundfos_cm_pump_manual.pdf", "relevant_pages": [12], "notes": "Replaces the original 'item 1 on nameplate' question, which was genuinely ambiguous (two separate nameplates exist)."},
+  {"id": "q4", "category": "TABLE", "question": "What is the remedy if the pump runs but delivers no water, according to the fault-finding table?", "doc_name": "grundfos_cm_pump_manual.pdf", "relevant_pages": [13], "notes": "Corrected from an incorrectly-claimed page 10."},
+  {"id": "q5", "category": "TABLE", "question": "What are the maximum sound pressure levels listed in the technical data section?", "doc_name": "1_TP.pdf", "relevant_pages": [30, 31], "notes": "Narrowed from a compound question; 'electrical data' half was never actually evidenced. Corrected from an incorrectly-claimed page 13."},
+  {"id": "q6", "category": "TABLE", "question": "What does the manual say if the pump is classified as contaminated?", "doc_name": "1_TP.pdf", "relevant_pages": [12], "notes": "Narrowed from [12, 14] -- page 14 evidence was actually a different, unrelated fault."},
+  {"id": "q7", "category": "IMAGE", "question": "How should TP and TPD pumps be lifted according to Fig. 1 and Fig. 2?", "doc_name": "1_TP.pdf", "relevant_pages": [3]},
+  {"id": "q8", "category": "IMAGE", "question": "What does Fig. 5 illustrate regarding the use of washers for oval bolt holes during pump installation?", "doc_name": "1_TP.pdf", "relevant_pages": [4]},
+  {"id": "q9", "category": "IMAGE", "question": "What does Fig. 3 show for the suction and discharge ports?", "doc_name": "grundfos_cm_pump_manual.pdf", "relevant_pages": [5]},
+  {"id": "q10", "category": "IMAGE", "question": "What does Fig. 5 show about alternative connection positions?", "doc_name": "grundfos_cm_pump_manual.pdf", "relevant_pages": [6]},
+  {"id": "q11", "category": "IMAGE", "question": "What does Fig. 6 show about terminal box positions?", "doc_name": "grundfos_cm_pump_manual.pdf", "relevant_pages": [6]},
+  {"id": "q12", "category": "IMAGE", "question": "How is the pump connected in the terminal box, and what does the wiring diagram show?", "doc_name": "grundfos_cm_pump_manual.pdf", "relevant_pages": [6, 7], "notes": "Corrected from [7] only -- this is the established multimodal test case from Phase 8/9; page 6 (terminal box positions text) is also genuinely relevant."},
+  {"id": "q13", "category": "EXACT_FACT", "question": "What should I check before installing the pump, according to section 6?", "doc_name": "grundfos_cm_pump_manual.pdf", "relevant_pages": [4]},
+  {"id": "q14", "category": "EXACT_FACT", "question": "What is the maximum liquid temperature allowed for self-priming pumps?", "doc_name": "grundfos_cm_pump_manual.pdf", "relevant_pages": [10], "notes": "Corrected from an incorrectly-claimed page 8."},
+  {"id": "q15", "category": "EXACT_FACT", "question": "What should I check regarding the direction of rotation before starting the pump?", "doc_name": "grundfos_cm_pump_manual.pdf", "relevant_pages": [9]},
+  {"id": "q16", "category": "EXACT_FACT", "question": "What is the recommended concrete foundation weight for TP Series 300 pumps?", "doc_name": "1_TP.pdf", "relevant_pages": [7]},
+  {"id": "q17", "category": "EXACT_FACT", "question": "What should be injected between the motor stool and shaft if the pump is drained for a long period of inactivity?", "doc_name": "1_TP.pdf", "relevant_pages": [11]},
+  {"id": "q18", "category": "EXACT_FACT", "question": "How should the pump be disposed of at the end of its life?", "doc_name": "grundfos_cm_pump_manual.pdf", "relevant_pages": [13]},
+  {"id": "q19", "category": "MULTI_PAGE", "question": "What nameplate information is provided for both the pump and the motor?", "doc_name": "grundfos_cm_pump_manual.pdf", "relevant_pages": [3, 4]},
+  {"id": "q20", "category": "MULTI_PAGE", "question": "What are the pump's temperature and pressure operating limits?", "doc_name": "grundfos_cm_pump_manual.pdf", "relevant_pages": [10, 11]},
+  {"id": "q21", "category": "MULTI_PAGE", "question": "What are the handling and delivery guidelines for TP and TPD pumps?", "doc_name": "1_TP.pdf", "relevant_pages": [3], "notes": "Page grounded in the manual's own ToC; no page-3 body content directly surfaced in retrieval."},
+  {"id": "q22", "category": "MULTI_PAGE", "question": "What are the pipe system flushing requirements before starting the pump?", "doc_name": "1_TP.pdf", "relevant_pages": [10], "notes": "Reworded from a 3-part question ('startup, flushing, priming'); only flushing was actually evidenced. Corrected from unconfirmed [10, 11]."},
+  {"id": "q23", "category": "SECTION_STRUCTURE", "question": "What does section 6 of this manual cover, and what are its subsections?", "doc_name": "grundfos_cm_pump_manual.pdf", "relevant_pages": [2, 4], "notes": "Restored the documented 2-page hard case (ToC + body) -- corrected from an incorrectly-collapsed single page."},
+  {"id": "q24", "category": "SECTION_STRUCTURE", "question": "What does section 5 (Installation) cover in the TP manual, and what are its subsections?", "doc_name": "1_TP.pdf", "relevant_pages": [2, 4], "notes": "Same structural pattern as q23, now confirmed on a second manual."},
+  {"id": "q25", "category": "SECTION_STRUCTURE", "question": "What does section 8 (Maintenance and service) cover in the TP manual?", "doc_name": "1_TP.pdf", "relevant_pages": [11, 12]}
 ]

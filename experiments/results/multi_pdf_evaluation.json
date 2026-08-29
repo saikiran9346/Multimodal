@@ -2,10 +2,10 @@
   "baseline_dense": {
     "arm": "1. Baseline Dense (BGE)",
     "summary": {
-      "recall@5": 0.62,
-      "precision@5": 0.16,
-      "mrr": 0.5667,
-      "ndcg@5": 0.5518
+      "recall@5": 0.78,
+      "precision@5": 0.192,
+      "mrr": 0.6967,
+      "ndcg@5": 0.6891
     },
     "per_question": [
       {
@@ -85,39 +85,39 @@
       {
         "id": "q3",
         "category": "TABLE",
-        "question": "What does item 1 on the pump nameplate represent?",
+        "question": "What is the cause if the pump does not run, according to the fault-finding table?",
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
-            3
+            12
           ]
         ],
         "retrieved": [
           [
-            "grundfos_cm_pump_manual.pdf",
-            3
+            "1_TP.pdf",
+            14
+          ],
+          [
+            "1_TP.pdf",
+            14
           ],
           [
             "grundfos_cm_pump_manual.pdf",
-            3
+            13
           ],
           [
             "grundfos_cm_pump_manual.pdf",
-            3
+            12
           ],
           [
             "grundfos_cm_pump_manual.pdf",
-            3
-          ],
-          [
-            "grundfos_cm_pump_manual.pdf",
-            3
+            13
           ]
         ],
         "recall@5": 1.0,
         "precision@5": 0.2,
-        "mrr": 1.0,
-        "ndcg@5": 1.0
+        "mrr": 0.25,
+        "ndcg@5": 0.43067655807339306
       },
       {
         "id": "q4",
@@ -126,7 +126,7 @@
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
-            10
+            13
           ]
         ],
         "retrieved": [
@@ -151,19 +151,23 @@
             13
           ]
         ],
-        "recall@5": 0.0,
-        "precision@5": 0.0,
-        "mrr": 0.0,
-        "ndcg@5": 0.0
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
       },
       {
         "id": "q5",
         "category": "TABLE",
-        "question": "What are the sound pressure levels and electrical data listed in the technical data section?",
+        "question": "What are the maximum sound pressure levels listed in the technical data section?",
         "expected": [
           [
             "1_TP.pdf",
-            13
+            30
+          ],
+          [
+            "1_TP.pdf",
+            31
           ]
         ],
         "retrieved": [
@@ -177,60 +181,56 @@
           ],
           [
             "1_TP.pdf",
-            31
-          ],
-          [
-            "1_TP.pdf",
             30
           ],
           [
             "1_TP.pdf",
-            31
-          ]
-        ],
-        "recall@5": 0.0,
-        "precision@5": 0.0,
-        "mrr": 0.0,
-        "ndcg@5": 0.0
-      },
-      {
-        "id": "q6",
-        "category": "TABLE",
-        "question": "What does the fault-finding table recommend if the pump is classified as contaminated?",
-        "expected": [
-          [
-            "1_TP.pdf",
-            12
+            28
           ],
           [
             "1_TP.pdf",
-            14
-          ]
-        ],
-        "retrieved": [
-          [
-            "1_TP.pdf",
-            12
-          ],
-          [
-            "1_TP.pdf",
-            14
-          ],
-          [
-            "1_TP.pdf",
-            12
-          ],
-          [
-            "grundfos_cm_pump_manual.pdf",
-            10
-          ],
-          [
-            "grundfos_cm_pump_manual.pdf",
-            10
+            30
           ]
         ],
         "recall@5": 1.0,
         "precision@5": 0.4,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "id": "q6",
+        "category": "TABLE",
+        "question": "What does the manual say if the pump is classified as contaminated?",
+        "expected": [
+          [
+            "1_TP.pdf",
+            12
+          ]
+        ],
+        "retrieved": [
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
+            14
+          ]
+        ],
+        "recall@5": 1.0,
+        "precision@5": 0.2,
         "mrr": 1.0,
         "ndcg@5": 1.0
       },
@@ -426,6 +426,10 @@
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
             7
           ]
         ],
@@ -500,7 +504,7 @@
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
-            8
+            10
           ]
         ],
         "retrieved": [
@@ -525,10 +529,10 @@
             5
           ]
         ],
-        "recall@5": 0.0,
-        "precision@5": 0.0,
-        "mrr": 0.0,
-        "ndcg@5": 0.0
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
       },
       {
         "id": "q15",
@@ -570,7 +574,7 @@
       {
         "id": "q16",
         "category": "EXACT_FACT",
-        "question": "What is the recommended concrete foundation weight for TP Series 300 pumps with weights of 150 kg or more?",
+        "question": "What is the recommended concrete foundation weight for TP Series 300 pumps?",
         "expected": [
           [
             "1_TP.pdf",
@@ -596,7 +600,7 @@
           ],
           [
             "1_TP.pdf",
-            8
+            7
           ]
         ],
         "recall@5": 1.0,
@@ -800,15 +804,11 @@
       {
         "id": "q22",
         "category": "MULTI_PAGE",
-        "question": "What steps are required for startup, flushing, and priming the pipe system?",
+        "question": "What are the pipe system flushing requirements before starting the pump?",
         "expected": [
           [
             "1_TP.pdf",
             10
-          ],
-          [
-            "1_TP.pdf",
-            11
           ]
         ],
         "retrieved": [
@@ -821,28 +821,32 @@
             10
           ],
           [
+            "1_TP.pdf",
+            10
+          ],
+          [
+            "1_TP.pdf",
+            6
+          ],
+          [
             "grundfos_cm_pump_manual.pdf",
             5
-          ],
-          [
-            "1_TP.pdf",
-            10
-          ],
-          [
-            "1_TP.pdf",
-            10
           ]
         ],
-        "recall@5": 0.5,
+        "recall@5": 1.0,
         "precision@5": 0.2,
         "mrr": 1.0,
-        "ndcg@5": 0.6131471927654584
+        "ndcg@5": 1.0
       },
       {
         "id": "q23",
         "category": "SECTION_STRUCTURE",
         "question": "What does section 6 of this manual cover, and what are its subsections?",
         "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
           [
             "grundfos_cm_pump_manual.pdf",
             4
@@ -870,10 +874,10 @@
             13
           ]
         ],
-        "recall@5": 0.0,
-        "precision@5": 0.0,
-        "mrr": 0.0,
-        "ndcg@5": 0.0
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 0.6131471927654584
       },
       {
         "id": "q24",
@@ -962,10 +966,10 @@
   "hybrid_rrf": {
     "arm": "2. Hybrid Search (Dense + BM25 RRF)",
     "summary": {
-      "recall@5": 0.8,
-      "precision@5": 0.2,
-      "mrr": 0.6467,
-      "ndcg@5": 0.6652
+      "recall@5": 0.9,
+      "precision@5": 0.224,
+      "mrr": 0.7767,
+      "ndcg@5": 0.7813
     },
     "per_question": [
       {
@@ -1045,39 +1049,39 @@
       {
         "id": "q3",
         "category": "TABLE",
-        "question": "What does item 1 on the pump nameplate represent?",
+        "question": "What is the cause if the pump does not run, according to the fault-finding table?",
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
-            3
+            12
           ]
         ],
         "retrieved": [
           [
-            "grundfos_cm_pump_manual.pdf",
-            3
+            "1_TP.pdf",
+            14
           ],
           [
             "grundfos_cm_pump_manual.pdf",
-            3
+            8
+          ],
+          [
+            "1_TP.pdf",
+            14
           ],
           [
             "grundfos_cm_pump_manual.pdf",
-            3
+            12
           ],
           [
             "grundfos_cm_pump_manual.pdf",
-            3
-          ],
-          [
-            "grundfos_cm_pump_manual.pdf",
-            3
+            12
           ]
         ],
         "recall@5": 1.0,
         "precision@5": 0.2,
-        "mrr": 1.0,
-        "ndcg@5": 1.0
+        "mrr": 0.25,
+        "ndcg@5": 0.43067655807339306
       },
       {
         "id": "q4",
@@ -1086,7 +1090,7 @@
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
-            10
+            13
           ]
         ],
         "retrieved": [
@@ -1111,19 +1115,23 @@
             12
           ]
         ],
-        "recall@5": 0.0,
-        "precision@5": 0.0,
-        "mrr": 0.0,
-        "ndcg@5": 0.0
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
       },
       {
         "id": "q5",
         "category": "TABLE",
-        "question": "What are the sound pressure levels and electrical data listed in the technical data section?",
+        "question": "What are the maximum sound pressure levels listed in the technical data section?",
         "expected": [
           [
             "1_TP.pdf",
-            13
+            30
+          ],
+          [
+            "1_TP.pdf",
+            31
           ]
         ],
         "retrieved": [
@@ -1132,7 +1140,7 @@
             31
           ],
           [
-            "1_TP.pdf",
+            "grundfos_cm_pump_manual.pdf",
             2
           ],
           [
@@ -1140,31 +1148,27 @@
             30
           ],
           [
-            "1_TP.pdf",
+            "grundfos_cm_pump_manual.pdf",
             2
           ],
           [
             "1_TP.pdf",
-            31
+            30
           ]
         ],
-        "recall@5": 0.0,
-        "precision@5": 0.0,
-        "mrr": 0.0,
-        "ndcg@5": 0.0
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "mrr": 1.0,
+        "ndcg@5": 0.9197207891481876
       },
       {
         "id": "q6",
         "category": "TABLE",
-        "question": "What does the fault-finding table recommend if the pump is classified as contaminated?",
+        "question": "What does the manual say if the pump is classified as contaminated?",
         "expected": [
           [
             "1_TP.pdf",
             12
-          ],
-          [
-            "1_TP.pdf",
-            14
           ]
         ],
         "retrieved": [
@@ -1173,6 +1177,10 @@
             12
           ],
           [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
             "1_TP.pdf",
             12
           ],
@@ -1181,18 +1189,14 @@
             10
           ],
           [
-            "grundfos_cm_pump_manual.pdf",
-            10
-          ],
-          [
             "1_TP.pdf",
-            14
+            10
           ]
         ],
         "recall@5": 1.0,
-        "precision@5": 0.4,
+        "precision@5": 0.2,
         "mrr": 1.0,
-        "ndcg@5": 0.8503449055347546
+        "ndcg@5": 1.0
       },
       {
         "id": "q7",
@@ -1386,6 +1390,10 @@
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
             7
           ]
         ],
@@ -1411,10 +1419,10 @@
             7
           ]
         ],
-        "recall@5": 1.0,
+        "recall@5": 0.5,
         "precision@5": 0.2,
         "mrr": 0.3333333333333333,
-        "ndcg@5": 0.5
+        "ndcg@5": 0.3065735963827292
       },
       {
         "id": "q13",
@@ -1460,7 +1468,7 @@
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
-            8
+            10
           ]
         ],
         "retrieved": [
@@ -1487,8 +1495,8 @@
         ],
         "recall@5": 1.0,
         "precision@5": 0.2,
-        "mrr": 0.5,
-        "ndcg@5": 0.6309297535714575
+        "mrr": 1.0,
+        "ndcg@5": 1.0
       },
       {
         "id": "q15",
@@ -1530,7 +1538,7 @@
       {
         "id": "q16",
         "category": "EXACT_FACT",
-        "question": "What is the recommended concrete foundation weight for TP Series 300 pumps with weights of 150 kg or more?",
+        "question": "What is the recommended concrete foundation weight for TP Series 300 pumps?",
         "expected": [
           [
             "1_TP.pdf",
@@ -1556,7 +1564,7 @@
           ],
           [
             "1_TP.pdf",
-            8
+            7
           ]
         ],
         "recall@5": 1.0,
@@ -1760,49 +1768,49 @@
       {
         "id": "q22",
         "category": "MULTI_PAGE",
-        "question": "What steps are required for startup, flushing, and priming the pipe system?",
+        "question": "What are the pipe system flushing requirements before starting the pump?",
         "expected": [
           [
             "1_TP.pdf",
             10
-          ],
-          [
-            "1_TP.pdf",
-            11
           ]
         ],
         "retrieved": [
           [
-            "grundfos_cm_pump_manual.pdf",
-            8
+            "1_TP.pdf",
+            10
           ],
           [
             "1_TP.pdf",
             10
           ],
           [
-            "grundfos_cm_pump_manual.pdf",
-            8
+            "1_TP.pdf",
+            10
           ],
           [
             "1_TP.pdf",
-            10
+            2
           ],
           [
             "1_TP.pdf",
             10
           ]
         ],
-        "recall@5": 0.5,
+        "recall@5": 1.0,
         "precision@5": 0.2,
-        "mrr": 0.5,
-        "ndcg@5": 0.38685280723454163
+        "mrr": 1.0,
+        "ndcg@5": 1.0
       },
       {
         "id": "q23",
         "category": "SECTION_STRUCTURE",
         "question": "What does section 6 of this manual cover, and what are its subsections?",
         "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
           [
             "grundfos_cm_pump_manual.pdf",
             4
@@ -1830,10 +1838,10 @@
             2
           ]
         ],
-        "recall@5": 0.0,
-        "precision@5": 0.0,
-        "mrr": 0.0,
-        "ndcg@5": 0.0
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 0.6131471927654584
       },
       {
         "id": "q24",
@@ -1922,10 +1930,10 @@
   "hybrid_reranked": {
     "arm": "3. Hybrid + Cross-Encoder Reranker",
     "summary": {
-      "recall@5": 0.76,
-      "precision@5": 0.184,
-      "mrr": 0.72,
-      "ndcg@5": 0.6939
+      "recall@5": 0.9,
+      "precision@5": 0.216,
+      "mrr": 0.8267,
+      "ndcg@5": 0.8216
     },
     "per_question": [
       {
@@ -2005,33 +2013,33 @@
       {
         "id": "q3",
         "category": "TABLE",
-        "question": "What does item 1 on the pump nameplate represent?",
+        "question": "What is the cause if the pump does not run, according to the fault-finding table?",
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
-            3
+            12
           ]
         ],
         "retrieved": [
           [
             "grundfos_cm_pump_manual.pdf",
-            3
+            12
           ],
           [
             "grundfos_cm_pump_manual.pdf",
-            3
+            12
           ],
           [
             "1_TP.pdf",
-            9
+            14
           ],
           [
-            "grundfos_cm_pump_manual.pdf",
-            3
+            "1_TP.pdf",
+            14
           ],
           [
-            "grundfos_cm_pump_manual.pdf",
-            3
+            "1_TP.pdf",
+            15
           ]
         ],
         "recall@5": 1.0,
@@ -2046,7 +2054,7 @@
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
-            10
+            13
           ]
         ],
         "retrieved": [
@@ -2071,33 +2079,33 @@
             13
           ]
         ],
-        "recall@5": 0.0,
-        "precision@5": 0.0,
-        "mrr": 0.0,
-        "ndcg@5": 0.0
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
       },
       {
         "id": "q5",
         "category": "TABLE",
-        "question": "What are the sound pressure levels and electrical data listed in the technical data section?",
+        "question": "What are the maximum sound pressure levels listed in the technical data section?",
         "expected": [
           [
             "1_TP.pdf",
-            13
+            30
+          ],
+          [
+            "1_TP.pdf",
+            31
           ]
         ],
         "retrieved": [
           [
             "1_TP.pdf",
-            2
+            28
           ],
           [
             "1_TP.pdf",
-            31
-          ],
-          [
-            "1_TP.pdf",
-            2
+            29
           ],
           [
             "1_TP.pdf",
@@ -2106,25 +2114,25 @@
           [
             "1_TP.pdf",
             29
+          ],
+          [
+            "1_TP.pdf",
+            30
           ]
         ],
-        "recall@5": 0.0,
-        "precision@5": 0.0,
-        "mrr": 0.0,
-        "ndcg@5": 0.0
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@5": 0.3065735963827292
       },
       {
         "id": "q6",
         "category": "TABLE",
-        "question": "What does the fault-finding table recommend if the pump is classified as contaminated?",
+        "question": "What does the manual say if the pump is classified as contaminated?",
         "expected": [
           [
             "1_TP.pdf",
             12
-          ],
-          [
-            "1_TP.pdf",
-            14
           ]
         ],
         "retrieved": [
@@ -2133,6 +2141,10 @@
             12
           ],
           [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
             "1_TP.pdf",
             12
           ],
@@ -2141,18 +2153,14 @@
             10
           ],
           [
-            "grundfos_cm_pump_manual.pdf",
-            10
-          ],
-          [
-            "grundfos_cm_pump_manual.pdf",
-            8
+            "1_TP.pdf",
+            14
           ]
         ],
-        "recall@5": 0.5,
+        "recall@5": 1.0,
         "precision@5": 0.2,
         "mrr": 1.0,
-        "ndcg@5": 0.6131471927654584
+        "ndcg@5": 1.0
       },
       {
         "id": "q7",
@@ -2346,6 +2354,10 @@
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
             7
           ]
         ],
@@ -2371,10 +2383,10 @@
             7
           ]
         ],
-        "recall@5": 1.0,
+        "recall@5": 0.5,
         "precision@5": 0.2,
         "mrr": 0.3333333333333333,
-        "ndcg@5": 0.5
+        "ndcg@5": 0.3065735963827292
       },
       {
         "id": "q13",
@@ -2420,7 +2432,7 @@
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
-            8
+            10
           ]
         ],
         "retrieved": [
@@ -2445,10 +2457,10 @@
             2
           ]
         ],
-        "recall@5": 0.0,
-        "precision@5": 0.0,
-        "mrr": 0.0,
-        "ndcg@5": 0.0
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
       },
       {
         "id": "q15",
@@ -2490,7 +2502,7 @@
       {
         "id": "q16",
         "category": "EXACT_FACT",
-        "question": "What is the recommended concrete foundation weight for TP Series 300 pumps with weights of 150 kg or more?",
+        "question": "What is the recommended concrete foundation weight for TP Series 300 pumps?",
         "expected": [
           [
             "1_TP.pdf",
@@ -2720,15 +2732,11 @@
       {
         "id": "q22",
         "category": "MULTI_PAGE",
-        "question": "What steps are required for startup, flushing, and priming the pipe system?",
+        "question": "What are the pipe system flushing requirements before starting the pump?",
         "expected": [
           [
             "1_TP.pdf",
             10
-          ],
-          [
-            "1_TP.pdf",
-            11
           ]
         ],
         "retrieved": [
@@ -2745,24 +2753,28 @@
             10
           ],
           [
-            "1_TP.pdf",
-            2
+            "grundfos_cm_pump_manual.pdf",
+            5
           ],
           [
-            "grundfos_cm_pump_manual.pdf",
-            8
+            "1_TP.pdf",
+            10
           ]
         ],
-        "recall@5": 0.5,
+        "recall@5": 1.0,
         "precision@5": 0.2,
         "mrr": 1.0,
-        "ndcg@5": 0.6131471927654584
+        "ndcg@5": 1.0
       },
       {
         "id": "q23",
         "category": "SECTION_STRUCTURE",
         "question": "What does section 6 of this manual cover, and what are its subsections?",
         "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
           [
             "grundfos_cm_pump_manual.pdf",
             4
@@ -2790,10 +2802,10 @@
             8
           ]
         ],
-        "recall@5": 0.0,
-        "precision@5": 0.0,
-        "mrr": 0.0,
-        "ndcg@5": 0.0
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 0.3333333333333333,
+        "ndcg@5": 0.3065735963827292
       },
       {
         "id": "q24",
@@ -2882,10 +2894,10 @@
   "multimodal_final": {
     "arm": "4. Multimodal (Text + Tables + Vision Chunks)",
     "summary": {
-      "recall@5": 0.76,
-      "precision@5": 0.184,
-      "mrr": 0.7467,
-      "ndcg@5": 0.7131
+      "recall@5": 0.92,
+      "precision@5": 0.224,
+      "mrr": 0.8747,
+      "ndcg@5": 0.8578
     },
     "per_question": [
       {
@@ -2965,39 +2977,39 @@
       {
         "id": "q3",
         "category": "TABLE",
-        "question": "What does item 1 on the pump nameplate represent?",
+        "question": "What is the cause if the pump does not run, according to the fault-finding table?",
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
-            3
+            12
           ]
         ],
         "retrieved": [
           [
             "grundfos_cm_pump_manual.pdf",
+            12
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
+            12
+          ],
+          [
+            "1_TP.pdf",
             14
           ],
           [
-            "grundfos_cm_pump_manual.pdf",
-            3
-          ],
-          [
-            "grundfos_cm_pump_manual.pdf",
+            "1_TP.pdf",
             14
           ],
           [
-            "grundfos_cm_pump_manual.pdf",
-            3
-          ],
-          [
-            "grundfos_cm_pump_manual.pdf",
-            3
+            "1_TP.pdf",
+            15
           ]
         ],
         "recall@5": 1.0,
         "precision@5": 0.2,
-        "mrr": 0.5,
-        "ndcg@5": 0.6309297535714575
+        "mrr": 1.0,
+        "ndcg@5": 1.0
       },
       {
         "id": "q4",
@@ -3006,7 +3018,7 @@
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
-            10
+            13
           ]
         ],
         "retrieved": [
@@ -3031,33 +3043,29 @@
             13
           ]
         ],
-        "recall@5": 0.0,
-        "precision@5": 0.0,
-        "mrr": 0.0,
-        "ndcg@5": 0.0
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
       },
       {
         "id": "q5",
         "category": "TABLE",
-        "question": "What are the sound pressure levels and electrical data listed in the technical data section?",
+        "question": "What are the maximum sound pressure levels listed in the technical data section?",
         "expected": [
           [
             "1_TP.pdf",
-            13
+            30
+          ],
+          [
+            "1_TP.pdf",
+            31
           ]
         ],
         "retrieved": [
           [
             "1_TP.pdf",
-            2
-          ],
-          [
-            "1_TP.pdf",
-            31
-          ],
-          [
-            "1_TP.pdf",
-            2
+            28
           ],
           [
             "1_TP.pdf",
@@ -3066,25 +3074,29 @@
           [
             "1_TP.pdf",
             29
+          ],
+          [
+            "1_TP.pdf",
+            30
+          ],
+          [
+            "1_TP.pdf",
+            30
           ]
         ],
-        "recall@5": 0.0,
-        "precision@5": 0.0,
-        "mrr": 0.0,
-        "ndcg@5": 0.0
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 0.5,
+        "ndcg@5": 0.38685280723454163
       },
       {
         "id": "q6",
         "category": "TABLE",
-        "question": "What does the fault-finding table recommend if the pump is classified as contaminated?",
+        "question": "What does the manual say if the pump is classified as contaminated?",
         "expected": [
           [
             "1_TP.pdf",
             12
-          ],
-          [
-            "1_TP.pdf",
-            14
           ]
         ],
         "retrieved": [
@@ -3093,6 +3105,10 @@
             12
           ],
           [
+            "grundfos_cm_pump_manual.pdf",
+            10
+          ],
+          [
             "1_TP.pdf",
             12
           ],
@@ -3101,18 +3117,14 @@
             10
           ],
           [
-            "grundfos_cm_pump_manual.pdf",
-            10
-          ],
-          [
-            "grundfos_cm_pump_manual.pdf",
-            8
+            "1_TP.pdf",
+            14
           ]
         ],
-        "recall@5": 0.5,
+        "recall@5": 1.0,
         "precision@5": 0.2,
         "mrr": 1.0,
-        "ndcg@5": 0.6131471927654584
+        "ndcg@5": 1.0
       },
       {
         "id": "q7",
@@ -3306,6 +3318,10 @@
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
+            6
+          ],
+          [
+            "grundfos_cm_pump_manual.pdf",
             7
           ]
         ],
@@ -3332,9 +3348,9 @@
           ]
         ],
         "recall@5": 1.0,
-        "precision@5": 0.2,
+        "precision@5": 0.4,
         "mrr": 1.0,
-        "ndcg@5": 1.0
+        "ndcg@5": 0.8503449055347546
       },
       {
         "id": "q13",
@@ -3380,7 +3396,7 @@
         "expected": [
           [
             "grundfos_cm_pump_manual.pdf",
-            8
+            10
           ]
         ],
         "retrieved": [
@@ -3405,10 +3421,10 @@
             2
           ]
         ],
-        "recall@5": 0.0,
-        "precision@5": 0.0,
-        "mrr": 0.0,
-        "ndcg@5": 0.0
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "mrr": 1.0,
+        "ndcg@5": 1.0
       },
       {
         "id": "q15",
@@ -3450,7 +3466,7 @@
       {
         "id": "q16",
         "category": "EXACT_FACT",
-        "question": "What is the recommended concrete foundation weight for TP Series 300 pumps with weights of 150 kg or more?",
+        "question": "What is the recommended concrete foundation weight for TP Series 300 pumps?",
         "expected": [
           [
             "1_TP.pdf",
@@ -3680,15 +3696,11 @@
       {
         "id": "q22",
         "category": "MULTI_PAGE",
-        "question": "What steps are required for startup, flushing, and priming the pipe system?",
+        "question": "What are the pipe system flushing requirements before starting the pump?",
         "expected": [
           [
             "1_TP.pdf",
             10
-          ],
-          [
-            "1_TP.pdf",
-            11
           ]
         ],
         "retrieved": [
@@ -3705,24 +3717,28 @@
             10
           ],
           [
-            "1_TP.pdf",
-            2
+            "grundfos_cm_pump_manual.pdf",
+            5
           ],
           [
-            "grundfos_cm_pump_manual.pdf",
-            8
+            "1_TP.pdf",
+            10
           ]
         ],
-        "recall@5": 0.5,
+        "recall@5": 1.0,
         "precision@5": 0.2,
         "mrr": 1.0,
-        "ndcg@5": 0.6131471927654584
+        "ndcg@5": 1.0
       },
       {
         "id": "q23",
         "category": "SECTION_STRUCTURE",
         "question": "What does section 6 of this manual cover, and what are its subsections?",
         "expected": [
+          [
+            "grundfos_cm_pump_manual.pdf",
+            2
+          ],
           [
             "grundfos_cm_pump_manual.pdf",
             4
@@ -3750,10 +3766,10 @@
             2
           ]
         ],
-        "recall@5": 0.0,
-        "precision@5": 0.0,
-        "mrr": 0.0,
-        "ndcg@5": 0.0
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "mrr": 0.2,
+        "ndcg@5": 0.23719771276929622
       },
       {
         "id": "q24",
