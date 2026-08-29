@@ -213,6 +213,20 @@ Evaluated on the full 25-question multi-document ground-truth set (422 chunks ac
 
 ---
 
+### C. RAGAS LLM-as-a-Judge Metric Benchmarks
+
+*Source script: [`backend/tests/evaluate_ragas.py`](file:///c:/Users/pachi/Downloads/Projects/Multimodal-Rag/backend/tests/evaluate_ragas.py) / Output data: [`backend/tests/ragas_report.json`](file:///c:/Users/pachi/Downloads/Projects/Multimodal-Rag/backend/tests/ragas_report.json)*
+
+Evaluated using the **RAGAS** framework (`ragas` library) with **Groq LLM** (`qwen/qwen3.8-27b`) as the judge and **FastEmbed** (`BAAI/bge-base-en-v1.5`) embeddings across multi-category technical queries (PDF, DOCX, Code, Standalone Diagram):
+
+| RAGAS Metric | Score | Definition |
+| :--- | :---: | :--- |
+| **Faithfulness** | **0.9333** | Measures if all facts in the generated answer are strictly grounded in retrieved evidence without hallucination. |
+| **Answer Relevancy** | **0.9346** | Measures how directly and completely the LLM answer addresses the user query. |
+| **Context Precision** | **0.7500** / **1.0000** | Measures if the most relevant evidence chunks are ranked at the top of the context pool. |
+
+---
+
 ## 10. Robustness & Error Handling
 
 The FastAPI backend includes defensive validation verified via explicit integration tests (`backend/tests/test_error_handling.py`):
@@ -456,6 +470,12 @@ python tests/run_verification.py
 cd backend
 python tests/test_error_handling.py
 python tests/test_api.py
+```
+
+### 7. Run RAGAS Evaluation Suite
+```bash
+cd backend
+python tests/evaluate_ragas.py
 ```
 
 ---

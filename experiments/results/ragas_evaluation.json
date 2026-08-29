@@ -1,0 +1,25 @@
+{
+  "ragas_summary": {},
+  "per_question_details": [
+    {
+      "question": "What is shaft seal type AQQx rated for?",
+      "answer": "Based on the provided excerpts, the shaft seal type **AQQx** is rated for the following maximum system pressures and permissible liquid temperatures, depending on the pump material:\n\n*   **Stainless steel (EN 1.4401 / AISI 316):**\n    *   **Permissible liquid temperature:** -20 to 90 \u00b0C (-4 to 194 \u00b0F) and 91 to 120 \u00b0C (195.8 to 248 \u00b0F) [1][3].\n    *   **Maximum system pressure:** 16 bar (232 psi) and 10 bar (145 psi) [1][3].\n\n*   **Cast iron (EN-GJL-200):**\n    *   **Permissible liquid temperature:** -20 to 90 \u00b0C (-4 to 194 \u00b0F) [2][4].\n    *   **Maximum system pressure:** 10 bar (145 psi) [2][4].\n\n*   **Stainless steel (EN 1.4301 / AISI 304):**\n    *   **Permissible liquid temperature:** -20 to 90 \u00b0C (-4 to 194 \u00b0F) and 91 to 120 \u00b0C (195.8 to 248 \u00b0F) [2][4].\n    *   **Maximum system pressure:** 16 bar (232 psi) and 10 bar (145 psi) [2][4].\n\nNote: The excerpts indicate specific temperature ranges associated with asterisks (e.g., -20*** to 90 \u00b0C and 91 to 120 \u00b0C**), but the specific conditions or limitations defined by these asterisks are not detailed in the provided text.",
+      "ground_truth": ""
+    },
+    {
+      "question": "What is the maximum system pressure for a cast iron pump with shaft seal type AVBx?",
+      "answer": "For a cast iron pump with shaft seal type AVBx, the maximum system pressure is 10 bar (145 psi) for liquid temperatures between -20 to 40 \u00b0C, and 6 bar (87 psi) for liquid temperatures between 41 to 90 \u00b0C [1].",
+      "ground_truth": ""
+    },
+    {
+      "question": "What is the cause if the pump does not run, according to the fault-finding table?",
+      "answer": "According to the fault-finding table, the causes for the pump not running are:\n\n*   Supply failure [1]\n*   Motor protection tripped [1]\n*   Control-current circuit defective [1]\n\n[2]",
+      "ground_truth": ""
+    },
+    {
+      "question": "What is the remedy if the pump runs but delivers no water, according to the fault-finding table?",
+      "answer": "According to the fault-finding table, if the pump runs but gives no water, the remedies depend on the specific cause:\n\n*   If the cause is **pump inlet pressure too low**, the remedy is to see section 5.a [1].\n*   If the cause is that the **suction pipe is partly clogged by impurities**, the remedy is to see section 5.b [1].\n*   If the cause is that the **foot or non-return valve is stuck in its closed position**, the remedy is to remove and clean, repair, or replace the valve [1].\n*   If the cause is **leakage in the suction pipe**, the remedy is to see section 5.c [1].\n*   If the cause is **air in the suction pipe or pump**, the remedy is to see section 5.d [1].",
+      "ground_truth": ""
+    }
+  ]
+}
