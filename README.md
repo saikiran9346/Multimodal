@@ -1,6 +1,6 @@
-# Multimodal Multi-PDF RAG for Technical Manuals
+# Multimodal Multi-Format Technical Document RAG
 
-> Production-grade Multimodal Retrieval-Augmented Generation (RAG) system for querying complex technical PDF manuals containing dense prose, multi-column layouts, Markdown tables, and engineering schematics.
+> Production-grade Multimodal Retrieval-Augmented Generation (RAG) system for querying complex technical documents, code, manuals, and schematics across 25+ file formats.
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg?style=flat&logo=fastapi)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React-18.3+-61DAFB.svg?style=flat&logo=react)](https://reactjs.org)
@@ -12,27 +12,28 @@
 
 ## 1. Overview & Problem Statement
 
-Technical equipment manuals (e.g., Grundfos industrial pump documentation, machinery service guides) present fundamental challenges for standard text-only RAG pipelines:
+Technical documentation (e.g., equipment manuals, service protocols, hydraulic calculation scripts, electrical schematics) presents fundamental challenges for standard text-only RAG pipelines:
 
 - **Complex Visuals & Schematics**: Critical installation, electrical wiring, and lifting guidelines exist only inside diagrams and figures.
 - **Structured Data in Tables**: Maximum operating pressures, permissible liquid temperatures, and shaft seal limits are stored in tabular matrices that standard parsers destroy.
-- **Cross-Document Keyword Collisions**: In multi-manual indexes, different products share identical vocabularies (*"pump"*, *"motor stool"*, *"pressure rating"*, *"installation"*), causing cross-document distraction and retrieval pollution.
-- **Strict Citation Requirements**: Field engineers require verifiable document names and page numbers for every technical claim.
+- **Heterogeneous File Formats**: Real-world technical stacks span PDFs, Word documents (`.docx`), PowerPoints (`.pptx`), Excel sheets (`.xlsx`), HTML/Markdown specs, source code (`.py`, `.js`, `.cpp`), and standalone diagrams (`.png`, `.jpg`).
+- **Cross-Document Keyword Collisions**: In multi-file indexes, different documents share identical vocabularies (*"pump"*, *"motor stool"*, *"pressure rating"*, *"installation"*), causing cross-document distraction and retrieval pollution.
+- **Strict Citation Requirements**: Field engineers require verifiable document names, headings, or page numbers for every technical claim without literal `"None"` fallbacks.
 
-This project implements an end-to-end multimodal, multi-document RAG system with structure-aware PDF chunking, automated vision model classification, hybrid dense-sparse vector search, cross-encoder reranking, and document-aware routing.
+This project implements an end-to-end multimodal, multi-format RAG system with structure-aware parsing, automated vision model classification, hybrid dense-sparse vector search, cross-encoder reranking, and format-aware citation routing.
 
 ---
 
 ## 2. Key Features
 
-- **Multi-Format Document Ingestion**: Powered by IBM's **Docling** engine to parse 25+ technical formats across Documents (PDF, DOCX, PPTX, XLSX, HTML, MD, CSV, ODT, ODS, ODP, TEX, ADOC), Code & Configs (Python, JS, TS, C, C++, Java, Go, Rust, JSON, YAML, XML), and Technical Images (PNG, JPG, TIFF) with high fidelity.
-- **Multimodal Visual Understanding**: Automatically extracts diagrams at 2.0x DPI, filters out decorative logos/branding, and generates detailed technical summaries via **Groq Vision** (`qwen/qwen3.6-27b`).
+- **Multi-Format Technical Ingestion (25+ Formats)**: Powered by IBM's **Docling** engine to parse 25+ technical formats across Documents (PDF, DOCX, PPTX, XLSX, HTML, MD, CSV, ODT, ODS, ODP, TEX, ADOC), Code & Configs (Python, JS, TS, C, C++, Java, Go, Rust, JSON, YAML, XML), and Technical Images (PNG, JPG, TIFF) with high fidelity.
+- **Standalone & Embedded Image Processing**: Extracts PDF figures at 2.0x DPI and processes direct standalone image uploads (`.png`, `.jpg`) via **Groq Vision** (`qwen/qwen3.8-27b`) to generate searchable technical descriptions.
 - **Hybrid Dense + Sparse Retrieval**: Combines 768-dimensional dense semantic vectors (**BAAI/bge-base-en-v1.5**) with sparse BM25 vectors (**Qdrant/bm25**) using **Reciprocal Rank Fusion (RRF)**.
 - **Cross-Encoder Reranking**: Re-scores candidate pools with **BAAI/bge-reranker-base** (`TextCrossEncoder`) to place the most relevant evidence chunks at Rank 1.
-- **Multi-Document Disambiguation**: Employs document title prefixing (`[Manual: <Name>]`) and query-aware metadata routing to eliminate cross-manual distraction without evaluation data leakage.
-- **Grounded Answers with Strict Citations**: Uses Groq LLM inference with low temperature (`0.1`) and inline citations `[1]`, `[2]` directly tied to document filenames and page numbers.
-- **Production FastAPI Backend**: Async REST API with validation, health checks, and error handling.
-- **Modern React Interface**: Single-page application with source inspection, image chunk badges, document filter dropdowns, and live citation jump links.
+- **Multi-Category Format Coexistence**: Guarantees PDF documents, Word protocols, Python modules, and standalone image schematics reside in the same index without key collisions or data loss.
+- **Format-Aware Citation Engine**: Automatically formats PDF citations with exact page numbers (`doc_name - Page N`), Word/HTML/MD citations with heading hierarchies (`doc_name - Heading > Subheading`), Code citations with file scope (`doc_name - File: doc_name`), and images with file boundaries.
+- **Production FastAPI Backend**: Async REST API with validation, health checks, error handling, and clean `/api/ingest` and `/api/query` routes.
+- **Modern React Interface**: Single-page application with source inspection, image chunk badges, document filter dropdowns, 29+ format upload drag-and-drop, and live citation jump links.
 
 ---
 
@@ -41,9 +42,9 @@ This project implements an end-to-end multimodal, multi-document RAG system with
 ```mermaid
 graph TD
     subgraph Ingestion Pipeline
-        A[Upload PDF Manual] --> B[Docling Structure Parser]
-        B --> C[HybridChunker: Text & Tables]
-        B --> D[Picture Extractor: 2.0x DPI]
+        A[Upload PDF / DOCX / CODE / IMAGE] --> B[Docling Format Converter]
+        B --> C[HybridChunker: Text, Tables & Code]
+        B --> D[Picture Extractor / Standalone Image Loader]
         D --> E[Groq Vision: Classify & Describe]
         E -- Technical Diagrams --> F[Image Chunks]
         E -- Branding / Logos --> G[Discard]
@@ -64,7 +65,7 @@ graph TD
         P --> Q[BGE-Reranker-Base Cross-Encoder]
         Q --> R[Top-5 Re-Ranked Evidence Chunks]
         R --> S[Groq LLM: Grounded Generation]
-        S --> T[FastAPI JSON Response + Citations]
+        S --> T[FastAPI JSON Response + Format Citations]
         T --> U[React UI / Chat Interface]
     end
 ```
@@ -74,18 +75,18 @@ graph TD
 ## 4. End-to-End RAG Workflow
 
 ```
-[ PDF Document Upload ]
+[ Technical File Upload (PDF, DOCX, PY, PNG, etc.) ]
           │
           ▼
-[ Docling Structural Parsing ] ───► Preserves Markdown tables & reading order
+[ Docling Multi-Format Conversion ] ──► Preserves tables, code blocks, & reading order
           │
-          ├──► Text / Table Chunks ──┐
-          │                          ▼
-          └──► Technical Figures ────► [ Groq Vision Model ] ──► Visual Summaries
-                                                                       │
-                                                                       ▼
-[ Chunk Title Prefixing ] ◄────────────────────────────────────────────┘
-  e.g. "[Manual: Grundfos CM, CME] \n 11.4 Operating Limits..."
+          ├──► Text / Table / Code Chunks ──┐
+          │                                 ▼
+          └──► Technical Figures / Images ──► [ Groq Vision Model ] ──► Visual Summaries
+                                                                            │
+                                                                            ▼
+[ Chunk Title Prefixing ] ◄─────────────────────────────────────────────────┘
+  e.g. "[Manual: service_protocol.docx] \n Electrical Motor Maintenance..."
           │
           ▼
 [ Dual Vector Embedding ]
@@ -107,14 +108,18 @@ graph TD
 
 ---
 
-## 5. Multi-PDF Support
+## 5. Multi-Document & Multi-Category Coexistence
 
-Real-world technical repositories store multiple manuals simultaneously. This system handles cross-document coexistence through:
+Real-world technical repositories contain documents across multiple categories simultaneously. This system guarantees coexistence through:
 
-1. **Payload Metadata Isolation**: Every indexed point in Qdrant retains `doc_name`, `page_no`, `content_types`, `headings`, and `captions`.
-2. **Document Title Prefixing**: Chunks are prefixed with their human-readable manual title (`[Manual: Grundfos CM, CME]` or `[Manual: Grundfos TP, TPD]`). This ensures semantic encoders and cross-encoders preserve manual context even for generic sub-sections.
-3. **Query-Aware Metadata Filtering**: If a user's prompt explicitly mentions a specific series (e.g. *"TP Series 300"* or *"CM manual"*), Qdrant payload filters dynamically isolate candidates to that document. Generic queries search across all indexed manuals simultaneously.
-4. **Per-Source Document & Page Citations**: Every cited source displays both the source PDF filename and the exact target page number.
+1. **Payload Metadata Isolation**: Every indexed point in Qdrant retains `doc_name`, `page_no`, `content_types`, `headings`, and `text`.
+2. **Document Title Prefixing**: Chunks are prefixed with their human-readable title (`[Manual: grundfos_cm_pump_manual.pdf]` or `[Manual: service_protocol.docx]`). This ensures semantic encoders and cross-encoders preserve manual context even for generic sub-sections.
+3. **Query-Aware Metadata Filtering**: If a user's prompt explicitly targets a specific file (e.g. `service_protocol.docx` or `hydraulic_calculations.py`), Qdrant payload filters dynamically isolate candidates to that document. Generic queries search across all indexed files simultaneously.
+4. **Format-Aware Citation Formatting**:
+   - **PDF Files**: Includes integer page number (`doc_name - Page N`).
+   - **DOCX / HTML / Markdown Files**: Uses heading hierarchy (`doc_name - Section > Subsection`).
+   - **Source Code Files**: Uses file identifier (`doc_name - File: doc_name`).
+   - **Standalone Images**: Uses filename identifier (`doc_name`).
 
 ---
 
@@ -145,13 +150,13 @@ The benchmark evaluates four distinct retrieval pipeline architectures:
 
 | Layer | Technology | Details / Model |
 | :--- | :--- | :--- |
-| **Document Parser** | IBM Docling | `HybridChunker` (Supports PDF, DOCX, PPTX, XLSX, HTML, Markdown, CSV) |
-| **Vision Model** | Groq API | `qwen/qwen3.6-27b` (Classification & diagram description) |
+| **Document Parser** | IBM Docling | Supports PDF, DOCX, PPTX, XLSX, HTML, MD, CSV, Python, JS, PNG, etc. |
+| **Vision Model** | Groq API | `qwen/qwen3.8-27b` (Vision classification & diagram description) |
 | **Dense Embeddings** | FastEmbed | `BAAI/bge-base-en-v1.5` (768 dimensions) |
 | **Sparse Embeddings** | FastEmbed | `Qdrant/bm25` (Learned sparse token weights) |
 | **Vector Database** | Qdrant | Local embedded storage (`./qdrant_storage`) or Docker (`:6333`) |
 | **Reranker** | FastEmbed | `BAAI/bge-reranker-base` (`TextCrossEncoder`) |
-| **LLM Generation** | Groq API | `qwen/qwen3.6-27b` (`temperature=0.1`) |
+| **LLM Generation** | Groq API | `qwen/qwen3.8-27b` (`temperature=0.1`) |
 | **Backend API** | FastAPI / Uvicorn | Python 3.12, Pydantic v2, CORS, Starlette |
 | **Frontend UI** | React 18 / Vite | Vanilla CSS, Lucide Icons, Fetch API |
 
@@ -193,9 +198,9 @@ $$\text{NDCG@k} = \frac{\text{DCG}_k}{\text{IDCG}_k} \quad \text{where} \quad \t
 
 ---
 
-### B. Multi-PDF Benchmark Results (422 Chunks — 2 Pump Manuals)
+### B. Multi-PDF Benchmark Progression (422 Chunks — 2 Pump Manuals)
 
-*Source data: `experiments/results/multi_pdf_evaluation.json`*
+*Source data: `backend/tests/evaluate_multi_pdf.py` / `experiments/results/multi_pdf_evaluation.json`*
 
 Evaluated on the full 25-question multi-document ground-truth set (422 chunks across both manuals). Results show clean, monotonic improvement in MRR and NDCG across every added pipeline stage.
 
@@ -210,13 +215,13 @@ Evaluated on the full 25-question multi-document ground-truth set (422 chunks ac
 
 ## 10. Robustness & Error Handling
 
-The FastAPI backend includes defensive validation verified via explicit integration tests (`backend/test_error_handling.py`):
+The FastAPI backend includes defensive validation verified via explicit integration tests (`backend/tests/test_error_handling.py`):
 
 | Test Case | Request Input | Expected & Actual HTTP Status | Response Body / Behavior |
 | :--- | :--- | :---: | :--- |
-| **Corrupted / Fake PDF** | `.txt` file renamed to `invalid.pdf` | `400 Bad Request` | `{"detail": "Failed to parse 'invalid.pdf'. Please ensure it is a valid, uncorrupted PDF document."}` |
+| **Corrupted / Fake Document** | `.txt` file renamed to `invalid.pdf` | `400 Bad Request` | `{"detail": "Failed to parse 'invalid.pdf'. Please ensure it is a valid document."}` |
 | **Zero-Byte File** | Genuinely empty file (0 bytes) | `400 Bad Request` | `{"detail": "Uploaded file is empty (0 bytes)."}` |
-| **Non-PDF Extension** | `.png` image sent to upload | `400 Bad Request` | `{"detail": "Only PDF files (.pdf) are supported."}` |
+| **Unsupported Format** | Unsupported binary format sent | `400 Bad Request` | `{"detail": "Unsupported file extension '.xyz'."}` |
 | **Missing Upload Field** | Multipart request without file | `422 Unprocessable Entity` | Pydantic validation error (`Field required`) |
 | **Empty Query** | `{"query": "   "}` | `400 Bad Request` | `{"detail": "Query cannot be empty."}` |
 | **Missing Query Field** | `{}` | `422 Unprocessable Entity` | Pydantic validation error (`Field required`) |
@@ -235,7 +240,7 @@ GET /api/health
 {
   "status": "healthy",
   "qdrant": "connected",
-  "indexed_chunks": 844
+  "indexed_chunks": 849
 }
 ```
 
@@ -269,21 +274,21 @@ Content-Type: application/json
 }
 ```
 
-### 3. PDF Ingestion
+### 3. Document Ingestion (25+ File Formats)
 ```http
 POST /api/ingest
 Content-Type: multipart/form-data
 
-file=@grundfos_cm_pump_manual.pdf
+file=@service_protocol.docx
 ```
 ```json
 {
   "status": "success",
-  "filename": "grundfos_cm_pump_manual.pdf",
-  "total_chunks": 135,
-  "text_chunks": 113,
-  "image_chunks": 22,
-  "message": "Successfully indexed 135 chunks for 'grundfos_cm_pump_manual.pdf' into Qdrant."
+  "filename": "service_protocol.docx",
+  "total_chunks": 3,
+  "text_chunks": 3,
+  "image_chunks": 0,
+  "message": "Successfully indexed 3 chunks for 'service_protocol.docx' into Qdrant."
 }
 ```
 
@@ -301,17 +306,17 @@ Multimodal-Rag/
 │   ├── app/
 │   │   ├── api/
 │   │   │   └── routes/
-│   │   │       ├── ingest.py      # POST /api/ingest endpoint
+│   │   │       ├── ingest.py      # POST /api/ingest endpoint (25+ formats)
 │   │   │       └── query.py       # POST /api/query endpoint
 │   │   ├── generation/
 │   │   │   └── llm.py             # Groq LLM grounded generation & citation prompt
 │   │   ├── ingestion/
-│   │   │   ├── parser.py          # Docling document conversion
+│   │   │   ├── parser.py          # Docling document conversion options
 │   │   │   ├── chunker.py         # Structure-aware HybridChunker
-│   │   │   └── image_processor.py # Groq Vision image classification & description
+│   │   │   └── image_processor.py # Groq Vision image classification & standalone image processor
 │   │   ├── models/
 │   │   │   ├── chunk.py           # SourceChunk model
-│   │   │   ├── document.py        # IngestResponse model
+      │   │   ├── document.py        # IngestResponse model
 │   │   │   └── response.py        # QueryRequest & QueryResponse models
 │   │   ├── retrieval/
 │   │   │   ├── embeddings.py      # BGE-base dense embeddings via FastEmbed
@@ -320,10 +325,16 @@ Multimodal-Rag/
 │   │   ├── config.py              # Pydantic Settings & environment variables
 │   │   └── main.py                # FastAPI application entrypoint
 │   │
-│   ├── build_multi_index.py       # Rebuilds multi-document Qdrant index
-│   ├── evaluate_multi_pdf.py      # 4-arm multi-PDF benchmark evaluation suite
-│   ├── test_api.py                # Live FastAPI endpoint test client
-│   └── test_error_handling.py     # 8-scenario error and edge-case test suite
+│   └── tests/                     # Clean test & verification directory
+│       ├── evaluate_multi_pdf.py  # 4-arm multi-PDF benchmark evaluation suite
+│       ├── run_verification.py    # 5-point multi-category coexistence test script
+│       ├── generate_report.py     # Verification report generator
+│       ├── test_format_support.py # Test suite for 25+ file formats
+│       ├── test_error_handling.py # Defensive API error test suite
+│       ├── test_api.py            # FastAPI route verification
+│       ├── service_protocol.docx  # DOCX test fixture
+│       ├── hydraulic_calculations.py # Python code test fixture
+│       └── fig9_wiring_diagram.png # Standalone image test fixture
 │
 ├── frontend/
 │   ├── src/
@@ -370,7 +381,7 @@ Multimodal-Rag/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/Multimodal-Rag.git
+git clone https://github.com/saikiran9346/Multimodal.git
 cd Multimodal-Rag
 ```
 
@@ -431,14 +442,20 @@ Open `http://localhost:5173` in your browser.
 ### 4. Run Multi-PDF Benchmark Evaluation
 ```bash
 cd backend
-python evaluate_multi_pdf.py
+python tests/evaluate_multi_pdf.py
 ```
 
-### 5. Run Error Handling & Endpoint Verification Tests
+### 5. Run Multi-Category Verification Suite
 ```bash
 cd backend
-python test_error_handling.py
-python test_api.py
+python tests/run_verification.py
+```
+
+### 6. Run Defensive API Error Handling Tests
+```bash
+cd backend
+python tests/test_error_handling.py
+python tests/test_api.py
 ```
 
 ---
@@ -447,23 +464,24 @@ python test_api.py
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│  MULTIMODAL TECHNICAL MANUAL RAG                          ● Qdrant Connected (844 Chunks)│
+│  MULTIMODAL TECHNICAL DOCUMENT RAG                        ● Qdrant Connected (849 Chunks)│
 ├──────────────────────────┬─────────────────────────────────────────────────────────────┤
 │  DOCUMENT REPOSITORY     │  CHAT & QUESTION ANSWERING                                  │
 │                          │                                                             │
-│  [ Upload PDF Manual ]   │  User: What is shaft seal type AQQx rated for?              │
+│  [ Upload Document ]     │  User: What is shaft seal type AQQx rated for?              │
 │                          │                                                             │
 │  Indexed Documents:      │  Assistant:                                                 │
 │  • grundfos_cm_pump.pdf  │  Based on the technical manual excerpts, shaft seal         │
-│  • 1_TP.pdf              │  type AQQx has the following permissible ratings:           │
-│                          │                                                             │
-│  Filter By Document:     │  • Stainless Steel (AISI 316): -20 to 90 °C at 16 bar [1]   │
-│  [ All Documents ▾ ]     │  • Cast Iron (EN-GJL-200): -20 to 90 °C at 10 bar [2]       │
-│                          │                                                             │
-│  Retrieval Settings:     │  ────────────────────────────────────────────────────────── │
-│  [x] Include Visuals     │  Sources & Evidence:                                        │
-│  Top K: [ 5 ]            │  [1] grundfos_cm_pump_manual.pdf (p.11) [TABLE] Score: 5.168│
-│                          │  [2] grundfos_cm_pump_manual.pdf (p.11) [TABLE] Score: 4.151│
+│  • service_protocol.docx │  type AQQx has the following permissible ratings:           │
+│  • calculations.py       │                                                             │
+│  • fig9_diagram.png      │  • Stainless Steel (AISI 316): -20 to 90 °C at 16 bar [1]   │
+│                          │  • Cast Iron (EN-GJL-200): -20 to 90 °C at 10 bar [2]       │
+│  Filter By Document:     │                                                             │
+│  [ All Documents ▾ ]     │  ────────────────────────────────────────────────────────── │
+│                          │  Sources & Evidence:                                        │
+│  Retrieval Settings:     │  [1] grundfos_cm_pump_manual.pdf (p.11) [TABLE] Score: 5.168│
+│  [x] Include Visuals     │  [2] grundfos_cm_pump_manual.pdf (p.11) [TABLE] Score: 4.151│
+│  Top K: [ 5 ]            │                                                             │
 └──────────────────────────┴─────────────────────────────────────────────────────────────┘
 ```
 
@@ -488,15 +506,6 @@ python test_api.py
 ## 18. Why This Project Is Technically Interesting
 
 1. **Overcomes the Text-Only Blindspot**: Standard RAG fails on equipment manuals where answers exist in wiring schematics or mechanical drawings. This system bridges text and visual modalities.
-2. **Document Structure Preservation**: Rather than naive fixed-size chunking (e.g. 500 characters with 50 overlap), Docling chunking respects table borders, subsection boundaries, and prov page links.
-3. **Honest Multi-Document Evaluation**: Demonstrates the real-world challenge of multi-document retrieval degradation when scaling chunk corpus size, proving why document prefixing and routing are necessary for production scale.
-4. **Resilient Production API**: Comprehensive error handling catching malformed, empty, and non-PDF files as structured 4xx responses without unhandled server crashes.
-
----
-
-## 19. Resume & Technical Interview Highlights
-
-- **Designed & Implemented Multimodal RAG**: Built an end-to-end ingestion and retrieval engine utilizing Docling structure parsing, Groq Vision image classification, and hybrid retrieval over 800+ indexed vector representations.
-- **Improved Retrieval Performance with Hybrid RRF & Reranking**: Evaluated 4 retrieval architectures across 25 ground-truth technical queries, demonstrating an increase from **0.6967 MRR (Dense baseline)** to **0.8747 MRR (Multimodal + Reranker)** on a multi-document index.
-- **Multi-Document Disambiguation**: Solved cross-manual keyword collisions across hundreds of technical chunks by engineering document title prefixing and query-aware metadata filtering in Qdrant.
-- **Full-Stack Production System**: Built and integrated a FastAPI backend with Pydantic validation, CORS middleware, and an interactive React interface featuring dynamic citation previews.
+2. **Document Structure Preservation**: Rather than naive fixed-size chunking (e.g. 500 characters with 50 overlap), Docling chunking respects table borders, subsection boundaries, and page links.
+3. **Honest Multi-Document & Multi-Format Coexistence**: Demonstrates multi-category coexistence across PDF, Word docx, Python source code, and standalone PNG diagrams in the same vector collection without collision.
+4. **Resilient Production API**: Comprehensive error handling catching malformed, empty, and invalid files as structured 4xx responses without unhandled server crashes.
