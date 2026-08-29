@@ -1,25 +1,96 @@
 {
+  "total_questions_evaluated": 15,
   "ragas_summary": {},
   "per_question_details": [
     {
       "question": "What is shaft seal type AQQx rated for?",
-      "answer": "Based on the provided excerpts, the shaft seal type **AQQx** is rated for the following maximum system pressures and permissible liquid temperatures, depending on the pump material:\n\n*   **Stainless steel (EN 1.4401 / AISI 316):**\n    *   **Permissible liquid temperature:** -20 to 90 \u00b0C (-4 to 194 \u00b0F) and 91 to 120 \u00b0C (195.8 to 248 \u00b0F) [1][3].\n    *   **Maximum system pressure:** 16 bar (232 psi) and 10 bar (145 psi) [1][3].\n\n*   **Cast iron (EN-GJL-200):**\n    *   **Permissible liquid temperature:** -20 to 90 \u00b0C (-4 to 194 \u00b0F) [2][4].\n    *   **Maximum system pressure:** 10 bar (145 psi) [2][4].\n\n*   **Stainless steel (EN 1.4301 / AISI 304):**\n    *   **Permissible liquid temperature:** -20 to 90 \u00b0C (-4 to 194 \u00b0F) and 91 to 120 \u00b0C (195.8 to 248 \u00b0F) [2][4].\n    *   **Maximum system pressure:** 16 bar (232 psi) and 10 bar (145 psi) [2][4].\n\nNote: The excerpts indicate specific temperature ranges associated with asterisks (e.g., -20*** to 90 \u00b0C and 91 to 120 \u00b0C**), but the specific conditions or limitations defined by these asterisks are not detailed in the provided text.",
-      "ground_truth": ""
+      "doc_name": "grundfos_cm_pump_manual.pdf",
+      "answer": "Based on the provided excerpts, the shaft seal type **AQQx** is rated for the following maximum system pressures and permissible liquid temperatures, depending on the pump material:\n\n*   **Stainless steel (EN 1.4401 / AISI 316):**\n    *   **Permissible liquid temperature:** -20 to 90 \u00b0C (-4 to 194 \u00b0F) and 91 to 120 \u00b0C (195.8 to 248 \u00b0F) [1].\n    *   **Maximum system pressure:** 16 bar (232 psi) and 10 bar (145 psi) [1].\n\n*   **Cast iron (EN-GJL-200):**\n    *   **Permissible liquid temperature:** -20 to 90 \u00b0C (-4 to 194 \u00b0F) [2].\n    *   **Maximum system pressure:** 10 bar (145 psi) [2].\n\n*   **Stainless steel (EN 1.4301 / AISI 304):**\n    *   **Permissible liquid temperature:** -20 to 90 \u00b0C (-4 to 194 \u00b0F) and 91 to 120 \u00b0C (195.8 to 248 \u00b0F) [2].\n    *   **Maximum system pressure:** 16 bar (232 psi) and 10 bar (145 psi) [2].\n\nNote: The excerpts indicate specific temperature ranges and pressures associated with the AQQx seal for different materials, often distinguishing between lower and higher temperature/pressure tiers (e.g., -20 to 90 \u00b0C vs. 91 to 120 \u00b0C) [1][2].",
+      "ground_truth": "Technical manual specifications."
     },
     {
       "question": "What is the maximum system pressure for a cast iron pump with shaft seal type AVBx?",
-      "answer": "For a cast iron pump with shaft seal type AVBx, the maximum system pressure is 10 bar (145 psi) for liquid temperatures between -20 to 40 \u00b0C, and 6 bar (87 psi) for liquid temperatures between 41 to 90 \u00b0C [1].",
-      "ground_truth": ""
+      "doc_name": "grundfos_cm_pump_manual.pdf",
+      "answer": "For a cast iron pump (EN-GJL-200) with shaft seal type AVBx, the maximum system pressure depends on the permissible liquid temperature:\n\n*   For liquid temperatures of **-20 to 40 \u00b0C** (-4 to 104 \u00b0F), the maximum system pressure is **10 bar** (145 psi) [1].\n*   For liquid temperatures of **41 to 90 \u00b0C** (105.8 to 194 \u00b0F), the maximum system pressure is **6 bar** (87 psi) [1].",
+      "ground_truth": "Technical manual specifications."
     },
     {
       "question": "What is the cause if the pump does not run, according to the fault-finding table?",
+      "doc_name": "grundfos_cm_pump_manual.pdf",
       "answer": "According to the fault-finding table, the causes for the pump not running are:\n\n*   Supply failure [1]\n*   Motor protection tripped [1]\n*   Control-current circuit defective [1]\n\n[2]",
-      "ground_truth": ""
+      "ground_truth": "Replaces the original 'item 1 on nameplate' question, which was genuinely ambiguous (two separate nameplates exist)."
     },
     {
       "question": "What is the remedy if the pump runs but delivers no water, according to the fault-finding table?",
-      "answer": "According to the fault-finding table, if the pump runs but gives no water, the remedies depend on the specific cause:\n\n*   If the cause is **pump inlet pressure too low**, the remedy is to see section 5.a [1].\n*   If the cause is that the **suction pipe is partly clogged by impurities**, the remedy is to see section 5.b [1].\n*   If the cause is that the **foot or non-return valve is stuck in its closed position**, the remedy is to remove and clean, repair, or replace the valve [1].\n*   If the cause is **leakage in the suction pipe**, the remedy is to see section 5.c [1].\n*   If the cause is **air in the suction pipe or pump**, the remedy is to see section 5.d [1].",
-      "ground_truth": ""
+      "doc_name": "grundfos_cm_pump_manual.pdf",
+      "answer": "According to the fault-finding table, there are five specific causes for the pump running but giving no water, each with a corresponding remedy:\n\n1.  If the cause is **pump inlet pressure too low**, the remedy is to see section 5.a [1].\n2.  If the cause is that the **suction pipe is partly clogged by impurities**, the remedy is to see section 5.b [1].\n3.  If the cause is that the **foot or non-return valve is stuck in its closed position**, the remedy is to remove and clean, repair, or replace the valve [1].\n4.  If the cause is **leakage in the suction pipe**, the remedy is to see section 5.c [1].\n5.  If the cause is **air in the suction pipe or pump**, the remedy is to see section 5.d [1].",
+      "ground_truth": "Corrected from an incorrectly-claimed page 10."
+    },
+    {
+      "question": "What are the maximum sound pressure levels listed in the technical data section?",
+      "doc_name": "1_TP.pdf",
+      "answer": "Based on the provided excerpts, the technical data section lists **Maximum sound pressure level** values for various Grundfos TP and TPD pump models [1][2][3][4][5].\n\nThe specific numerical values for the sound pressure levels are not clearly legible or are represented by symbols (such as `\u25cf` or `-`) in the provided text excerpts [1][2][3][4][5]. The excerpts list the following model designations associated with the \"Maximum sound pressure level\" heading:\n\n*   **From Page 28:**\n    *   Models associated with 560.0, 50 Hz [dB(A)] and 630.0, 50/60 Hz [dB(A] specifications, including 2-pole, 4-pole, and 6-pole variants [1].\n*   **From Page 29:**\n    *   TP, TPE 80-340/4 (PN 16, PN 25) [2][4].\n    *   TP, TPE 100-250/4 (PN 16, PN 25) [2][4].\n    *   TP, TPE 100-330/4 (PN 16, PN 25) [2][4].\n    *   TP, TPE 100-370/4 (PN 16, PN 25) [2][4].\n    *   TP 100-410/4 (PN 16, PN 25) [2][4].\n    *   TP, TPE 125-190/4 (PN 16, PN 25) [2][4].\n    *   TP, TPE 125-230/4 (PN 16) [2][4].\n*   **From Page 30:**\n    *   TP, TPE 65-740/2 [3][5].\n    *   TP, TPE 80-330/2 (PN 16, PN 25) [3][5].\n    *   TP, TPE 80-400/2 (PN 16, PN 25) [3][5].\n    *   TP, TPE 80-480/2 (PN 16, PN 25) [3][5].\n    *   TP, TPE 80-530/2 (PN 16, PN 25) [3][5].\n    *   TP, TPE 100-300/2 (PN 16, PN 25) [3][5].\n    *   TP, TPE 100-370/2 (PN 16, PN 25) [3][5].\n\nThe excerpts do not provide the specific decibel (dB(A)) numerical values for these models, only the model names and the heading \"Maximum sound pressure level\" [1][2][3][4][5].",
+      "ground_truth": "Narrowed from a compound question; 'electrical data' half was never actually evidenced. Corrected from an incorrectly-claimed page 13."
+    },
+    {
+      "question": "What does the manual say if the pump is classified as contaminated?",
+      "doc_name": "1_TP.pdf",
+      "answer": "If a pump has been used for a liquid that is injurious to health or toxic, it is classified as contaminated [1]. In this case, if Grundfos is requested to service the pump, the customer must contact Grundfos with details about the pumped liquid before returning the pump for service [1]. If Grundfos is not contacted with these details beforehand, they can refuse to accept the pump for service [1]. Additionally, any possible costs associated with returning the pump are paid by the customer [1].",
+      "ground_truth": "Narrowed from [12, 14] -- page 14 evidence was actually a different, unrelated fault."
+    },
+    {
+      "question": "How should TP and TPD pumps be lifted according to Fig. 1 and Fig. 2?",
+      "doc_name": "1_TP.pdf",
+      "answer": "According to the provided excerpts, TP and TPD pumps without lifting eyes must be lifted by means of nylon straps [1]. This requirement is illustrated in Figure 1 for TP pumps and Figure 2 for TPD pumps [1].\n\nSpecifically:\n*   **TP Pumps (Fig. 1):** The pump is suspended by a lifting sling attached to a hook above, with the sling wrapped around the upper motor housing [5].\n*   **TPD Pumps (Fig. 2):** The lifting configuration involves two straps (slings) attached to lifting lugs on the pump housing and routed upward to a single overhead hook [2]. The slings are arranged symmetrically to balance the load, with the hook centered above the center of gravity of the assembly [2].\n\nIt is important to note that these figures apply to pumps *without* lifting eyes; pumps with lifting eyes require the use of nylon straps and shackles as shown in Figures 3 and 4 [1]. Additionally, for TPD pumps, the centrally positioned thread of the pump housing must not be used for lifting purposes [1].",
+      "ground_truth": "Technical manual specifications."
+    },
+    {
+      "question": "What does Fig. 5 illustrate regarding the use of washers for oval bolt holes during pump installation?",
+      "doc_name": "1_TP.pdf",
+      "answer": "Fig. 5 illustrates the correct mechanical assembly practice for using washers when installing a pump with oval (slotted) bolt holes [1]. Specifically, the diagram demonstrates that washers are required on both sides of the flange interface: one under the bolt head on the installation side and one under the nut on the pump side [1]. This placement is necessary to ensure proper clamping force and to avoid deformation or stress concentration in the material, which is particularly important when using slotted holes that allow for positional adjustment [1]. The manual instructs to use these washers when installing pumps with oval bolt holes in the pump flange (PN 6/10) [3].",
+      "ground_truth": "Technical manual specifications."
+    },
+    {
+      "question": "What does Fig. 3 show for the suction and discharge ports?",
+      "doc_name": "grundfos_cm_pump_manual.pdf",
+      "answer": "Fig. 3 is a technical line drawing that illustrates the external configuration of an inline centrifugal pump assembly, specifically highlighting the orientation and location of the fluid connection ports [1]. The diagram identifies two key ports:\n\n*   **Suction port:** Located on the right side of the pump housing (from the viewer\u2019s perspective), indicated by a left-pointing arrow; this is where fluid enters the pump [1].\n*   **Discharge port:** Located on the top center of the pump housing, indicated by a downward-pointing arrow; this is where fluid exits the pump after being pressurized [1].\n\nThe figure indicates a standard inline pump configuration where fluid flows horizontally into the suction port and vertically out the discharge port [1]. This diagram serves to clearly identify the inlet and outlet connections for installation or piping purposes to ensure correct orientation during setup [1].",
+      "ground_truth": "Technical manual specifications."
+    },
+    {
+      "question": "What does Fig. 5 show about alternative connection positions?",
+      "doc_name": "grundfos_cm_pump_manual.pdf",
+      "answer": "Fig. 5 illustrates the alternative connection positions for mounting or connecting the pump unit [1]. The diagram is a schematic that displays the external physical layout and orientation options for installation or piping connections [1]. It includes centerlines to indicate symmetry and alignment axes [1].\n\nSpecific features shown in the diagram include:\n*   **Pump Housing:** A rounded rectangular shape with rounded corners [1].\n*   **Mounting Features:** Two L-shaped mounting feet at the bottom and four circular bolt holes, one in each corner, for securing the pump to a mounting surface [1].\n*   **Shaft Interface:** A central circular feature with concentric rings, indicating a shaft seal, coupling, or drive shaft interface [1].\n*   **Connection Ports:** Dashed-line rectangles on the left and right sides, indicating potential pipe connection flanges or ports aligned horizontally with the central axis [1].\n*   **Reference Markers:** Vertical labeling with the letter \u201cX\u201d on the right side, which likely serves as a reference axis marker for rotational symmetry or alignment [1].\n\nThe diagram is intended to show that the pump can be rotated or mounted in multiple positions while maintaining proper alignment of the drive shaft and connection ports [1]. It is a mechanical layout diagram for installation purposes and does not show internal components, electrical wiring, or performance data [1].",
+      "ground_truth": "Technical manual specifications."
+    },
+    {
+      "question": "What does Fig. 6 show about terminal box positions?",
+      "doc_name": "grundfos_cm_pump_manual.pdf",
+      "answer": "Fig. 6 illustrates the possible mounting positions for the terminal box on the electric motor of a Grundfos CM or CME pump [1][2][3][4]. The diagram shows that the terminal box can be rotated to four standard positions in 90-degree increments (0\u00b0, 90\u00b0, 180\u00b0, and 270\u00b0) around the motor\u2019s vertical axis [1][2]. This feature allows installers to optimize cable routing and accessibility during field installation without requiring disassembly or modification of the motor [1][2]. The manual notes that the pump is available with various terminal box positions on special request [3][4].",
+      "ground_truth": "Technical manual specifications."
+    },
+    {
+      "question": "How is the pump connected in the terminal box, and what does the wiring diagram show?",
+      "doc_name": "grundfos_cm_pump_manual.pdf",
+      "answer": "Based on the provided excerpts, the document does not contain enough information to explain how the pump is electrically connected (i.e., the specific wiring configuration such as star or delta, or the internal circuit paths).\n\nThe excerpts describe **Fig. 9 Wiring diagram** as a physical illustration rather than an electrical schematic [1][2]. Specifically:\n*   The figure shows a cutaway or exploded view of the electric motor housing with the terminal box cover open [1][2].\n*   It displays six circular terminals arranged in two rows of three inside the terminal box [1][2].\n*   The diagram illustrates the **physical location and arrangement** of these electrical terminals within the junction box to help technicians identify where to connect wires [1][2].\n*   It explicitly states that the figure **does not show** how the terminals are internally wired or connected to external circuits [1][2].\n*   No text, numbers, codes, or labels indicating specific electrical connections (such as U1, V1, W1, etc.) are visible within the diagram itself [1][2].\n\nTherefore, while the diagram shows the physical layout of the terminal block, it does not provide the wiring instructions or circuit connectivity required to answer how the pump is connected.",
+      "ground_truth": "Corrected from [7] only -- this is the established multimodal test case from Phase 8/9; page 6 (terminal box positions text) is also genuinely relevant."
+    },
+    {
+      "question": "What is the minimum acceptable winding insulation resistance when measured at 500V DC megohmmeter?",
+      "doc_name": "service_protocol.docx",
+      "answer": "The minimum acceptable winding insulation resistance for a healthy motor at 25 degrees Celsius is 100 Megohms [1].",
+      "ground_truth": "Minimum acceptable insulation resistance is 100 Megohms at 25 degrees C."
+    },
+    {
+      "question": "What formula is used in Python to calculate Net Positive Suction Head Available (NPSHa)?",
+      "doc_name": "hydraulic_calculations.py",
+      "answer": "The formula used to calculate Net Positive Suction Head Available (NPSHa) is `NPSHa = (P_suction - P_vapor) / (rho * g) + (V^2 / 2g)` [1].\n\nIn the Python implementation, this is calculated by first determining the `pressure_head` as `((suction_pressure_bar - vapor_pressure_bar) * 100000.0) / (liquid_density_kg_m3 * g)` and the `velocity_head` as `(suction_velocity_m_s ** 2) / (2.0 * g)`, then returning the sum of these two values [1].",
+      "ground_truth": "NPSHa = (P_suction - P_vapor) / (rho * g) + (V^2 / 2g)"
+    },
+    {
+      "question": "What electrical wiring diagram or motor connection layout is shown in fig9_wiring_diagram.png?",
+      "doc_name": "fig9_wiring_diagram.png",
+      "answer": "Based on the provided evidence, the diagram in `fig9_wiring_diagram.png` illustrates the **electrical connection interface of a pump unit**, specifically focusing on the **terminal box** [1].\n\nThe image depicts a rectangular electrical enclosure with a hinged lid, containing a **terminal block** with a grid of connection points arranged in **two rows of four**, totaling **eight terminals** [1]. It also shows a **cable gland** on the side of the enclosure for cable entry [1]. The diagram includes a magnified inset view detailing the terminal block layout and the mounting flange of the inlet port [1].\n\nNote: The excerpt states that \"No specific text, numbers, or codes are visible on the components in this diagram\" [1], so specific motor connection types (e.g., star/delta) or wire gauges are not identified in the provided text.",
+      "ground_truth": "Terminal box connection interface with 8 terminal connection points arranged in two rows."
     }
   ]
 }

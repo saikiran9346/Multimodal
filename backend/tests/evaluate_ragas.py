@@ -34,16 +34,22 @@ RESULTS_PATH = os.path.abspath(os.path.join(backend_dir.parent, "experiments", "
 TEST_RESULTS_PATH = os.path.join(Path(__file__).resolve().parent, "ragas_report.json")
 
 
-def load_questions():
+def load_15_multi_doc_questions():
+    questions = []
+    
+    # 1. Add questions from multi_pdf_questions.json (12 questions)
     if os.path.exists(QUESTIONS_PATH):
         with open(QUESTIONS_PATH, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return [
-        {
-            "query": "What is the maximum system pressure for a cast iron pump with shaft seal type AVBx?",
-            "ground_truth": "For cast iron with shaft seal AVBx, max pressure is 10 bar from -20 to 40 C and 6 bar from 41 to 90 C.",
-            "doc_name": "grundfos_cm_pump_manual.pdf"
-        },
+            pdf_q = json.load(f)
+            for item in pdf_q[:12]:
+                questions.append({
+                    "query": item.get("question") or item.get("query"),
+                    "ground_truth": item.get("notes", "Technical manual specifications."),
+                    "doc_name": item.get("doc_name")
+                })
+
+    # 2. Add non-PDF format questions (3 questions: DOCX, Code, Standalone Image)
+    extra_format_questions = [
         {
             "query": "What is the minimum acceptable winding insulation resistance when measured at 500V DC megohmmeter?",
             "ground_truth": "Minimum acceptable insulation resistance is 100 Megohms at 25 degrees C.",
@@ -61,24 +67,29 @@ def load_questions():
         }
     ]
 
+    for eq in extra_format_questions:
+        if len(questions) < 15:
+            questions.append(eq)
+
+    return questions[:15]
+
 
 def run_ragas_eval():
     print("=" * 70)
-    print("        RAGAS MULTIMODAL RAG EVALUATION SUITE")
+    print("        RAGAS MULTIMODAL RAG EVALUATION SUITE (15 QUESTIONS)")
     print("=" * 70)
 
-    questions_data = load_questions()
-    sample_data = questions_data[:4] if len(questions_data) > 4 else questions_data
+    sample_data = load_15_multi_doc_questions()
 
-    print(f"\nProcessing {len(sample_data)} evaluation queries through Multimodal RAG pipeline...")
+    print(f"\nProcessing {len(sample_data)} evaluation queries across Multi-Doc & Multi-Format index...")
 
     questions = []
     answers = []
     contexts = []
     ground_truths = []
 
-    for item in sample_data:
-        q = item.get("query") or item.get("question")
+    for idx, item in enumerate(sample_data, 1):
+        q = item.get("query")
         doc_name = item.get("doc_name")
         gt = item.get("ground_truth", "")
 
@@ -91,7 +102,7 @@ def run_ragas_eval():
         answers.append(res.answer)
         contexts.append(ctx_list)
         ground_truths.append(gt)
-        print(f"  [OK] Processed query: '{q[:50]}...'")
+        print(f"  [{idx:02d}/15] Processed query ({doc_name}): '{q[:45]}...'")
 
     eval_dict = {
         "question": questions,
@@ -129,10 +140,11 @@ def run_ragas_eval():
     )
 
     print("\n" + "=" * 70)
-    print("                   RAGAS EVALUATION RESULTS")
+    print("                   RAGAS EVALUATION RESULTS (15 MULTI-DOC QUESTIONS)")
     print("=" * 70)
 
     report = {
+        "total_questions_evaluated": len(questions),
         "ragas_summary": {},
         "per_question_details": []
     }
@@ -149,6 +161,7 @@ def run_ragas_eval():
     for idx in range(len(questions)):
         detail = {
             "question": questions[idx],
+            "doc_name": sample_data[idx].get("doc_name"),
             "answer": answers[idx],
             "ground_truth": ground_truths[idx]
         }
