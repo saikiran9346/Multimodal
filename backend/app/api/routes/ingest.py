@@ -72,6 +72,7 @@ def ingest_document(file: UploadFile = File(...)):
         image_progress_path = str(temp_dir / f"{file.filename}_image_progress.json")
         image_chunks = extract_image_chunks(
             document,
+            file_path=str(temp_file_path),
             chunks_path=image_chunks_path,
             progress_path=image_progress_path,
         )

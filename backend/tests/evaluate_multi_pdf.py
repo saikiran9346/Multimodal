@@ -1,13 +1,17 @@
 import os
+import sys
 import json
 import math
 from pathlib import Path
 
+# Add backend directory to sys.path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from app.retrieval.vector_store import search_dense, search_hybrid, detect_document_from_query
 from app.retrieval.reranker import rerank
 
-QUESTIONS_PATH = os.path.join("..", "data", "evaluation", "multi_pdf_questions.json")
-RESULTS_PATH = os.path.join("..", "experiments", "results", "multi_pdf_evaluation.json")
+QUESTIONS_PATH = os.path.abspath(os.path.join(Path(__file__).resolve().parent.parent.parent, "data", "evaluation", "multi_pdf_questions.json"))
+RESULTS_PATH = os.path.abspath(os.path.join(Path(__file__).resolve().parent.parent.parent, "experiments", "results", "multi_pdf_evaluation.json"))
 
 
 def load_questions():

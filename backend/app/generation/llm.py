@@ -8,7 +8,7 @@ _client = None
 def get_groq_client() -> Groq:
     global _client
     if _client is None:
-        _client = Groq(api_key=settings.groq_api_key)
+        _client = Groq(api_key=settings.groq_api_key, timeout=30.0)
     return _client
 
 
@@ -24,7 +24,7 @@ def ask_groq(context: str, question: str) -> str:
     )
 
     response = client.chat.completions.create(
-        model="qwen/qwen3.6-27b",
+        model="qwen/qwen3.8-27b",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.1,
         reasoning_effort="none",
@@ -80,7 +80,7 @@ def generate_grounded_answer(question: str, chunks: list[dict]) -> dict:
     )
 
     response = client.chat.completions.create(
-        model="qwen/qwen3.6-27b",
+        model="qwen/qwen3.8-27b",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.1,
         reasoning_effort="none",

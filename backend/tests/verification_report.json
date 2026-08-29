@@ -1,0 +1,178 @@
+{
+  "total_points": 849,
+  "doc_counts": {
+    "grundfos_cm_pump_manual.pdf": 270,
+    "1_TP.pdf": 574,
+    "service_protocol.docx": 3,
+    "hydraulic_calculations.py": 1,
+    "fig9_wiring_diagram.png": 1
+  },
+  "checks": [
+    {
+      "check_num": 2,
+      "title": "PDF-Only Query",
+      "query": "What is the maximum system pressure for a cast iron pump with shaft seal type AVBx?",
+      "doc_name_filter": "grundfos_cm_pump_manual.pdf",
+      "answer": "For a cast iron (EN-GJL-200) pump with shaft seal type AVBx, the maximum system pressure depends on the permissible liquid temperature:\n\n*   For liquid temperatures from -20 to 40 \u00b0C, the maximum system pressure is **10 bar** (145 psi) [1].\n*   For liquid temperatures from 41 to 90 \u00b0C, the maximum system pressure is **6 bar** (87 psi) [1].",
+      "sources": [
+        {
+          "index": 1,
+          "doc_name": "grundfos_cm_pump_manual.pdf",
+          "page_no": 11,
+          "headings": [
+            "11.4 Maximum system pressure and permissible liquid temperature"
+          ],
+          "content_types": [
+            "table"
+          ],
+          "score": 7.693147659301758,
+          "text": "[Manual: Grundfos CM, CME]\n11.4 Maximum system pressure and permissible liquid temperature\n\nCast iron (EN-GJL-200), Shaft seal = AVBx. Cast iron (EN-GJL-200), Permissible liquid temperature* = -20 to 40 \u00b0C 41 to 90 \u00b0C. Cast iron (EN-GJL-200), Permissible liquid temperature* = (-4 to 104 \u00b0F) (105.8 to 194 \u00b0F). Cast iron (EN-GJL-200), Maximum system pressure = 10 bar 6 bar. Cast iron (EN-GJL-200), Maximum system pressure = (145 psi) (87 psi). Cast iron (EN-GJL-200), Shaft seal = AQQx. Cast iron (EN-GJL-200), Permissible liquid temperature* = -20 to 90 \u00b0C. Cast iron (EN-GJL-200), Permissible liquid temperature* = (-4 to 194 \u00b0F). Cast iron (EN-GJL-200), Maximum system pressure = 10 bar. Cast iron (EN-GJL-200), Maximum system pressure = (145 psi). Stainless steel (EN 1.4301 / AISI 304), Shaft seal = AVBx. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = -20 to 40 \u00b0C 41 to 90 \u00b0C. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = (-4 to 104 \u00b0F) (105.8 to 194 \u00b0F). Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = 10 bar 6 bar. Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = (145 psi) (87 psi). Stainless steel (EN 1.4301 / AISI 304), Shaft seal = AQQx. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = -20*** to 90 \u00b0C 91 to 120 \u00b0C**. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = (-4 to 194 \u00b0F) (195.8 to 248 \u00b0F). Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = 16 bar 10 bar. Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = (232 psi)"
+        },
+        {
+          "index": 2,
+          "doc_name": "grundfos_cm_pump_manual.pdf",
+          "page_no": 11,
+          "headings": [
+            "11.4 Maximum system pressure and permissible liquid temperature"
+          ],
+          "content_types": [
+            "table"
+          ],
+          "score": 7.066897392272949,
+          "text": "11.4 Maximum system pressure and permissible liquid temperature\n\nCast iron (EN-GJL-200), Shaft seal = AVBx. Cast iron (EN-GJL-200), Permissible liquid temperature* = -20 to 40 \u00b0C 41 to 90 \u00b0C. Cast iron (EN-GJL-200), Permissible liquid temperature* = (-4 to 104 \u00b0F) (105.8 to 194 \u00b0F). Cast iron (EN-GJL-200), Maximum system pressure = 10 bar 6 bar. Cast iron (EN-GJL-200), Maximum system pressure = (145 psi) (87 psi). Cast iron (EN-GJL-200), Shaft seal = AQQx. Cast iron (EN-GJL-200), Permissible liquid temperature* = -20 to 90 \u00b0C. Cast iron (EN-GJL-200), Permissible liquid temperature* = (-4 to 194 \u00b0F). Cast iron (EN-GJL-200), Maximum system pressure = 10 bar. Cast iron (EN-GJL-200), Maximum system pressure = (145 psi). Stainless steel (EN 1.4301 / AISI 304), Shaft seal = AVBx. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = -20 to 40 \u00b0C 41 to 90 \u00b0C. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = (-4 to 104 \u00b0F) (105.8 to 194 \u00b0F). Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = 10 bar 6 bar. Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = (145 psi) (87 psi). Stainless steel (EN 1.4301 / AISI 304), Shaft seal = AQQx. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = -20*** to 90 \u00b0C 91 to 120 \u00b0C**. Stainless steel (EN 1.4301 / AISI 304), Permissible liquid temperature* = (-4 to 194 \u00b0F) (195.8 to 248 \u00b0F). Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = 16 bar 10 bar. Stainless steel (EN 1.4301 / AISI 304), Maximum system pressure = (232 psi)"
+        },
+        {
+          "index": 3,
+          "doc_name": "grundfos_cm_pump_manual.pdf",
+          "page_no": 11,
+          "headings": [
+            "11.4 Maximum system pressure and permissible liquid temperature"
+          ],
+          "content_types": [
+            "table"
+          ],
+          "score": 7.052469253540039,
+          "text": "[Manual: Grundfos CM, CME]\n11.4 Maximum system pressure and permissible liquid temperature\n (145 psi). Stainless steel (EN 1.4401 / AISI 316), Shaft seal = AVBx. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = -20 to 40 \u00b0C 41 to 90 \u00b0C. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = (-4 to 104 \u00b0F) (105.8 to 194 \u00b0F). Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = 10 bar 6 bar. Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = (145 psi) (87 psi). Stainless steel (EN 1.4401 / AISI 316), Shaft seal = AQQx. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = -20*** to 90 \u00b0C 91 to 120 \u00b0C**. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = (-4 to 194 \u00b0F) (195.8 to 248 \u00b0F). Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = 16 bar 10 bar. Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = (232 psi) (145 psi)"
+        },
+        {
+          "index": 4,
+          "doc_name": "grundfos_cm_pump_manual.pdf",
+          "page_no": 11,
+          "headings": [
+            "11.4 Maximum system pressure and permissible liquid temperature"
+          ],
+          "content_types": [
+            "table"
+          ],
+          "score": 5.4665350914001465,
+          "text": "11.4 Maximum system pressure and permissible liquid temperature\n (145 psi). Stainless steel (EN 1.4401 / AISI 316), Shaft seal = AVBx. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = -20 to 40 \u00b0C 41 to 90 \u00b0C. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = (-4 to 104 \u00b0F) (105.8 to 194 \u00b0F). Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = 10 bar 6 bar. Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = (145 psi) (87 psi). Stainless steel (EN 1.4401 / AISI 316), Shaft seal = AQQx. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = -20*** to 90 \u00b0C 91 to 120 \u00b0C**. Stainless steel (EN 1.4401 / AISI 316), Permissible liquid temperature* = (-4 to 194 \u00b0F) (195.8 to 248 \u00b0F). Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = 16 bar 10 bar. Stainless steel (EN 1.4401 / AISI 316), Maximum system pressure = (232 psi) (145 psi)"
+        },
+        {
+          "index": 5,
+          "doc_name": "grundfos_cm_pump_manual.pdf",
+          "page_no": 11,
+          "headings": [
+            "11.6 Maximum inlet pressure"
+          ],
+          "content_types": [
+            "text"
+          ],
+          "score": -2.1057891845703125,
+          "text": "11.6 Maximum inlet pressure\nThe actual inlet pressure plus the pressure when the pump is operating against a closed valve must always be lower than the maximum system pressure."
+        }
+      ]
+    },
+    {
+      "check_num": 3,
+      "title": "DOCX-Only Query",
+      "query": "What is the minimum acceptable winding insulation resistance when measured at 500V DC megohmmeter?",
+      "doc_name_filter": "service_protocol.docx",
+      "answer": "The minimum acceptable winding insulation resistance for a healthy motor at 25 degrees Celsius is 100 Megohms [1].",
+      "sources": [
+        {
+          "index": 1,
+          "doc_name": "service_protocol.docx",
+          "page_no": null,
+          "headings": [
+            "Electrical Motor Maintenance Protocol",
+            "Insulation Resistance Testing"
+          ],
+          "content_types": [
+            "text"
+          ],
+          "score": 9.485038757324219,
+          "text": "[Manual: service protocol.docx]\nElectrical Motor Maintenance Protocol\nInsulation Resistance Testing\nMeasure the winding insulation resistance using a 500V DC megohmmeter. For a healthy motor at 25 degrees Celsius, the minimum acceptable insulation resistance is 100 Megohms. If the measured resistance falls below 10 Megohms, the motor windings must be baked and dried in a heating oven to remove moisture before energizing."
+        },
+        {
+          "index": 2,
+          "doc_name": "service_protocol.docx",
+          "page_no": null,
+          "headings": [
+            "Electrical Motor Maintenance Protocol",
+            "Shaft Alignment and Coupling Tolerances"
+          ],
+          "content_types": [
+            "text"
+          ],
+          "score": -9.234718322753906,
+          "text": "[Manual: service protocol.docx]\nElectrical Motor Maintenance Protocol\nShaft Alignment and Coupling Tolerances\nLaser alignment is mandatory for all direct-coupled pumps exceeding 15 kW. Radial misalignment between the motor shaft and pump shaft must not exceed 0.05 mm, and angular misalignment must be within 0.04 degrees. Exceeding these tolerances will lead to premature bearing degradation and mechanical seal leakage."
+        },
+        {
+          "index": 3,
+          "doc_name": "service_protocol.docx",
+          "page_no": null,
+          "headings": [
+            "Electrical Motor Maintenance Protocol"
+          ],
+          "content_types": [
+            "text"
+          ],
+          "score": -9.53459358215332,
+          "text": "[Manual: service protocol.docx]\nElectrical Motor Maintenance Protocol\nBefore performing any electrical maintenance on Grundfos pump motors, ensure the main circuit breaker is locked out and tagged according to OSHA safety regulations."
+        }
+      ]
+    },
+    {
+      "check_num": 4,
+      "title": "Python Code-Only Query",
+      "query": "What formula is used in Python to calculate Net Positive Suction Head Available (NPSHa)?",
+      "doc_name_filter": "hydraulic_calculations.py",
+      "answer": "The formula used to calculate Net Positive Suction Head Available (NPSHa) is `NPSHa = (P_suction - P_vapor) / (rho * g) + (V^2 / 2g)` [1]. In the Python code, this is implemented by calculating the pressure head as `((suction_pressure_bar - vapor_pressure_bar) * 100000.0) / (liquid_density_kg_m3 * g)` and the velocity head as `(suction_velocity_m_s ** 2) / (2.0 * g)`, then returning their sum [1].",
+      "sources": [
+        {
+          "index": 1,
+          "doc_name": "hydraulic_calculations.py",
+          "page_no": null,
+          "headings": [
+            "File: hydraulic_calculations.py"
+          ],
+          "content_types": [
+            "code"
+          ],
+          "score": 4.28347110748291,
+          "text": "[Manual: hydraulic calculations.py]\nFile: hydraulic_calculations.py\n```\n\"\"\"\nHydraulic Calculation Module for Industrial Centrifugal Pumps.\nContains functions for NPSH, Total Dynamic Head (TDH), and friction loss.\n\"\"\"\n\nimport math\n\n\ndef calculate_npsh_available(suction_pressure_bar: float, vapor_pressure_bar: float, liquid_density_kg_m3: float, suction_velocity_m_s: float) -> float:\n    \"\"\"\n    Calculates Net Positive Suction Head Available (NPSHa) in meters of liquid.\n    \n    Formula: NPSHa = (P_suction - P_vapor) / (rho * g) + (V^2 / 2g)\n    \"\"\"\n    g = 9.81\n    pressure_head = ((suction_pressure_bar - vapor_pressure_bar) * 100000.0) / (liquid_density_kg_m3 * g)\n    velocity_head = (suction_velocity_m_s ** 2) / (2.0 * g)\n    return pressure_head + velocity_head\n\n\ndef calculate_total_dynamic_head(static_discharge_head_m: float, static_suction_head_m: float, total_friction_loss_m: float) -> float:\n    \"\"\"\n    Calculates Total Dynamic Head (TDH) required for pump selection.\n    \n    Formula: TDH = Static Discharge Lift - Static Suction Lift + Total Pipe Friction Losses\n    \"\"\"\n    return static_discharge_head_m - static_suction_head_m + total_friction_loss_m\n\n\ndef calculate_pipe_friction_loss(darcy_friction_factor: float, pipe_length_m: float, pipe_diameter_m: float, flow_velocity_m_s: float) -> float:\n    \"\"\"\n    Calculates Darcy-Weisbach pipe friction head loss in meters.\n    \n    Formula: h_f = f * (L / D) * (V^2 / 2g)\n    \"\"\"\n    g = 9.81\n    return darcy_friction_factor * (pipe_length_m / pipe_diameter_m) * ((flow_velocity_m_s ** 2) / (2.0 * g))\n```"
+        }
+      ]
+    },
+    {
+      "check_num": 5,
+      "title": "Standalone Image Query",
+      "query": "What electrical wiring diagram or motor connection layout is shown in fig9_wiring_diagram.png?",
+      "doc_name_filter": "fig9_wiring_diagram.png",
+      "answer": "Based on the provided evidence, the diagram in `fig9_wiring_diagram.png` illustrates the **electrical connection interface of a pump unit**, specifically focusing on the **terminal box** [1].\n\nThe layout includes:\n*   A **rectangular electrical enclosure** with a hinged lid shown in the open position [1].\n*   A **terminal block** inside the enclosure featuring a grid of connection points arranged in **two rows of four**, totaling **eight terminals** [1].\n*   A **cable gland** on the side of the enclosure for cable entry [1].\n*   A **cylindrical inlet or outlet port** on the left side of the pump housing [1].\n*   A magnified inset view detailing the terminal block layout and the mounting flange of the inlet port [1].\n\nThe document notes that no specific text, numbers, or codes are visible on the components in this diagram [1].",
+      "sources": [
+        {
+          "index": 1,
+          "doc_name": "fig9_wiring_diagram.png",
+          "page_no": null,
+          "headings": [],
+          "content_types": [
+            "picture"
+          ],
+          "score": 8.42906379699707,
+          "text": "[Manual: fig9 wiring diagram.png]\n[Standalone Diagram/Image: fig9_wiring_diagram.png]\nThis is a technical line drawing illustrating the electrical connection interface of a pump unit, specifically focusing on the terminal box. The diagram shows the pump housing with a cylindrical inlet or outlet port on the left side. The central feature is a rectangular electrical enclosure with its hinged lid open. Inside the enclosure, a terminal block is visible, featuring a grid of connection points arranged in two rows of four, totaling eight terminals. A cable gland is depicted on the side of the enclosure for cable entry. The image includes a magnified inset view at the bottom, providing a detailed look at the terminal block layout and the mounting flange of the inlet port. No specific text, numbers, or codes are visible on the components in this diagram."
+        }
+      ]
+    }
+  ]
+}

@@ -68,21 +68,24 @@ def describe_image(image, context: str = ""):
     if context:
         prompt += f"\n\nManual's own caption for this figure: {context}"
 
-    response = _create_with_retry(
-        client,
-        model="qwen/qwen3.6-27b",
-        messages=[{
-            "role": "user",
-            "content": [
-                {"type": "text", "text": prompt},
-                {"type": "image_url", "image_url": {"url": image_url}},
-            ],
-        }],
-        temperature=0.1,
-        reasoning_effort="none",
-        max_completion_tokens=1024,
-    )
-    result = response.choices[0].message.content.strip()
+    try:
+        response = _create_with_retry(
+            client,
+            model="qwen/qwen3.8-27b",
+            messages=[{
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": prompt},
+                    {"type": "image_url", "image_url": {"url": image_url}},
+                ],
+            }],
+            temperature=0.1,
+            max_completion_tokens=1024,
+        )
+        result = response.choices[0].message.content.strip()
+    except Exception as vision_err:
+        print(f"    Vision classification skipped due to API limit/error: {str(vision_err)}")
+        return None
 
     first_line, _, rest = result.partition("\n")
     if first_line.strip().upper().startswith("SKIP"):
@@ -90,7 +93,7 @@ def describe_image(image, context: str = ""):
     return rest.strip() if rest.strip() else result
 
 
-def extract_image_chunks(document, chunks_path: str = "test_image_chunks.json",
+def extract_image_chunks(document, file_path: str = None, chunks_path: str = "test_image_chunks.json",
                           progress_path: str = "test_image_progress.json") -> list[dict]:
     """
     Walks every PictureItem, classifies + describes each via Groq, and
@@ -98,7 +101,7 @@ def extract_image_chunks(document, chunks_path: str = "test_image_chunks.json",
     tracks every picture index ever processed (relevant or skipped) so
     reruns never waste a Groq call re-classifying an image already
     judged -- kept separate from chunks_path, which only holds chunks
-    meant for embedding.
+    meant for embedding. Supports standalone image file paths.
     """
     chunks = []
     if os.path.exists(chunks_path):
@@ -114,7 +117,38 @@ def extract_image_chunks(document, chunks_path: str = "test_image_chunks.json",
         print(f"  Resuming: {len(processed)} image(s) already processed "
               f"({len(chunks)} kept as relevant)")
 
-    pictures = document.pictures
+    pictures = getattr(document, "pictures", [])
+
+    # If standalone image upload (not a PDF with embedded pictures)
+    if not pictures and file_path and any(file_path.lower().endswith(ext) for ext in [".png", ".jpg", ".jpeg", ".tiff", ".bmp"]):
+        if 0 not in processed:
+            print(f"  Processing standalone image file '{os.path.basename(file_path)}'...")
+            try:
+                from PIL import Image
+                img = Image.open(file_path)
+                description = describe_image(img, context=os.path.basename(file_path))
+                if description:
+                    print("    -> RELEVANT, kept")
+                    chunks.append({
+                        "picture_index": 0,
+                        "text": f"[Standalone Diagram/Image: {os.path.basename(file_path)}]\n{description}".strip(),
+                        "raw_text": description,
+                        "page_no": None,
+                        "headings": [],
+                        "captions": [],
+                        "content_types": ["picture"],
+                        "contains_table": False,
+                    })
+                    with open(chunks_path, "w", encoding="utf-8") as f:
+                        json.dump(chunks, f, indent=2, ensure_ascii=False)
+                else:
+                    print("    -> SKIP (not technical content)")
+            except Exception as img_err:
+                print(f"    Failed to process standalone image: {str(img_err)}")
+            processed.add(0)
+            with open(progress_path, "w", encoding="utf-8") as f:
+                json.dump(sorted(processed), f)
+        return chunks
 
     for i, picture in enumerate(pictures):
         if i in processed:
