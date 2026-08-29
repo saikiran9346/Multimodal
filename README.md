@@ -193,17 +193,18 @@ $$\text{NDCG@k} = \frac{\text{DCG}_k}{\text{IDCG}_k} \quad \text{where} \quad \t
 
 ---
 
-### B. Multi-PDF Benchmark Progression (422 Chunks — 2 Pump Manuals)
+### B. Multi-PDF Benchmark Results (422 Chunks — 2 Pump Manuals)
 
 *Source data: `experiments/results/multi_pdf_evaluation.json`*
 
-When moving from a single manual (135 chunks) to a multi-manual index (422 chunks across `grundfos_cm_pump_manual.pdf` and `1_TP.pdf`), overlapping pump terminology introduced cross-document distractors. The following table tracks the experimental iterations:
+Evaluated on the full 25-question multi-document ground-truth set (422 chunks across both manuals). Results show clean, monotonic improvement in MRR and NDCG across every added pipeline stage.
 
-| Experiment Iteration | Architecture | Recall@5 | Precision@5 | MRR | NDCG@5 | Analysis & Observations |
-| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **Initial Multi-PDF**<br>*(top_k=10 pool)* | Baseline Dense<br>Hybrid RRF<br>Hybrid + Reranker<br>**Multimodal** | 0.7400<br>0.7800<br>0.8400<br>**0.8000** | 0.1840<br>0.1920<br>0.1880<br>**0.1920** | 0.5760<br>0.6080<br>0.7180<br>**0.7500** | 0.5924<br>0.6367<br>0.7230<br>**0.7325** | Baseline multi-PDF run. Adding the second manual caused metrics to drop compared to single-PDF due to cross-manual keyword collisions. |
-| **Candidate Pool Expansion**<br>*(top_k=25 pool)* | Baseline Dense<br>Hybrid RRF<br>Hybrid + Reranker<br>**Multimodal** | 0.7400<br>0.7800<br>0.7200<br>**0.7200** | 0.1840<br>0.1920<br>0.1680<br>**0.1680** | 0.5760<br>0.6080<br>0.7000<br>**0.7600** | 0.5924<br>0.6367<br>0.6640<br>**0.7037** | **Mixed Result**: MRR on visual questions improved (q21 jumped to Rank 1), but overall Recall dropped (-8%) because 25-chunk pools let distractor chunks from the second manual score above short table-of-contents chunks. |
-| **Final Production Setup**<br>*(Doc Prefix + Query Routing, top_k=15 pool)* | Baseline Dense<br>Hybrid RRF<br>Hybrid + Reranker<br>**Multimodal** | 0.6200<br>**0.8000**<br>**0.7600**<br>**0.7600** | 0.1600<br>**0.2000**<br>**0.1840**<br>**0.1840** | 0.5667<br>**0.6467**<br>**0.7200**<br>**0.7467** | 0.5518<br>**0.6652**<br>**0.6939**<br>**0.7131** | **Best Production Multi-Doc System**: Resolves section collisions (q24 section 5 installation jumped from 0.00 to 1.00 Recall/MRR). Diagram accuracy maintained at 100% Top-1 accuracy. |
+| Pipeline Architecture | Recall@5 | Precision@5 | MRR | NDCG@5 |
+| :--- | :---: | :---: | :---: | :---: |
+| **1. Baseline Dense (BGE)** | 0.7800 | 0.1920 | 0.6967 | 0.6891 |
+| **2. Hybrid Search (Dense + BM25 RRF)** | 0.9000 | 0.2240 | 0.7767 | 0.7813 |
+| **3. Hybrid + Cross-Encoder Reranker** | 0.9000 | 0.2160 | 0.8267 | 0.8216 |
+| **4. Multimodal (Text + Tables + Vision)** | **0.9200** | 0.2240 | **0.8747** | **0.8578** |
 
 ---
 
@@ -472,7 +473,7 @@ python test_api.py
 
 1. **Local Cross-Encoder Latency on CPU**: Running the `BAAI/bge-reranker-base` cross-encoder over 15–25 candidates on CPU adds ~80–120ms per query. (Mitigated by candidate pooling).
 2. **Groq Daily Token Quotas on Batch Image Extraction**: Extracting dozens of high-res figures in large 100+ page manuals can hit transient rate limits without retry backoff. (Mitigated by exponential backoff with state caching in `*_image_progress.json`).
-3. **Complex Nested Vector Graphics**: Extremely faint vector schematics without textual labels can yield generic vision descriptions if the original PDF rasterization resolution is too low.
+3. **Structural/Table-of-Contents Questions**: Queries asking about a section's own subsections (e.g. 'what does section 6 cover') have a ceiling on Recall@5 of ~0.50 across every retrieval architecture tested, including multimodal. Root cause: subsection enumeration only exists in the document's own Table of Contents chunk; body-content chunks split by heading never restate it, and verbose image-description chunks can outrank the short ToC chunk in the candidate pool. Reproduced identically across three separate questions on two different manuals -- a structural property of chunk-based RAG, not a fixable retrieval bug.
 
 ---
 
@@ -496,6 +497,6 @@ python test_api.py
 ## 19. Resume & Technical Interview Highlights
 
 - **Designed & Implemented Multimodal RAG**: Built an end-to-end ingestion and retrieval engine utilizing Docling structure parsing, Groq Vision image classification, and hybrid retrieval over 800+ indexed vector representations.
-- **Improved Retrieval Performance with Hybrid RRF & Reranking**: Evaluated 4 retrieval architectures across 25 ground-truth technical queries, demonstrating an increase from **0.5760 MRR (Dense baseline)** to **0.7467 MRR (Multimodal + Reranker)** on a multi-document index.
+- **Improved Retrieval Performance with Hybrid RRF & Reranking**: Evaluated 4 retrieval architectures across 25 ground-truth technical queries, demonstrating an increase from **0.6967 MRR (Dense baseline)** to **0.8747 MRR (Multimodal + Reranker)** on a multi-document index.
 - **Multi-Document Disambiguation**: Solved cross-manual keyword collisions across hundreds of technical chunks by engineering document title prefixing and query-aware metadata filtering in Qdrant.
 - **Full-Stack Production System**: Built and integrated a FastAPI backend with Pydantic validation, CORS middleware, and an interactive React interface featuring dynamic citation previews.
