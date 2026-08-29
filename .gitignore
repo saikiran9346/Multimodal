@@ -49,9 +49,14 @@ qdrant_storage/
 backend/qdrant_storage/
 backend/qdrant_embedded/
 
-# Large temporary document parser caches
+# Large temporary document parser dumps & benchmark caches
 backend/*_parsed_doc.json
 backend/*_progress.json
+backend/tests/*_parsed_doc.json
+backend/tests/*_progress.json
+backend/tests/test_chunks.json
+backend/tests/tp_chunks.json
+backend/tests/*.txt
 
 # Logs & OS
 *.log
