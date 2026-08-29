@@ -12,25 +12,32 @@ from app.retrieval.vector_store import upsert_chunks
 
 router = APIRouter()
 
-ALLOWED_EXTENSIONS = {".pdf", ".docx", ".pptx", ".xlsx", ".html", ".htm", ".md", ".csv"}
+ALLOWED_EXTENSIONS = {
+    # Documents
+    ".pdf", ".docx", ".pptx", ".xlsx", ".html", ".htm", ".md", ".csv",
+    ".odt", ".ods", ".odp", ".tex", ".adoc", ".asciidoc",
+    # Code & Configs
+    ".py", ".js", ".ts", ".c", ".cpp", ".java", ".go", ".rs", ".sh",
+    ".json", ".yaml", ".yml", ".txt", ".log", ".xml",
+    # Images & Schematics
+    ".png", ".jpg", ".jpeg", ".tiff", ".bmp",
+}
 
 
 @router.post("/ingest", response_model=IngestResponse)
 def ingest_document(file: UploadFile = File(...)):
     """
-    Ingests a technical document (PDF, DOCX, PPTX, XLSX, HTML, MD, CSV):
-    1. Validates file extension and non-empty content
-    2. Parses document structure with Docling (gracefully catching format errors)
-    3. Chunks text, tables, and headings
-    4. Extracts & describes technical diagrams via Groq Vision
-    5. Indexes both dense and sparse vectors into Qdrant alongside existing documents
+    Ingests technical documents across 25+ file formats:
+    - Documents: PDF, DOCX, PPTX, XLSX, HTML, MD, CSV, ODT, ODS, ODP, TEX, ADOC
+    - Code & Configs: PY, JS, TS, C, CPP, JAVA, GO, RS, SH, JSON, YAML, TXT, XML
+    - Images: PNG, JPG, JPEG, TIFF, BMP
     """
     filename = file.filename or ""
     ext = Path(filename).suffix.lower()
     if not filename or ext not in ALLOWED_EXTENSIONS:
         raise HTTPException(
             status_code=400,
-            detail=f"Unsupported file format '{ext}'. Supported formats: .pdf, .docx, .pptx, .xlsx, .html, .htm, .md, .csv"
+            detail=f"Unsupported file format '{ext}'. Supported technical formats include PDF, Office, Code, Markdown, HTML, Data, and Images."
         )
 
     temp_dir = Path(tempfile.gettempdir()) / "multimodal_rag_uploads"

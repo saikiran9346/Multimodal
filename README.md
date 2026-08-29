@@ -25,7 +25,7 @@ This project implements an end-to-end multimodal, multi-document RAG system with
 
 ## 2. Key Features
 
-- **Structure-Aware Document Parsing**: Powered by IBM's **Docling** engine to parse multi-column PDF layouts, hierarchical headings, and Markdown tables with high fidelity.
+- **Multi-Format Document Ingestion**: Powered by IBM's **Docling** engine to parse 25+ technical formats across Documents (PDF, DOCX, PPTX, XLSX, HTML, MD, CSV, ODT, ODS, ODP, TEX, ADOC), Code & Configs (Python, JS, TS, C, C++, Java, Go, Rust, JSON, YAML, XML), and Technical Images (PNG, JPG, TIFF) with high fidelity.
 - **Multimodal Visual Understanding**: Automatically extracts diagrams at 2.0x DPI, filters out decorative logos/branding, and generates detailed technical summaries via **Groq Vision** (`qwen/qwen3.6-27b`).
 - **Hybrid Dense + Sparse Retrieval**: Combines 768-dimensional dense semantic vectors (**BAAI/bge-base-en-v1.5**) with sparse BM25 vectors (**Qdrant/bm25**) using **Reciprocal Rank Fusion (RRF)**.
 - **Cross-Encoder Reranking**: Re-scores candidate pools with **BAAI/bge-reranker-base** (`TextCrossEncoder`) to place the most relevant evidence chunks at Rank 1.

@@ -51,7 +51,7 @@ export function Sidebar({ topK, setTopK, excludeImages, setExcludeImages, onUplo
             type="file"
             ref={fileInputRef}
             onChange={handleFileChange}
-            accept=".pdf,.docx,.pptx,.xlsx,.html,.htm,.md,.csv"
+            accept=".pdf,.docx,.pptx,.xlsx,.html,.htm,.md,.csv,.odt,.ods,.odp,.tex,.adoc,.asciidoc,.py,.js,.ts,.c,.cpp,.java,.go,.rs,.sh,.json,.yaml,.yml,.txt,.log,.xml,.png,.jpg,.jpeg,.tiff,.bmp"
             style={{ display: 'none' }}
           />
           <div className="dropzone-icon">
@@ -61,7 +61,7 @@ export function Sidebar({ topK, setTopK, excludeImages, setExcludeImages, onUplo
             {file ? file.name : 'Upload Technical Document'}
           </div>
           <div className="dropzone-subtitle">
-            {file ? `${(file.size / 1024 / 1024).toFixed(2)} MB` : 'Click to browse (.pdf, .docx, .pptx, .xlsx, .html, .md, .csv)'}
+            {file ? `${(file.size / 1024 / 1024).toFixed(2)} MB` : 'Click to browse (PDF, Office, Code, Configs, Images, etc.)'}
           </div>
         </div>
 
