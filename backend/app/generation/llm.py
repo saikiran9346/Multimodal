@@ -34,16 +34,36 @@ def ask_groq(context: str, question: str) -> str:
     return response.choices[0].message.content
 
 
+def _format_doc_header(c: dict) -> str:
+    doc_name = c.get("doc_name")
+    page_no = c.get("page_no")
+    headings = c.get("headings", [])
+    first_heading = headings[0] if headings and len(headings) > 0 else None
+
+    if doc_name and page_no is not None:
+        return f"{doc_name} - Page {page_no}"
+    elif doc_name and first_heading:
+        return f"{doc_name} - {first_heading}"
+    elif doc_name:
+        return doc_name
+    elif page_no is not None:
+        return f"Page {page_no}"
+    elif first_heading:
+        return first_heading
+    else:
+        return "Source"
+
+
 def generate_grounded_answer(question: str, chunks: list[dict]) -> dict:
     """
     Builds an answer from reranked chunks, each given a numbered
-    citation tag referencing document filename and page number.
+    citation tag referencing document filename and page number/heading.
     """
     client = get_groq_client()
 
     context_blocks = []
     for i, c in enumerate(chunks, start=1):
-        doc_header = f"{c['doc_name']} - Page {c['page_no']}" if c.get("doc_name") else f"Page {c['page_no']}"
+        doc_header = _format_doc_header(c)
         context_blocks.append(f"[{i}] ({doc_header})\n{c['text']}")
 
     context = "\n\n".join(context_blocks)
@@ -71,8 +91,8 @@ def generate_grounded_answer(question: str, chunks: list[dict]) -> dict:
         {
             "index": i,
             "doc_name": c.get("doc_name"),
-            "page_no": c["page_no"],
-            "headings": c["headings"],
+            "page_no": c.get("page_no"),
+            "headings": c.get("headings", []),
             "content_types": c.get("content_types", ["text"]),
             "text": c.get("text"),
             "score": c.get("rerank_score", c.get("hybrid_score")),

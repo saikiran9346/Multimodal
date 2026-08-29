@@ -145,7 +145,7 @@ The benchmark evaluates four distinct retrieval pipeline architectures:
 
 | Layer | Technology | Details / Model |
 | :--- | :--- | :--- |
-| **Document Parser** | IBM Docling | `HybridChunker`, `PdfPipelineOptions(images_scale=2.0)` |
+| **Document Parser** | IBM Docling | `HybridChunker` (Supports PDF, DOCX, PPTX, XLSX, HTML, Markdown, CSV) |
 | **Vision Model** | Groq API | `qwen/qwen3.6-27b` (Classification & diagram description) |
 | **Dense Embeddings** | FastEmbed | `BAAI/bge-base-en-v1.5` (768 dimensions) |
 | **Sparse Embeddings** | FastEmbed | `Qdrant/bm25` (Learned sparse token weights) |

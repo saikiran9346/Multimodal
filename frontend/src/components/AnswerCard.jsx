@@ -108,9 +108,13 @@ export function AnswerCard({ item }) {
                               📄 {s.doc_name}
                             </span>
                           )}
-                          {s.page_no && (
+                          {s.page_no !== null && s.page_no !== undefined ? (
                             <span className="badge-page">Page {s.page_no}</span>
-                          )}
+                          ) : s.headings && s.headings.length > 0 ? (
+                            <span className="badge-page" style={{ background: 'rgba(99, 102, 241, 0.18)', color: '#a5b4fc' }}>
+                              {s.headings[0]}
+                            </span>
+                          ) : null}
                           {getTypeBadge(s.content_types)}
                         </div>
 

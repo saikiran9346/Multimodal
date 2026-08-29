@@ -1,23 +1,56 @@
-from docling.document_converter import DocumentConverter, PdfFormatOption
-from docling.datamodel.pipeline_options import PdfPipelineOptions
+from docling.document_converter import (
+    DocumentConverter,
+    PdfFormatOption,
+    WordFormatOption,
+    PowerpointFormatOption,
+    ExcelFormatOption,
+    CsvFormatOption,
+    HTMLFormatOption,
+    MarkdownFormatOption,
+)
+from docling.datamodel.pipeline_options import PdfPipelineOptions, PaginatedPipelineOptions
 from docling.datamodel.base_models import InputFormat
+
+
+def parse_document(file_path: str):
+    """
+    Parses technical documents (PDF, DOCX, PPTX, XLSX, HTML, MD, CSV) with Docling
+    and returns the parsed DoclingDocument object.
+    
+    Format configurations:
+    - PDF: PdfPipelineOptions(generate_picture_images=True, images_scale=2.0)
+    - DOCX: PaginatedPipelineOptions(generate_page_images=True, images_scale=2.0)
+    - PPTX: PowerpointFormatOption (defaults)
+    - HTML: HTMLFormatOption (defaults)
+    - MD: MarkdownFormatOption (defaults)
+    - XLSX: ExcelFormatOption (defaults)
+    - CSV: CsvFormatOption (defaults)
+    """
+    pdf_options = PdfPipelineOptions()
+    pdf_options.generate_picture_images = True
+    pdf_options.images_scale = 2.0
+
+    docx_options = PaginatedPipelineOptions()
+    docx_options.generate_page_images = True
+    docx_options.images_scale = 2.0
+
+    format_options = {
+        InputFormat.PDF: PdfFormatOption(pipeline_options=pdf_options),
+        InputFormat.DOCX: WordFormatOption(pipeline_options=docx_options),
+        InputFormat.PPTX: PowerpointFormatOption(),
+        InputFormat.HTML: HTMLFormatOption(),
+        InputFormat.MD: MarkdownFormatOption(),
+        InputFormat.XLSX: ExcelFormatOption(),
+        InputFormat.CSV: CsvFormatOption(),
+    }
+
+    converter = DocumentConverter(format_options=format_options)
+    result = converter.convert(file_path)
+    return result.document
 
 
 def parse_pdf(pdf_path: str):
     """
-    Parses a PDF with Docling and returns the DoclingDocument object.
-    generate_picture_images=True is required for Phase 8 -- without it,
-    every PictureItem.get_image() call returns None, since Docling
-    doesn't keep pixel data by default. images_scale=2.0 gives higher-
-    resolution crops so the vision model can actually read small labels
-    and text inside diagrams.
+    Backwards-compatible wrapper for PDF parsing.
     """
-    pipeline_options = PdfPipelineOptions()
-    pipeline_options.generate_picture_images = True
-    pipeline_options.images_scale = 2.0
-
-    converter = DocumentConverter(
-        format_options={InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options)}
-    )
-    result = converter.convert(pdf_path)
-    return result.document
+    return parse_document(pdf_path)

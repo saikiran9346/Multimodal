@@ -51,17 +51,17 @@ export function Sidebar({ topK, setTopK, excludeImages, setExcludeImages, onUplo
             type="file"
             ref={fileInputRef}
             onChange={handleFileChange}
-            accept=".pdf"
+            accept=".pdf,.docx,.pptx,.xlsx,.html,.htm,.md,.csv"
             style={{ display: 'none' }}
           />
           <div className="dropzone-icon">
             <UploadCloud size={20} />
           </div>
           <div className="dropzone-title">
-            {file ? file.name : 'Upload Technical PDF'}
+            {file ? file.name : 'Upload Technical Document'}
           </div>
           <div className="dropzone-subtitle">
-            {file ? `${(file.size / 1024 / 1024).toFixed(2)} MB` : 'Click to browse manual (.pdf)'}
+            {file ? `${(file.size / 1024 / 1024).toFixed(2)} MB` : 'Click to browse (.pdf, .docx, .pptx, .xlsx, .html, .md, .csv)'}
           </div>
         </div>
 
@@ -74,7 +74,7 @@ export function Sidebar({ topK, setTopK, excludeImages, setExcludeImages, onUplo
             {uploading ? (
               <>
                 <div className="pulsing-spinner" style={{ width: 14, height: 14 }} />
-                <span>Processing PDF...</span>
+                <span>Processing Document...</span>
               </>
             ) : (
               <>
