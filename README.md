@@ -28,12 +28,13 @@ This project implements an end-to-end multimodal, multi-format RAG system with s
 
 - **Multi-Format Technical Ingestion (25+ Formats)**: Powered by IBM's **Docling** engine to parse 25+ technical formats across Documents (PDF, DOCX, PPTX, XLSX, HTML, MD, CSV, ODT, ODS, ODP, TEX, ADOC), Code & Configs (Python, JS, TS, C, C++, Java, Go, Rust, JSON, YAML, XML), and Technical Images (PNG, JPG, TIFF) with high fidelity.
 - **Standalone & Embedded Image Processing**: Extracts PDF figures at 2.0x DPI and processes direct standalone image uploads (`.png`, `.jpg`) via **Groq Vision** (`qwen/qwen3.8-27b`) to generate searchable technical descriptions.
+- **Self-Critique ReAct Agent Loop**: Autonomous verification engine that evaluates generated answers for factual groundedness and completeness. If confidence drops below 0.70, it reformulates the query and re-retrieves candidates from Qdrant.
 - **Hybrid Dense + Sparse Retrieval**: Combines 768-dimensional dense semantic vectors (**BAAI/bge-base-en-v1.5**) with sparse BM25 vectors (**Qdrant/bm25**) using **Reciprocal Rank Fusion (RRF)**.
 - **Cross-Encoder Reranking**: Re-scores candidate pools with **BAAI/bge-reranker-base** (`TextCrossEncoder`) to place the most relevant evidence chunks at Rank 1.
 - **Multi-Category Format Coexistence**: Guarantees PDF documents, Word protocols, Python modules, and standalone image schematics reside in the same index without key collisions or data loss.
 - **Format-Aware Citation Engine**: Automatically formats PDF citations with exact page numbers (`doc_name - Page N`), Word/HTML/MD citations with heading hierarchies (`doc_name - Heading > Subheading`), Code citations with file scope (`doc_name - File: doc_name`), and images with file boundaries.
-- **Production FastAPI Backend**: Async REST API with validation, health checks, error handling, and clean `/api/ingest` and `/api/query` routes.
-- **Modern React Interface**: Single-page application with source inspection, image chunk badges, document filter dropdowns, 29+ format upload drag-and-drop, and live citation jump links.
+- **Production FastAPI Backend**: Async REST API with validation, health checks, error handling, clean `/api/ingest`, `/api/query`, and `/api/query/agentic` routes.
+- **Modern React Interface**: Single-page application with source inspection, image chunk badges, document filter dropdowns, 29+ format upload drag-and-drop, live citation jump links, and interactive **Agent Reasoning traces**.
 
 ---
 
@@ -56,7 +57,7 @@ graph TD
         J --> K
     end
 
-    subgraph Query & Generation Pipeline
+    subgraph Agentic Query & Retrieval Pipeline
         L[User Query] --> M[Document Query Router]
         M --> N[Hybrid Search: Dense + BM25 Prefetch]
         K --> N
@@ -65,8 +66,10 @@ graph TD
         P --> Q[BGE-Reranker-Base Cross-Encoder]
         Q --> R[Top-5 Re-Ranked Evidence Chunks]
         R --> S[Groq LLM: Grounded Generation]
-        S --> T[FastAPI JSON Response + Format Citations]
-        T --> U[React UI / Chat Interface]
+        S --> T[Critic LLM: Groundedness & Completeness Check]
+        T -- "Confidence < 0.70 (Reformulate Query)" --> M
+        T -- "Confidence >= 0.70 (Pass)" --> U[FastAPI JSON Response + Critique Log]
+        U --> V[React UI: Answer Card + Agent Reasoning Trace]
     end
 ```
 
@@ -103,7 +106,13 @@ graph TD
 [ Cross-Encoder Reranking ] ──► BAAI/bge-reranker-base (Pool: 15 -> Top 5)
           │
           ▼
-[ Groq LLM Generation ] ──► Grounded response with [1], [2] bracket citations
+[ Groq LLM Generation ] ──► Drafts grounded answer with [1], [2] citations
+          │
+          ▼
+[ Critic LLM Reflection Loop ]
+  ├── Evaluates factual groundedness & completeness
+  ├── If Confidence < 0.70 ──► Reformulates query & re-retrieves from Qdrant
+  └── If Confidence >= 0.70 ──► Returns verified response with full reasoning trace
 ```
 
 ---
@@ -355,17 +364,18 @@ Multimodal-Rag/
 │   │   ├── api/
 │   │   │   └── routes/
 │   │   │       ├── ingest.py      # POST /api/ingest endpoint (25+ formats)
-│   │   │       └── query.py       # POST /api/query endpoint
+│   │   │       └── query.py       # POST /api/query & /api/query/agentic endpoints
 │   │   ├── generation/
-│   │   │   └── llm.py             # Groq LLM grounded generation & citation prompt
+│   │   │   ├── llm.py             # Groq LLM grounded generation & citation prompt
+│   │   │   └── critique.py        # Self-Critique ReAct Agent, confidence scoring & re-retrieval
 │   │   ├── ingestion/
 │   │   │   ├── parser.py          # Docling document conversion options
 │   │   │   ├── chunker.py         # Structure-aware HybridChunker
 │   │   │   └── image_processor.py # Groq Vision image classification & standalone image processor
 │   │   ├── models/
 │   │   │   ├── chunk.py           # SourceChunk model
-      │   │   ├── document.py        # IngestResponse model
-│   │   │   └── response.py        # QueryRequest & QueryResponse models
+│   │   │   ├── document.py        # IngestResponse model
+│   │   │   └── response.py        # QueryRequest, QueryResponse & AgenticQueryResponse models
 │   │   ├── retrieval/
 │   │   │   ├── embeddings.py      # BGE-base dense embeddings via FastEmbed
 │   │   │   ├── reranker.py        # BGE-reranker-base cross-encoder
@@ -374,6 +384,7 @@ Multimodal-Rag/
 │   │   └── main.py                # FastAPI application entrypoint
 │   │
 │   └── tests/                     # Clean test & verification directory
+│       ├── evaluate_ragas.py      # RAGAS LLM-as-a-Judge benchmark suite
 │       ├── evaluate_multi_pdf.py  # 4-arm multi-PDF benchmark evaluation suite
 │       ├── run_verification.py    # 5-point multi-category coexistence test script
 │       ├── generate_report.py     # Verification report generator
@@ -387,13 +398,13 @@ Multimodal-Rag/
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── AnswerCard.jsx     # Markdown response renderer with citation pill clicks
+│   │   │   ├── AnswerCard.jsx     # Markdown renderer with Agent Reasoning accordion & citation pills
 │   │   │   ├── ChatView.jsx       # Chat thread and prompt input
 │   │   │   ├── Header.jsx         # App bar with Qdrant connectivity badge
 │   │   │   └── Sidebar.jsx        # Document upload, filter controls, and stats
-│   │   ├── api.js                 # Frontend API client
+│   │   ├── api.js                 # Frontend API client (/api/query/agentic)
 │   │   ├── App.jsx                # Main application state and layout
-│   │   └── index.css              # Custom styling
+│   │   └── index.css              # Custom styling & dark mode tokens
 │   ├── package.json
 │   └── vite.config.js
 │
@@ -415,7 +426,8 @@ Multimodal-Rag/
         ├── hybrid_rrf.json
         ├── hybrid_reranked.json
         ├── multimodal.json
-        └── multi_pdf_evaluation.json
+        ├── multi_pdf_evaluation.json
+        └── ragas_evaluation.json
 ```
 
 ---
@@ -531,11 +543,14 @@ python tests/evaluate_ragas.py
 │  • fig9_diagram.png      │  • Stainless Steel (AISI 316): -20 to 90 °C at 16 bar [1]   │
 │                          │  • Cast Iron (EN-GJL-200): -20 to 90 °C at 10 bar [2]       │
 │  Filter By Document:     │                                                             │
-│  [ All Documents ▾ ]     │  ────────────────────────────────────────────────────────── │
-│                          │  Sources & Evidence:                                        │
-│  Retrieval Settings:     │  [1] grundfos_cm_pump_manual.pdf (p.11) [TABLE] Score: 5.168│
-│  [x] Include Visuals     │  [2] grundfos_cm_pump_manual.pdf (p.11) [TABLE] Score: 4.151│
-│  Top K: [ 5 ]            │                                                             │
+│  [ All Documents ▾ ]     │  ▼ 🧠 Agent Reasoning (1 attempt | 95% confidence | Grounded)│
+│                          │    • Attempt 1: Query validated against retrieved context   │
+│  Retrieval Settings:     │    • Critic Result: 100% Grounded, Complete                 │
+│  [x] Include Visuals     │  ────────────────────────────────────────────────────────── │
+│  Top K: [ 5 ]            │  Sources & Evidence:                                        │
+│                          │  [1] grundfos_cm_pump_manual.pdf (p.11) [TABLE] Score: 5.168│
+│                          │  [2] grundfos_cm_pump_manual.pdf (p.11) [TABLE] Score: 4.151│
+│                          │                                                             │
 └──────────────────────────┴─────────────────────────────────────────────────────────────┘
 ```
 
@@ -561,5 +576,6 @@ python tests/evaluate_ragas.py
 
 1. **Overcomes the Text-Only Blindspot**: Standard RAG fails on equipment manuals where answers exist in wiring schematics or mechanical drawings. This system bridges text and visual modalities.
 2. **Document Structure Preservation**: Rather than naive fixed-size chunking (e.g. 500 characters with 50 overlap), Docling chunking respects table borders, subsection boundaries, and page links.
-3. **Honest Multi-Document & Multi-Format Coexistence**: Demonstrates multi-category coexistence across PDF, Word docx, Python source code, and standalone PNG diagrams in the same vector collection without collision.
-4. **Resilient Production API**: Comprehensive error handling catching malformed, empty, and invalid files as structured 4xx responses without unhandled server crashes.
+3. **Self-Critique Reflection Loop**: Incorporates a Critic LLM that evaluates every answer for factual groundedness, automatically reformulating queries to eliminate hallucinations.
+4. **Honest Multi-Document & Multi-Format Coexistence**: Demonstrates multi-category coexistence across PDF, Word docx, Python source code, and standalone PNG diagrams in the same vector collection without collision.
+5. **Resilient Production API**: Comprehensive error handling catching malformed, empty, and invalid files as structured 4xx responses without unhandled server crashes.
