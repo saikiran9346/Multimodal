@@ -54,6 +54,9 @@ export default function App() {
           query: response.query,
           answer: response.answer,
           sources: response.sources || [],
+          critique_log: response.critique_log || [],
+          attempts: response.attempts || 1,
+          final_query: response.final_query || response.query,
         },
       ]);
     } catch (err) {

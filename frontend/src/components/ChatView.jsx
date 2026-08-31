@@ -80,7 +80,7 @@ export function ChatView({
           <div className="qa-block">
             <div className="loading-box">
               <div className="pulsing-spinner" />
-              <span>Retrieving candidates from Qdrant, reranking with Cross-Encoder & generating grounded answer...</span>
+              <span>Self-Critique Agent: retrieving, reranking, generating & validating answer quality...</span>
             </div>
           </div>
         )}

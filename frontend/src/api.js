@@ -9,7 +9,7 @@ export async function fetchHealth() {
 }
 
 export async function sendQuery(query, topK = 5, excludeImages = false) {
-  const response = await fetch(`${API_BASE_URL}/api/query`, {
+  const response = await fetch(`${API_BASE_URL}/api/query/agentic`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

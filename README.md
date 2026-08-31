@@ -213,17 +213,22 @@ Evaluated on the full 25-question multi-document ground-truth set (422 chunks ac
 
 ---
 
-### C. RAGAS LLM-as-a-Judge Metric Benchmarks
+### C. RAGAS LLM-as-a-Judge Metric Benchmarks (Self-Critique Agent Pipeline)
 
-*Source script: [`backend/tests/evaluate_ragas.py`](file:///c:/Users/pachi/Downloads/Projects/Multimodal-Rag/backend/tests/evaluate_ragas.py) / Output data: [`backend/tests/ragas_report.json`](file:///c:/Users/pachi/Downloads/Projects/Multimodal-Rag/backend/tests/ragas_report.json)*
+*Source script: [`backend/tests/evaluate_ragas.py`](file:///c:/Users/pachi/Downloads/Projects/Multimodal-Rag/backend/tests/evaluate_ragas.py) / Output data: [`experiments/results/ragas_evaluation.json`](file:///c:/Users/pachi/Downloads/Projects/Multimodal-Rag/experiments/results/ragas_evaluation.json)*
 
-Evaluated using the **RAGAS** framework (`ragas` library) with **Groq LLM** (`qwen/qwen3.8-27b`) as the judge and **FastEmbed** (`BAAI/bge-base-en-v1.5`) embeddings across multi-category technical queries (PDF, DOCX, Code, Standalone Diagram):
+Evaluated across the 15 multi-document, multi-format evaluation benchmark using the **Self-Critique Adaptive Retrieval Agent** (Approach B: Re-Retrieve + Re-Generate) with **RAGAS** and **Groq LLM**:
 
 | RAGAS Metric | Score | Definition |
 | :--- | :---: | :--- |
-| **Faithfulness** | **0.9333** | Measures if all facts in the generated answer are strictly grounded in retrieved evidence without hallucination. |
-| **Answer Relevancy** | **0.9346** | Measures how directly and completely the LLM answer addresses the user query. |
-| **Context Precision** | **0.7500** / **1.0000** | Measures if the most relevant evidence chunks are ranked at the top of the context pool. |
+| **Faithfulness** | **0.9524 (95.2%)** | Measures if all claims in the generated answer are strictly grounded in retrieved evidence without hallucination. |
+| **Answer Relevancy** | **0.8190 (81.9%)** | Measures how directly and completely the LLM answer addresses the user query. |
+| **Context Precision** | **0.75+ / 0.38** | Measures if the most relevant evidence chunks are ranked at the top of the context pool. |
+
+**Self-Critique Agent Operational Statistics:**
+- **Verification Confidence Average**: 95.0% - 100.0% across technical manual, protocol, and schematic queries.
+- **Autonomous Query Reformulation**: Triggers re-retrieval loop when retrieval context confidence is below 0.70 threshold.
+- **Answer Grounding Rate**: 100% grounded claim verification passing Critic validation.
 
 ---
 
@@ -258,9 +263,24 @@ GET /api/health
 }
 ```
 
-### 2. Document Query
+### 2. Document Query (Standard & Agentic)
+
+#### A. Standard Query (`POST /api/query`)
 ```http
 POST /api/query
+Content-Type: application/json
+
+{
+  "query": "What is shaft seal type AQQx rated for?",
+  "top_k": 5,
+  "exclude_images": false,
+  "doc_name": null
+}
+```
+
+#### B. Self-Critique Agent Query (`POST /api/query/agentic`)
+```http
+POST /api/query/agentic
 Content-Type: application/json
 
 {
@@ -284,7 +304,21 @@ Content-Type: application/json
       "text": "[Manual: Grundfos CM, CME]\n11.4 Maximum system pressure...",
       "score": 5.168
     }
-  ]
+  ],
+  "critique_log": [
+    {
+      "attempt": 1,
+      "query_used": "What is shaft seal type AQQx rated for?",
+      "confidence": 0.95,
+      "is_grounded": true,
+      "is_complete": true,
+      "reasoning": "The answer correctly extracts ratings across AISI 316 and Cast Iron with full support in retrieved chunks.",
+      "suggested_query": "",
+      "duration_ms": 12581
+    }
+  ],
+  "attempts": 1,
+  "final_query": "What is shaft seal type AQQx rated for?"
 }
 ```
 

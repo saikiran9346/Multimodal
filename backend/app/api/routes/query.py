@@ -1,13 +1,14 @@
 from fastapi import APIRouter, HTTPException
 from qdrant_client.models import Filter, FieldCondition, MatchValue
 
-from app.models.response import QueryRequest, QueryResponse
+from app.models.response import QueryRequest, QueryResponse, AgenticQueryResponse, CritiqueLogEntry
 from app.models.chunk import SourceChunk
 from app.retrieval.vector_store import (
     search_hybrid, _get_client, COLLECTION_NAME, ensure_collection_exists, detect_document_from_query
 )
 from app.retrieval.reranker import rerank
 from app.generation.llm import generate_grounded_answer
+from app.generation.critique import agentic_rag_pipeline
 
 router = APIRouter()
 
@@ -98,3 +99,57 @@ def query_manual(request: QueryRequest):
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.post("/query/agentic", response_model=AgenticQueryResponse)
+def query_agentic(request: QueryRequest):
+    """
+    Self-Critique Adaptive Retrieval Agent endpoint:
+    1. Standard RAG pipeline (hybrid search → rerank → generate)
+    2. Critic LLM evaluates answer groundedness & completeness
+    3. If confidence < 0.7: reformulate query → re-retrieve → re-generate
+    4. Repeats up to 2 retries (max 3 total attempts)
+    5. Returns final answer + full critique_log with reasoning trace
+    """
+    if not request.query.strip():
+        raise HTTPException(status_code=400, detail="Query cannot be empty.")
+
+    try:
+        result = agentic_rag_pipeline(
+            query=request.query,
+            top_k=request.top_k,
+            exclude_images=request.exclude_images,
+            doc_name=request.doc_name,
+            max_retries=2,
+        )
+
+        sources = [
+            SourceChunk(
+                index=i,
+                doc_name=c.get("doc_name"),
+                page_no=c.get("page_no"),
+                headings=c.get("headings", []),
+                content_types=c.get("content_types", ["text"]),
+                text=c.get("text"),
+                score=c.get("rerank_score", c.get("hybrid_score")),
+            )
+            for i, c in enumerate(result["sources"], start=1)
+        ]
+
+        critique_entries = [
+            CritiqueLogEntry(**entry) for entry in result["critique_log"]
+        ]
+
+        return AgenticQueryResponse(
+            query=request.query,
+            answer=result["answer"],
+            sources=sources,
+            critique_log=critique_entries,
+            attempts=result["attempts"],
+            final_query=result["final_query"],
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
