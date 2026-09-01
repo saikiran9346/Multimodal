@@ -96,13 +96,19 @@ def _to_sparse_vector(sparse_embedding) -> SparseVector:
     )
 
 
-def _build_filter(exclude_images: bool = False, doc_name: Optional[str] = None) -> Optional[Filter]:
+def _build_filter(
+    exclude_images: bool = False,
+    doc_name: Optional[str] = None,
+    session_id: Optional[str] = None,
+) -> Optional[Filter]:
     must = []
     must_not = []
     if exclude_images:
         must_not.append(FieldCondition(key="content_types", match=MatchValue(value="picture")))
     if doc_name:
         must.append(FieldCondition(key="doc_name", match=MatchValue(value=doc_name)))
+    if session_id:
+        must.append(FieldCondition(key="session_id", match=MatchValue(value=session_id)))
     if not must and not must_not:
         return None
     return Filter(must=must if must else None, must_not=must_not if must_not else None)
@@ -130,7 +136,12 @@ def recreate_collection():
     )
 
 
-def upsert_chunks(chunks: list[dict], doc_name: str = "document.pdf", recreate: bool = False) -> int:
+def upsert_chunks(
+    chunks: list[dict],
+    doc_name: str = "document.pdf",
+    recreate: bool = False,
+    session_id: Optional[str] = None,
+) -> int:
     if recreate:
         recreate_collection()
     else:
@@ -153,21 +164,30 @@ def upsert_chunks(chunks: list[dict], doc_name: str = "document.pdf", recreate: 
     points = []
     for i, (dense_vec, sparse_vec, chunk) in enumerate(zip(dense_vectors, sparse_vectors, formatted_chunks)):
         chunk_doc_name = chunk["doc_name"]
-        point_id = str(uuid.uuid5(uuid.NAMESPACE_DNS, f"{chunk_doc_name}_{chunk.get('page_no')}_{i}_{chunk['text'][:40]}"))
-        
+        # Include session_id in point_id so same doc in different sessions gets separate points
+        sid_prefix = session_id or "global"
+        point_id = str(uuid.uuid5(
+            uuid.NAMESPACE_DNS,
+            f"{sid_prefix}_{chunk_doc_name}_{chunk.get('page_no')}_{i}_{chunk['text'][:40]}"
+        ))
+
+        payload = {
+            "doc_name": chunk_doc_name,
+            "text": chunk["text"],
+            "page_no": chunk["page_no"],
+            "headings": chunk["headings"],
+            "captions": chunk["captions"],
+            "content_types": chunk["content_types"],
+            "contains_table": chunk["contains_table"],
+        }
+        if session_id:
+            payload["session_id"] = session_id
+
         points.append(
             PointStruct(
                 id=point_id,
                 vector={"dense": dense_vec, "sparse": _to_sparse_vector(sparse_vec)},
-                payload={
-                    "doc_name": chunk_doc_name,
-                    "text": chunk["text"],
-                    "page_no": chunk["page_no"],
-                    "headings": chunk["headings"],
-                    "captions": chunk["captions"],
-                    "content_types": chunk["content_types"],
-                    "contains_table": chunk["contains_table"],
-                },
+                payload=payload,
             )
         )
 
@@ -175,10 +195,16 @@ def upsert_chunks(chunks: list[dict], doc_name: str = "document.pdf", recreate: 
     return len(points)
 
 
-def search_dense(query: str, top_k: int = 5, exclude_images: bool = False, doc_name: Optional[str] = None):
+def search_dense(
+    query: str,
+    top_k: int = 5,
+    exclude_images: bool = False,
+    doc_name: Optional[str] = None,
+    session_id: Optional[str] = None,
+):
     client = _get_client()
     ensure_collection_exists()
-    query_filter = _build_filter(exclude_images=exclude_images, doc_name=doc_name)
+    query_filter = _build_filter(exclude_images=exclude_images, doc_name=doc_name, session_id=session_id)
     results = client.query_points(
         collection_name=COLLECTION_NAME,
         query=embed_query(query),
@@ -189,11 +215,17 @@ def search_dense(query: str, top_k: int = 5, exclude_images: bool = False, doc_n
     return results.points
 
 
-def search_sparse(query: str, top_k: int = 5, exclude_images: bool = False, doc_name: Optional[str] = None):
+def search_sparse(
+    query: str,
+    top_k: int = 5,
+    exclude_images: bool = False,
+    doc_name: Optional[str] = None,
+    session_id: Optional[str] = None,
+):
     client = _get_client()
     ensure_collection_exists()
     sparse_vec = list(_get_sparse_model().embed([query]))[0]
-    query_filter = _build_filter(exclude_images=exclude_images, doc_name=doc_name)
+    query_filter = _build_filter(exclude_images=exclude_images, doc_name=doc_name, session_id=session_id)
     results = client.query_points(
         collection_name=COLLECTION_NAME,
         query=_to_sparse_vector(sparse_vec),
@@ -204,11 +236,17 @@ def search_sparse(query: str, top_k: int = 5, exclude_images: bool = False, doc_
     return results.points
 
 
-def search_hybrid(query: str, top_k: int = 5, exclude_images: bool = False, doc_name: Optional[str] = None):
+def search_hybrid(
+    query: str,
+    top_k: int = 5,
+    exclude_images: bool = False,
+    doc_name: Optional[str] = None,
+    session_id: Optional[str] = None,
+):
     client = _get_client()
     ensure_collection_exists()
     sparse_vec = list(_get_sparse_model().embed([query]))[0]
-    query_filter = _build_filter(exclude_images=exclude_images, doc_name=doc_name)
+    query_filter = _build_filter(exclude_images=exclude_images, doc_name=doc_name, session_id=session_id)
 
     results = client.query_points(
         collection_name=COLLECTION_NAME,

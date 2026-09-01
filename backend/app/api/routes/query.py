@@ -35,7 +35,13 @@ def query_manual(request: QueryRequest):
 
         # If an explicit doc_name was requested, verify it exists in the collection
         if request.doc_name:
-            doc_filter = Filter(must=[FieldCondition(key="doc_name", match=MatchValue(value=request.doc_name))])
+            filter_args = {"key": "doc_name", "match": MatchValue(value=request.doc_name)}
+            doc_filter_conditions = [FieldCondition(**filter_args)]
+            if request.session_id:
+                doc_filter_conditions.append(
+                    FieldCondition(key="session_id", match=MatchValue(value=request.session_id))
+                )
+            doc_filter = Filter(must=doc_filter_conditions)
             doc_count = client.count(collection_name=COLLECTION_NAME, count_filter=doc_filter).count
             if doc_count == 0:
                 raise HTTPException(
@@ -44,12 +50,13 @@ def query_manual(request: QueryRequest):
                 )
 
         # Retrieve candidate chunks (fetch 3x top_k for reranking pool)
-        retrieve_k = max(request.top_k * 3, 15)
+        retrieve_k = max(request.top_k * 3, 30)
         hybrid_points = search_hybrid(
             query=request.query,
             top_k=retrieve_k,
             exclude_images=request.exclude_images,
             doc_name=active_doc_name,
+            session_id=request.session_id,
         )
 
         if not hybrid_points:
@@ -120,6 +127,7 @@ def query_agentic(request: QueryRequest):
             top_k=request.top_k,
             exclude_images=request.exclude_images,
             doc_name=request.doc_name,
+            session_id=request.session_id,
             max_retries=2,
         )
 

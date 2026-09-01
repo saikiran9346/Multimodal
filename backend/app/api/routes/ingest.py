@@ -2,15 +2,84 @@ import os
 import shutil
 import tempfile
 from pathlib import Path
-from fastapi import APIRouter, UploadFile, File, HTTPException
+from fastapi import APIRouter, UploadFile, File, HTTPException, Header
+from typing import List, Optional
 
 from app.models.document import IngestResponse
 from app.ingestion.parser import parse_document
 from app.ingestion.chunker import chunk_document
 from app.ingestion.image_processor import extract_image_chunks
-from app.retrieval.vector_store import upsert_chunks
+from app.retrieval.vector_store import upsert_chunks, _get_client, COLLECTION_NAME, ensure_collection_exists
+from qdrant_client.models import Filter, FieldCondition, MatchValue
 
 router = APIRouter()
+
+
+@router.get("/documents", tags=["Document Ingestion"])
+def list_documents(x_session_id: Optional[str] = Header(default=None)):
+    """
+    Returns all unique documents indexed in the current session.
+    Pass X-Session-ID header to scope results to a session.
+    """
+    try:
+        ensure_collection_exists()
+        client = _get_client()
+        docs = {}
+        offset = None
+        while True:
+            result, next_offset = client.scroll(
+                collection_name=COLLECTION_NAME,
+                limit=500,
+                with_payload=["doc_name", "session_id"],
+                offset=offset,
+            )
+            for point in result:
+                if not point.payload:
+                    continue
+                point_session = point.payload.get("session_id")
+                # Filter by session if provided
+                if x_session_id and point_session != x_session_id:
+                    continue
+                name = point.payload.get("doc_name", "unknown")
+                docs[name] = docs.get(name, 0) + 1
+            if next_offset is None:
+                break
+            offset = next_offset
+        return {
+            "documents": [
+                {"doc_name": name, "chunk_count": count}
+                for name, count in sorted(docs.items())
+            ],
+            "total_documents": len(docs),
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.delete("/documents/{doc_name:path}", tags=["Document Ingestion"])
+def delete_document(
+    doc_name: str,
+    x_session_id: Optional[str] = Header(default=None),
+):
+    """
+    Deletes all indexed chunks for a document, scoped to the session if X-Session-ID is provided.
+    """
+    try:
+        ensure_collection_exists()
+        client = _get_client()
+        conditions = [FieldCondition(key="doc_name", match=MatchValue(value=doc_name))]
+        if x_session_id:
+            conditions.append(FieldCondition(key="session_id", match=MatchValue(value=x_session_id)))
+        doc_filter = Filter(must=conditions)
+        count_before = client.count(collection_name=COLLECTION_NAME, count_filter=doc_filter).count
+        if count_before == 0:
+            raise HTTPException(status_code=404, detail=f"Document '{doc_name}' not found in the index.")
+        client.delete(collection_name=COLLECTION_NAME, points_selector=doc_filter)
+        return {"status": "deleted", "doc_name": doc_name, "chunks_removed": count_before}
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 ALLOWED_EXTENSIONS = {
     # Documents
@@ -25,7 +94,10 @@ ALLOWED_EXTENSIONS = {
 
 
 @router.post("/ingest", response_model=IngestResponse)
-def ingest_document(file: UploadFile = File(...)):
+def ingest_document(
+    file: UploadFile = File(...),
+    x_session_id: Optional[str] = Header(default=None),
+):
     """
     Ingests technical documents across 25+ file formats:
     - Documents: PDF, DOCX, PPTX, XLSX, HTML, MD, CSV, ODT, ODS, ODP, TEX, ADOC
@@ -84,7 +156,12 @@ def ingest_document(file: UploadFile = File(...)):
             chunk["doc_name"] = file.filename
 
         # 4. Upsert into Qdrant (recreate=False allows multiple documents to coexist)
-        total_upserted = upsert_chunks(all_chunks, doc_name=file.filename, recreate=False)
+        total_upserted = upsert_chunks(
+            all_chunks,
+            doc_name=file.filename,
+            recreate=False,
+            session_id=x_session_id,
+        )
 
         return IngestResponse(
             status="success",

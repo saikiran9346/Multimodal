@@ -118,6 +118,7 @@ def agentic_rag_pipeline(
     top_k: int = 5,
     exclude_images: bool = False,
     doc_name: Optional[str] = None,
+    session_id: Optional[str] = None,
     max_retries: int = MAX_RETRIES,
 ) -> dict:
     """
@@ -149,12 +150,13 @@ def agentic_rag_pipeline(
         attempt_start = time.time()
 
         # Step 1: Hybrid search
-        retrieve_k = max(top_k * 3, 15)
+        retrieve_k = max(top_k * 3, 30)
         hybrid_points = search_hybrid(
             query=current_query,
             top_k=retrieve_k,
             exclude_images=exclude_images,
             doc_name=active_doc_name,
+            session_id=session_id,
         )
 
         if not hybrid_points:

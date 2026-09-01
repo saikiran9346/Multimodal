@@ -89,13 +89,12 @@ input, textarea {
 /* Header */
 .app-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 28px;
+  flex-direction: column;
   border-bottom: 1px solid var(--border-color);
   background: rgba(11, 15, 25, 0.8);
   backdrop-filter: blur(12px);
   z-index: 10;
+  flex-shrink: 0;
 }
 
 .brand-section {
@@ -670,6 +669,11 @@ input:checked + .slider:before {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+.spin {
+  animation: spin 0.8s linear infinite;
+}
+
 
 /* Input Bar Section */
 .input-section {

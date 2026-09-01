@@ -5,9 +5,10 @@ from app.models.chunk import SourceChunk
 
 class QueryRequest(BaseModel):
     query: str
-    top_k: int = 5
+    top_k: int = 20
     exclude_images: bool = False
     doc_name: Optional[str] = None
+    session_id: Optional[str] = None
 
 
 class QueryResponse(BaseModel):

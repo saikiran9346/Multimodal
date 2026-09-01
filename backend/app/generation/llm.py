@@ -69,12 +69,14 @@ def generate_grounded_answer(question: str, chunks: list[dict]) -> dict:
     context = "\n\n".join(context_blocks)
 
     prompt = (
-        "You are a technical assistant answering questions about technical documents/manuals, "
-        "using only the numbered evidence excerpts below. Every claim in "
-        "your answer must be traceable to one of these excerpts -- cite "
-        "the excerpt number in square brackets, like [1], right after the "
-        "claim it supports. If the excerpts don't contain enough "
-        "information to answer, say so clearly instead of guessing.\n\n"
+        "You are an expert assistant that answers questions using ONLY the numbered evidence excerpts below. "
+        "Rules:\n"
+        "1. Use ONLY information present in the excerpts — never guess or add external knowledge.\n"
+        "2. Cite each excerpt used with its number in square brackets like [1] right after the claim.\n"
+        "3. If the question asks to LIST or ENUMERATE items (projects, skills, experiences, etc.), "
+        "you MUST include EVERY single item found across ALL excerpts — do not skip or summarize. "
+        "Output each item as a separate numbered entry.\n"
+        "4. If the excerpts don't contain enough information, say so clearly.\n\n"
         f"{context}\n\n"
         f"Question: {question}"
     )
@@ -84,7 +86,7 @@ def generate_grounded_answer(question: str, chunks: list[dict]) -> dict:
         messages=[{"role": "user", "content": prompt}],
         temperature=0.1,
         reasoning_effort="none",
-        max_completion_tokens=1024,
+        max_completion_tokens=2048,
     )
 
     sources = [

@@ -29,12 +29,16 @@ This project implements an end-to-end multimodal, multi-format RAG system with s
 - **Multi-Format Technical Ingestion (25+ Formats)**: Powered by IBM's **Docling** engine to parse 25+ technical formats across Documents (PDF, DOCX, PPTX, XLSX, HTML, MD, CSV, ODT, ODS, ODP, TEX, ADOC), Code & Configs (Python, JS, TS, C, C++, Java, Go, Rust, JSON, YAML, XML), and Technical Images (PNG, JPG, TIFF) with high fidelity.
 - **Standalone & Embedded Image Processing**: Extracts PDF figures at 2.0x DPI and processes direct standalone image uploads (`.png`, `.jpg`) via **Groq Vision** (`qwen/qwen3.8-27b`) to generate searchable technical descriptions.
 - **Self-Critique ReAct Agent Loop**: Autonomous verification engine that evaluates generated answers for factual groundedness and completeness. If confidence drops below 0.70, it reformulates the query and re-retrieves candidates from Qdrant.
+- **Session-Isolated Multi-Chat Workspaces**: Every chat session is assigned a unique UUID. Documents uploaded in one session are **invisible to all other sessions** — queries in Chat 1 only search Chat 1's files, and Chat 2 only searches Chat 2's files, eliminating cross-session contamination.
+- **Multi-File Batch Upload**: Select and parse multiple documents simultaneously in a single click. The sidebar maintains a live upload queue with per-file progress indicators and per-session indexed document lists with delete capability.
 - **Hybrid Dense + Sparse Retrieval**: Combines 768-dimensional dense semantic vectors (**BAAI/bge-base-en-v1.5**) with sparse BM25 vectors (**Qdrant/bm25**) using **Reciprocal Rank Fusion (RRF)**.
 - **Cross-Encoder Reranking**: Re-scores candidate pools with **BAAI/bge-reranker-base** (`TextCrossEncoder`) to place the most relevant evidence chunks at Rank 1.
+- **Exhaustive Listing Retrieval**: Default `top_k=20` with a 60-candidate retrieval pool ensures enumeration queries (e.g. "list all projects") capture every item across the document set without dropping chunks.
+- **Document Management API**: REST endpoints to list all indexed documents per session (`GET /api/documents`) and permanently delete individual documents from the index (`DELETE /api/documents/{doc_name}`).
 - **Multi-Category Format Coexistence**: Guarantees PDF documents, Word protocols, Python modules, and standalone image schematics reside in the same index without key collisions or data loss.
-- **Format-Aware Citation Engine**: Automatically formats PDF citations with exact page numbers (`doc_name - Page N`), Word/HTML/MD citations with heading hierarchies (`doc_name - Heading > Subheading`), Code citations with file scope (`doc_name - File: doc_name`), and images with file boundaries.
-- **Production FastAPI Backend**: Async REST API with validation, health checks, error handling, clean `/api/ingest`, `/api/query`, and `/api/query/agentic` routes.
-- **Modern React Interface**: Single-page application with source inspection, image chunk badges, document filter dropdowns, 29+ format upload drag-and-drop, live citation jump links, and interactive **Agent Reasoning traces**.
+- **Format-Aware Citation Engine**: Automatically formats PDF citations with exact page numbers (`doc_name - Page N`), Word/HTML/MD citations with heading hierarchies, Code citations with file scope, and images with file boundaries.
+- **Production FastAPI Backend**: Async REST API with validation, health checks, error handling, clean `/api/ingest`, `/api/query`, `/api/query/agentic`, `/api/documents` routes.
+- **Modern React Interface**: Single-page application with persistent chat tab bar, session-scoped document workspaces, multi-file upload queue, live document list with delete buttons, source inspection, image chunk badges, and interactive **Agent Reasoning traces**.
 
 ---
 
@@ -49,27 +53,27 @@ graph TD
         D --> E[Groq Vision: Classify & Describe]
         E -- Technical Diagrams --> F[Image Chunks]
         E -- Branding / Logos --> G[Discard]
-        C --> H[Prepend Document Identifier]
+        C --> H[Prepend Document Identifier + Session ID Tag]
         F --> H
         H --> I[FastEmbed: Dense BGE-Base 768d]
         H --> J[FastEmbed: Sparse BM25 IDF]
-        I --> K[(Qdrant Vector DB)]
+        I --> K[(Qdrant Vector DB — Session-Scoped Payload)]
         J --> K
     end
 
     subgraph Agentic Query & Retrieval Pipeline
-        L[User Query] --> M[Document Query Router]
-        M --> N[Hybrid Search: Dense + BM25 Prefetch]
+        L[User Query + Session ID] --> M[Document Query Router]
+        M --> N[Hybrid Search: Dense + BM25 Prefetch — Filtered by Session ID]
         K --> N
         N --> O[Reciprocal Rank Fusion RRF]
-        O --> P[Candidate Pool: Top-15 Chunks]
+        O --> P[Candidate Pool: Top-60 Chunks]
         P --> Q[BGE-Reranker-Base Cross-Encoder]
-        Q --> R[Top-5 Re-Ranked Evidence Chunks]
-        R --> S[Groq LLM: Grounded Generation]
+        Q --> R[Top-20 Re-Ranked Evidence Chunks]
+        R --> S[Groq LLM: Grounded Generation with Exhaustive Listing Rules]
         S --> T[Critic LLM: Groundedness & Completeness Check]
         T -- "Confidence < 0.70 (Reformulate Query)" --> M
         T -- "Confidence >= 0.70 (Pass)" --> U[FastAPI JSON Response + Critique Log]
-        U --> V[React UI: Answer Card + Agent Reasoning Trace]
+        U --> V[React UI: Answer Card + Chat Tab + Agent Reasoning Trace]
     end
 ```
 
@@ -78,7 +82,7 @@ graph TD
 ## 4. End-to-End RAG Workflow
 
 ```
-[ Technical File Upload (PDF, DOCX, PY, PNG, etc.) ]
+[ Technical File Upload (PDF, DOCX, PY, PNG, etc.) — Session UUID Attached ]
           │
           ▼
 [ Docling Multi-Format Conversion ] ──► Preserves tables, code blocks, & reading order
@@ -88,8 +92,8 @@ graph TD
           └──► Technical Figures / Images ──► [ Groq Vision Model ] ──► Visual Summaries
                                                                             │
                                                                             ▼
-[ Chunk Title Prefixing ] ◄─────────────────────────────────────────────────┘
-  e.g. "[Manual: service_protocol.docx] \n Electrical Motor Maintenance..."
+[ Chunk Tagging: session_id + doc_name prefix ] ◄────────────────────────────┘
+  e.g. "[Manual: sde.pdf] \n Lineage | Version Control Engine..."
           │
           ▼
 [ Dual Vector Embedding ]
@@ -97,16 +101,16 @@ graph TD
   └── Sparse: Qdrant/bm25 (IDF modified)
           │
           ▼
-[ Qdrant Hybrid Storage ] (Payload: doc_name, page_no, headings, content_types)
+[ Qdrant Storage ] (Payload: session_id, doc_name, page_no, headings, content_types)
           │
           ▼
-[ Query Routing & Hybrid Search ] ──► Dense Prefetch + BM25 Prefetch via RRF
+[ Session-Scoped Hybrid Search ] ──► Dense + BM25 Prefetch filtered by session_id via RRF
           │
           ▼
-[ Cross-Encoder Reranking ] ──► BAAI/bge-reranker-base (Pool: 15 -> Top 5)
+[ Cross-Encoder Reranking ] ──► BAAI/bge-reranker-base (Pool: 60 → Top 20)
           │
           ▼
-[ Groq LLM Generation ] ──► Drafts grounded answer with [1], [2] citations
+[ Groq LLM Generation ] ──► Exhaustive listing rules + [1], [2] citations
           │
           ▼
 [ Critic LLM Reflection Loop ]
@@ -335,6 +339,7 @@ Content-Type: application/json
 ```http
 POST /api/ingest
 Content-Type: multipart/form-data
+X-Session-ID: <uuid>        # optional — scopes document to a chat session
 
 file=@service_protocol.docx
 ```
@@ -346,6 +351,34 @@ file=@service_protocol.docx
   "text_chunks": 3,
   "image_chunks": 0,
   "message": "Successfully indexed 3 chunks for 'service_protocol.docx' into Qdrant."
+}
+```
+
+### 4. List Indexed Documents
+```http
+GET /api/documents
+X-Session-ID: <uuid>        # optional — filters to session documents only
+```
+```json
+{
+  "documents": [
+    { "doc_name": "sde.pdf", "chunk_count": 13 },
+    { "doc_name": "data.pdf", "chunk_count": 13 }
+  ],
+  "total_documents": 2
+}
+```
+
+### 5. Delete a Document
+```http
+DELETE /api/documents/{doc_name}
+X-Session-ID: <uuid>        # optional — scopes delete to session
+```
+```json
+{
+  "status": "deleted",
+  "doc_name": "sde.pdf",
+  "chunks_removed": 13
 }
 ```
 
@@ -363,7 +396,7 @@ Multimodal-Rag/
 │   ├── app/
 │   │   ├── api/
 │   │   │   └── routes/
-│   │   │       ├── ingest.py      # POST /api/ingest endpoint (25+ formats)
+│   │   │       ├── ingest.py      # POST /api/ingest, GET /api/documents, DELETE /api/documents/{name}
 │   │   │       └── query.py       # POST /api/query & /api/query/agentic endpoints
 │   │   ├── generation/
 │   │   │   ├── llm.py             # Groq LLM grounded generation & citation prompt
