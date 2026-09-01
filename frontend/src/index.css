@@ -120,6 +120,7 @@ input, textarea {
   letter-spacing: -0.02em;
   background: linear-gradient(90deg, #ffffff, #d1d5db);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
