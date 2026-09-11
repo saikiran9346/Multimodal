@@ -561,31 +561,19 @@ python tests/evaluate_ragas.py
 
 ## 15. User Interface & Demonstration
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│  MULTIMODAL TECHNICAL DOCUMENT RAG                        ● Qdrant Connected (849 Chunks)│
-├──────────────────────────┬─────────────────────────────────────────────────────────────┤
-│  DOCUMENT REPOSITORY     │  CHAT & QUESTION ANSWERING                                  │
-│                          │                                                             │
-│  [ Upload Document ]     │  User: What is shaft seal type AQQx rated for?              │
-│                          │                                                             │
-│  Indexed Documents:      │  Assistant:                                                 │
-│  • grundfos_cm_pump.pdf  │  Based on the technical manual excerpts, shaft seal         │
-│  • service_protocol.docx │  type AQQx has the following permissible ratings:           │
-│  • calculations.py       │                                                             │
-│  • fig9_diagram.png      │  • Stainless Steel (AISI 316): -20 to 90 °C at 16 bar [1]   │
-│                          │  • Cast Iron (EN-GJL-200): -20 to 90 °C at 10 bar [2]       │
-│  Filter By Document:     │                                                             │
-│  [ All Documents ▾ ]     │  ▼ 🧠 Agent Reasoning (1 attempt | 95% confidence | Grounded)│
-│                          │    • Attempt 1: Query validated against retrieved context   │
-│  Retrieval Settings:     │    • Critic Result: 100% Grounded, Complete                 │
-│  [x] Include Visuals     │  ────────────────────────────────────────────────────────── │
-│  Top K: [ 5 ]            │  Sources & Evidence:                                        │
-│                          │  [1] grundfos_cm_pump_manual.pdf (p.11) [TABLE] Score: 5.168│
-│                          │  [2] grundfos_cm_pump_manual.pdf (p.11) [TABLE] Score: 4.151│
-│                          │                                                             │
-└──────────────────────────┴─────────────────────────────────────────────────────────────┘
-```
+### Workspace & Document Ingestion
+The single-page interface features session-isolated multi-chat workspaces, live document inventory with deletion controls, multi-file batch upload queue, and real-time backend status.
+
+<p align="center">
+  <img src="screenshots/ss1.png" alt="Workspace and Document Ingestion Interface" width="100%" />
+</p>
+
+### Grounded Technical Q&A with Agent Reasoning
+When querying technical documents, the system provides grounded answers, verifiable citations with page numbers, and expandable **Agent Reasoning traces** displaying Critic validation, confidence scores, and query reformulations.
+
+<p align="center">
+  <img src="screenshots/ss2.png" alt="Grounded Q&A with Agent Reasoning Trace and Citations" width="100%" />
+</p>
 
 ---
 
